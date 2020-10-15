@@ -3,8 +3,8 @@
 class PA_CPT_Projects {
 
 	public function __construct(){
-		self::CreatePostType();
-		self::RegisterSidebars();
+		add_action('init', [$this, 'CreatePostType']);
+		add_action('init', [$this, 'RegisterSidebars']);
 	}
 
 	function CreatePostType() {
@@ -76,4 +76,4 @@ class PA_CPT_Projects {
 	}
 }
 
-add_action('init', new PA_CPT_Projects(), 2);
+new PA_CPT_Projects();

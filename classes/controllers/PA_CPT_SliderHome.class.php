@@ -3,10 +3,10 @@
 class PA_CPT_SliderHome {
 
 	public function __construct(){
-		self::CreatePostType();
+		add_action('init', [$this, 'CreatePostType']);
 	}
 
-	static function CreatePostType() {
+	function CreatePostType() {
 		$labels = array(
 			'name'                  => _x( 'Sliders', 'Post Type General Name', 'pa_iasd' ),
 			'singular_name'         => _x( 'Slider', 'Post Type Singular Name', 'pa_iasd' ),
@@ -58,4 +58,4 @@ class PA_CPT_SliderHome {
 	}
 }
 
-add_action('init', new PA_CPT_SliderHome(), 2);
+new PA_CPT_SliderHome();
