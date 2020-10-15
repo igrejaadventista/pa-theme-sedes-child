@@ -9,7 +9,14 @@ $posts = get_posts(array(
 	<div class="pa-glide-principal">
 		<div class="glide__track" data-glide-el="track">
 			<div class="glide__slides">
-			<?php foreach($posts as $post) { ?>
+			<?php 
+				foreach($posts as $post) { 
+					if (get_field('slider_button_color')){
+						$button_color = get_field('slider_button_color');
+					} else {
+						$button_color = '#afffff';
+					}
+			?>
 				<div class="pa_slide_item glide__slide" data-img-cell="<?php the_field('slider_img_mobile'); ?>" style="background-image: url('<?php the_field('slider_img_desktop'); ?>');">
 					<div class="container">
 						<div class="row align-items-end align-items-xl-center">

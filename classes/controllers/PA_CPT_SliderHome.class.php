@@ -6,7 +6,7 @@ class PA_CPT_SliderHome {
 		self::CreatePostType();
 	}
 
-	function CreatePostType() {
+	static function CreatePostType() {
 		$labels = array(
 			'name'                  => _x( 'Sliders', 'Post Type General Name', 'pa_iasd' ),
 			'singular_name'         => _x( 'Slider', 'Post Type Singular Name', 'pa_iasd' ),
