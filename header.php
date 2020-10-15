@@ -7,15 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<?php wp_head(); ?>
-
-	<style>
-		:root {
-			/* --pa-color-default: #CF702F;
-			--pa-color-default-light: #F29050;
-			--pa-color-default-dark: #B56229;
-			--pa-color-default-aux: #bfd2e6;  */
-		}
-	</style>
 </head>
 
 <body <?php body_class(get_field('departamento', 'option')); ?>>
