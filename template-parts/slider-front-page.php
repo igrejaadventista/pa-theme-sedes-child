@@ -4,13 +4,16 @@ $posts = get_posts(array(
 	'post_type'		=> 'sliders',
 	'post_status'	=> 'publish'
 ));
+
+if(!empty($posts)):
 ?>
 <div class="pa-slider-principal">
 	<div class="pa-glide-principal">
 		<div class="glide__track" data-glide-el="track">
 			<div class="glide__slides">
 			<?php 
-				foreach($posts as $post) { 
+				foreach($posts as $post):
+				
 					if (get_field('slider_button_color')){
 						$button_color = get_field('slider_button_color');
 					} else {
@@ -29,7 +32,7 @@ $posts = get_posts(array(
 						</div>
 					</div>
 				</div>
-			<?php } ?>	
+				<?php endforeach; ?>	
 			</div>
 		</div>
 		<div class=" pa-slider-controle d-flex justify-content-center justify-content-xl-end align-items-center mb-5">
@@ -47,3 +50,5 @@ $posts = get_posts(array(
 		</div>
 	</div>
 </div>
+
+<?php endif; ?>
