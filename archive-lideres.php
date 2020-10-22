@@ -3,13 +3,11 @@
 get_header(); 
 
 $args = array(  
-	'post_type' => 'projetos',
+	'post_type' => 'lideres',
 	'post_status' => 'publish',
 );
 
 $loop = new WP_Query( $args ); 
-
-
 
 ?>
 	<?php 
