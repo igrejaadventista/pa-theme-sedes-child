@@ -16,6 +16,7 @@
 		<div class="pa-lider-geral row row-cols-auto mb-5">
 			<div class="col-12 col-xl-4 text-center mb-4">
 				<?php echo get_the_post_thumbnail( get_the_ID(), 'lider-thumb', array( 'class' => 'pa-lider-thumb rounded-circle mx-auto' ) ); ?>
+				<?php if(isset($lider_social)):?>
 				<div class="mt-4">
 					<ul class="pa-lider-contact list-inline">
 					<?php if ($lider_social['lider_facebook']):?>
@@ -35,6 +36,7 @@
 					<?php endif; ?>
 					</ul>
 				</div>
+				<?php endif; ?>
 			</div>
 			<div class="col col-xl-8">
 				<h1 class="h2 font-weight-bold"><?php the_title(); ?></h1>
