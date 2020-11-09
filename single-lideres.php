@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="pa-lider-geral row row-cols-auto mb-5">
 			<div class="col-12 col-xl-4 text-center mb-4">
-				<?php echo get_the_post_thumbnail( get_the_ID(), 'lider-thumb', array( 'class' => 'pa-lider-thumb rounded-circle mx-auto' ) ); ?>
+				<?php echo get_the_post_thumbnail( get_the_ID(), array(215,215), array( 'class' => 'pa-lider-thumb rounded-circle mx-auto' ) ); ?>
 				<?php if(isset($lider_social)):?>
 				<div class="mt-4">
 					<ul class="pa-lider-contact list-inline">
