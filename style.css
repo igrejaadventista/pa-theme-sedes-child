@@ -11,7 +11,7 @@ Template: pa-theme-sedes
 .depto-institucional {
   --pa-color-default: #003366;
   --pa-color-default-dark: #00172e;
-  --pa-color-default-light: #004c99;
+  --pa-color-default-light: #004d99;
   --pa-color-default-aux: #74ade7;
 }
 
@@ -247,8 +247,8 @@ Template: pa-theme-sedes
   --pa-color-default-aux: white;
 }
 
-/* line 2, assets/scss/_pa-cpt-projects.scss */
-.pa-archive-projects figcaption {
+/* line 3, assets/scss/_pa-cpt-projects.scss */
+.pa-archive-projects figcaption h3 {
   color: var(--pa-color-gray01);
 }
 
@@ -317,62 +317,38 @@ Template: pa-theme-sedes
   background-color: transparent;
 }
 
-/* line 3, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-geral {
-  color: var(--pa-color-gray03);
-}
-/* line 6, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-geral h1 {
-  color: var(--pa-color-gray01);
-}
-/* line 11, assets/scss/_pa-lideres.scss */
+/* line 2, assets/scss/_pa-lideres.scss */
 .pa-lideres .pa-lider-thumb {
-  border: 5px solid var(--pa-color-default);
+  border: 5px solid var(--pa-color-default-aux);
+  transition: border 0.5s;
 }
-/* line 15, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-contact, .pa-lideres .pa-lider-equipe {
-  font-size: 1.3rem;
+/* line 9, assets/scss/_pa-lideres.scss */
+.pa-lideres .pa-linkback a,
+.pa-lideres .pa-lider-contact a {
+  color: var(--pa-color-default);
+}
+/* line 14, assets/scss/_pa-lideres.scss */
+.pa-lideres a {
+  text-decoration: none;
+  color: var(--pa-color-gray01);
 }
 /* line 18, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-contact a, .pa-lideres .pa-lider-equipe a {
-  color: var(--pa-color-default-light);
+.pa-lideres a .pa-link-perfil {
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
-/* line 21, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-contact a:hover, .pa-lideres .pa-lider-equipe a:hover {
-  color: var(--pa-color-default-dark);
-}
-/* line 31, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-equipe ul h4 {
+/* line 24, assets/scss/_pa-lideres.scss */
+.pa-lideres a:hover {
   color: var(--pa-color-gray01);
 }
-/* line 36, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lider-equipe a {
-  font-size: 1rem;
-  text-decoration: none;
-}
-/* line 44, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lideres-depto .pa-lider-depto {
-  font-size: 1.2rem;
-}
-/* line 47, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lideres-depto .pa-lider-depto a {
-  text-decoration: none;
-  color: var(--pa-color-gray01);
-}
-/* line 52, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lideres-depto .pa-lider-depto .pa-lider-thumb {
-  border: 5px solid var(--pa-color-default-light);
-}
-/* line 56, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lideres-depto .pa-lider-depto .pa-link-perfil {
-  font-size: 1rem;
-}
-/* line 61, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lideres-depto .pa-lider-depto:hover .pa-link-perfil {
+/* line 26, assets/scss/_pa-lideres.scss */
+.pa-lideres a:hover .pa-link-perfil {
   visibility: visible !important;
-  color: var(--pa-color-default-dark);
+  color: var(--pa-color-default);
+  opacity: 1;
 }
-/* line 66, assets/scss/_pa-lideres.scss */
-.pa-lideres .pa-lideres-depto .pa-lider-depto:hover .pa-lider-thumb {
-  border: 5px solid var(--pa-color-default-dark);
+/* line 32, assets/scss/_pa-lideres.scss */
+.pa-lideres a:hover .pa-lider-thumb {
+  border: 5px solid var(--pa-color-default);
 }

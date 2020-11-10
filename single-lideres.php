@@ -60,6 +60,16 @@
 					</ul>
 				</div>
 					<?php endwhile; endif; ?>
+
+				<div class="pa-linkback text-center text-lg-left">
+					
+					<a href="<?= getTplPageURL('page-lideres') ?>" class="font-weight-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i> Voltar para página de líderes</a>
+
+				</div>
+				
+
+					
+
 			</div>
 		</div>
 	</div>
