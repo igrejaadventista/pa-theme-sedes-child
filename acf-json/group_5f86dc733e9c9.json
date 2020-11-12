@@ -16,6 +16,7 @@
                 "id": ""
             },
             "choices": {
+                "institucional": "Institucional",
                 "depto-adolescente": "Adolescente",
                 "depto-adra": "Adra",
                 "depto-afam": "AFAM",
@@ -69,5 +70,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1602719359
+    "modified": 1605184273
 }
