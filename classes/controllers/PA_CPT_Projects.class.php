@@ -1,6 +1,6 @@
 <?php
 
-class PA_CPT_Projects {
+class PaCptProjects {
 
 	public function __construct(){
 		add_action('init', [$this, 'CreatePostType']);
@@ -76,4 +76,4 @@ class PA_CPT_Projects {
 	}
 }
 
-new PA_CPT_Projects();
+$PaCptProjects = new PaCptProjects();

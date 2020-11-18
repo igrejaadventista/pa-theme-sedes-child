@@ -1,6 +1,6 @@
 <?php
 
-class PA_CPT_SliderHome {
+class PaCptSliderHome {
 
 	public function __construct(){
 		add_action('init', [$this, 'CreatePostType']);
@@ -58,4 +58,4 @@ class PA_CPT_SliderHome {
 	}
 }
 
-new PA_CPT_SliderHome();
+$PaCptSliderHome = new PaCptSliderHome();

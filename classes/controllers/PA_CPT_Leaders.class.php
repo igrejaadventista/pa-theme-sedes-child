@@ -1,6 +1,6 @@
 <?php
 
-class PA_CPT_Líderes {
+class PaCptLideres {
 
 	public function __construct(){
 		add_action('init', [$this, 'CreatePostType']);
@@ -58,4 +58,4 @@ class PA_CPT_Líderes {
 	}
 }
 
-new PA_CPT_Líderes();
+$PaCptLideres = new PaCptLideres();
