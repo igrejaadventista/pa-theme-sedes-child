@@ -25,7 +25,7 @@ if(!empty($posts)):
 						<div class="row align-items-end align-items-xl-center">
 							<div class="col col-xl-6 d-flex flex-column align-items-center align-items-xl-start justify-content-center mb-5 pb-5 mb-xl-0 pb-xl-0">
 								<small class="h6"><?php the_field('slider_text_01'); ?></small>
-								<h1 class="display-3 text-center text-xl-left my-2"><?php the_field('slider_text_02'); ?></h1>
+								<h1 class="display-3 text-center text-md-start my-2"><?php the_field('slider_text_02'); ?></h1>
 								<p class="pt-2 mb-3 pb-3 d-none d-xl-block"><?php the_field('slider_text_03'); ?></p>
 								<a href="<?php the_field('slider_button_url'); ?>" class="btn btn-primary mt-2 align-self-xl-start" style="background-color: <?php the_field('slider_button_color'); ?>; color: <?php the_field('slider_button_text_color'); ?> !important;"><?php the_field('slider_button_text'); ?></a>
 							</div>

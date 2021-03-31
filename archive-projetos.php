@@ -24,7 +24,7 @@ $loop = new WP_Query( $args );
 						<figure class="figure m-xl-0">
 							<?php echo get_the_post_thumbnail(get_the_ID(), 'full', array( 'class' => 'img-fluid rounded' )); ?>
 							<figcaption class="figure-caption w-100 rounded-bottom ">
-								<h3 class="h4 font-weight-bold pt-3"><?php the_title(); ?></h3>
+								<h3 class="h4 fw-bold pt-3"><?php the_title(); ?></h3>
 							</figcaption>
 						</figure>
 					</a>

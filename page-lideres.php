@@ -50,9 +50,9 @@
 			<div class="pa-lider-geral col col-xl-3 mb-5 text-center">
 				<a href="<?php echo get_permalink(); ?>">
 					<?php the_post_thumbnail( array(200, 200), array( 'class' => 'pa-lider-thumb rounded-circle' ) ); ?>
-					<p class="mt-4 mb-0 font-weight-bold"><?php the_title(); ?></p>
+					<p class="mt-4 mb-0 fw-bold"><?php the_title(); ?></p>
 					<p class="mb-0 font-italic"><?php the_field('lider_cargo', get_the_ID()); ?></p>
-					<p class="pa-link-perfil mb-0 font-weight-bold invisible">Ver perfil</p>
+					<p class="pa-link-perfil mb-0 fw-bold invisible">Ver perfil</p>
 				</a>
 			</div>
 			<?php 

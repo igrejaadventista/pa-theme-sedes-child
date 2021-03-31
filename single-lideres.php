@@ -39,7 +39,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="col col-xl-8">
-				<h1 class="h2 font-weight-bold"><?php the_title(); ?></h1>
+				<h1 class="h2 fw-bold"><?php the_title(); ?></h1>
 				<h5 class="mb-4"><?php the_field('lider_cargo'); ?></h5>
 				<div class="pa-lider-bio">
 					<?php the_field('lider_bibliografia'); ?>
@@ -51,19 +51,19 @@
 							$img = get_sub_field('lider_equipe_foto');
 				?>
 				<div class="pa-lider-equipe mb-5 clearfix">
-					<img src="<?php echo esc_url($img['sizes']['thumbnail']); ?>" alt="<?php the_sub_field('lider_equipe_nome'); ?>" class="pa-lider-thumb rounded-circle float-left mr-3 d-none d-xl-block" width="120" height="120">
+					<img src="<?php echo esc_url($img['sizes']['thumbnail']); ?>" alt="<?php the_sub_field('lider_equipe_nome'); ?>" class="pa-lider-thumb rounded-circle float-start me-3 d-none d-xl-block" width="120" height="120">
 					<ul class="ml-3 list-unstyled">
 						<li><h4 class="mb-0"><?php the_sub_field('lider_equipe_nome'); ?></h4></li>
 						<li class="mb-2"><em><?php the_sub_field('lider_equipe_cargo'); ?></em></li>
-						<?php if (get_sub_field('lider_equipe_email')): ?><li><a href="mailto:<?php the_sub_field('lider_equipe_email'); ?>"><i class="fas fa-envelope mr-3"></i><?php the_sub_field('lider_equipe_email'); ?></a></li><?php endif; ?>
-						<?php if (get_sub_field('lider_equipe_telefone')): ?><li><a href="tel:<?php the_sub_field('lider_equipe_telefone'); ?>"><i class="fas fa-phone mr-3"></i><?php the_sub_field('lider_equipe_telefone'); ?></a></li><?php endif; ?>
+						<?php if (get_sub_field('lider_equipe_email')): ?><li><a href="mailto:<?php the_sub_field('lider_equipe_email'); ?>"><i class="fas fa-envelope me-3"></i><?php the_sub_field('lider_equipe_email'); ?></a></li><?php endif; ?>
+						<?php if (get_sub_field('lider_equipe_telefone')): ?><li><a href="tel:<?php the_sub_field('lider_equipe_telefone'); ?>"><i class="fas fa-phone me-3"></i><?php the_sub_field('lider_equipe_telefone'); ?></a></li><?php endif; ?>
 					</ul>
 				</div>
 					<?php endwhile; endif; ?>
 
-				<div class="pa-linkback text-center text-lg-left">
+				<div class="pa-linkback text-center text-md-start">
 					
-					<a href="<?= getTplPageURL('page-lideres') ?>" class="font-weight-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i> Voltar para página de líderes</a>
+					<a href="<?= getTplPageURL('page-lideres') ?>" class="fw-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i> Voltar para página de líderes</a>
 
 				</div>
 				
