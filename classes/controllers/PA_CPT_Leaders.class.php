@@ -1,9 +1,20 @@
 <?php
 
+use WordPlate\Acf\Fields\Text;
+use WordPlate\Acf\Fields\Textarea;
+use WordPlate\Acf\Fields\Group;
+use WordPlate\Acf\Fields\Url;
+use WordPlate\Acf\Fields\Email;
+use WordPlate\Acf\Fields\Image;
+use WordPlate\Acf\Fields\Repeater;
+use WordPlate\Acf\Location;
+
+
 class PaCptLideres {
 
 	public function __construct(){
 		add_action('init', [$this, 'CreatePostType']);
+		add_action('init', [$this, 'CreateACFFields']);
 	}
 
 	function CreatePostType() {
@@ -55,6 +66,45 @@ class PaCptLideres {
 			'show_in_rest'          => true,
 		);
 		register_post_type( 'lideres', $args );
+	}
+
+	function CreateACFFields(){
+		register_extended_field_group([
+			'title' => 'Leaders',
+			'style' => 'default',
+			'fields' => [
+				Text::make('Cargo/Campo', 'lider_cargo'),
+				Textarea::make('Bibliografia', 'lider_bibliografia')
+					->newLines('br') // br or wpautop
+					->rows(8),
+				Group::make('Redes Sociais', 'lider_redes_sociais')
+					->fields([
+						Url::make('Facebook', 'lider_facebook'),
+						Url::make('Twitter', 'lider_twitter'),
+						Url::make('Instagram', 'lider_instagram'),
+						Email::make('E-mail', 'lider_email')
+					])
+					->layout('block'),
+				Repeater::make('Equipe', 'lider_equipe')
+					->fields([
+						Text::make('Nome', 'lider_equipe_nome'),
+						Text::make('Cargo', 'lider_equipe_cargo'),
+						Image::make('Foto', 'lider_equipe_foto')
+							->library('all') // all or uploadedTo
+							->height(300)
+    						->width(300)
+							->returnFormat('array') // id, url or array (default)
+							->previewSize('medium'), // thumbnail, medium or large
+						Email::make('E-mail', 'lider_equipe_email'),
+						Text::make('Telefone', 'lider_equipe_telefone'),
+					])
+					->buttonLabel('Adicionar membro')
+					->layout('table') // block, row or table
+			],
+			'location' => [
+				Location::if('post_type', 'lideres'),
+			],
+		]);
 	}
 }
 

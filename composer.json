@@ -1,0 +1,5 @@
+{
+    "require": {
+        "wordplate/acf": "^9.1"
+    }
+}

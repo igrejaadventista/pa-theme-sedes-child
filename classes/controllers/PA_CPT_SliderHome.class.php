@@ -1,9 +1,16 @@
 <?php
 
+use WordPlate\Acf\Fields\Image;
+use WordPlate\Acf\Fields\Url;
+use WordPlate\Acf\Fields\Text;
+use WordPlate\Acf\Fields\ColorPicker;
+use WordPlate\Acf\Location;
+
 class PaCptSliderHome {
 
 	public function __construct(){
 		add_action('init', [$this, 'CreatePostType']);
+		add_action('init', [$this, 'CreateACFFields']);
 	}
 
 	function CreatePostType() {
@@ -55,6 +62,36 @@ class PaCptSliderHome {
 			'show_in_rest'          => true,
 		);
 		register_post_type( 'sliders', $args );
+	}
+
+	function CreateACFFields(){
+		register_extended_field_group([
+			'title' => 'Slider-home',
+			'style' => 'default',
+			'fields' => [
+				Image::make('Imagem Desktop', 'slider_img_desktop')
+					->mimeTypes(['jpg', 'jpeg', 'png'])
+					->library('all') // all or uploadedTo
+					->returnFormat('url') // id, url or array (default)
+					->previewSize('medium'), // thumbnail, medium or large
+				Image::make('Imagem Mobile', 'slider_img_mobile')
+					->mimeTypes(['jpg', 'jpeg', 'png'])
+					->library('all') // all or uploadedTo
+					->returnFormat('url') // id, url or array (default)
+					->previewSize('medium'), // thumbnail, medium or large
+				Text::make('Linha 1 - Texto', 'slider_text_01'),
+				Text::make('Linha 2 - Texto', 'slider_text_02'),
+				Text::make('Linha 3 - Texto', 'slider_text_03'),
+				ColorPicker::make('Botão - Texto - Color', 'slider_button_text_color')
+					->defaultValue('#ffffff'),
+				ColorPicker::make('Botão - Cor', 'slider_button_color')
+					->defaultValue('#003366'),
+				Url::make('Botão - URL', 'slider_button_url'),
+			],
+			'location' => [
+				Location::if('post_type', 'sliders'),
+			],
+		]);
 	}
 }
 
