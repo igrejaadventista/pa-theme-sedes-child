@@ -10,6 +10,21 @@
 
 	require(get_template_directory() . '/components/parent/header.php');
 
+
+	function getTplPageURL($page_template){
+		$url = null;
+		$pages = get_pages(array(
+			'meta_key' => '_wp_page_template',
+			'meta_value' => $page_template
+		));
+	
+		// pconsole($pages);
+		if(isset($pages[0])) {
+			$url = get_page_link($pages[0]->ID);
+		}
+		return $url;
+	}
+
 ?>
 <section class="pa-content pa-lideres my-5">
 	<div class="container">
@@ -61,15 +76,11 @@
 				</div>
 					<?php endwhile; endif; ?>
 
-				<div class="pa-linkback text-center text-md-start">
+				<div class="pa-linkback text-center text-md-start mt-2">
 					
-					<a href="<?= getTplPageURL('page-lideres') ?>" class="fw-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i> Voltar para página de líderes</a>
+					<a href="<?= getTplPageURL('page-lideres.php') ?>" class="fw-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i> Voltar para página de líderes</a>
 
 				</div>
-				
-
-					
-
 			</div>
 		</div>
 	</div>

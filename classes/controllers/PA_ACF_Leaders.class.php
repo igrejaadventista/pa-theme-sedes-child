@@ -7,7 +7,7 @@ class PaAcfLeaders {
 
     public function __construct(){
         add_action('init', [$this, 'createACFFields']);
-        add_action( 'admin_init', [$this, 'hideEditor']);
+        // add_action( 'admin_init', [$this, 'hideEditor']);
     }
 
     function createACFFields(){
@@ -21,7 +21,7 @@ class PaAcfLeaders {
             ],
             'location' => [
                 Location::if('page_template', 'page-lideres.php'),
-            ],
+            ]
         ]);
     }
  

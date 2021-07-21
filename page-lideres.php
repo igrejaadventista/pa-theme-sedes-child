@@ -12,24 +12,16 @@
 
 ?>
 <section class="pa-content pa-lideres my-5">
-
-
 	<div class="container">
-
-
 		<div class="pa-lideres-destaque row d-flex justify-content-center">
 			<?php
 			$lider_id = array();
             $lideres = get_field('lideres_destaques');
 
-
 			pa_lideres_destaque($lideres);
             
-		
 			wp_reset_postdata(); 
 			?>
-
-
         </div>
 
         <!-- <hr class="mb-5"> -->
