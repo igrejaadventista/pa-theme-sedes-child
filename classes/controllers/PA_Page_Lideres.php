@@ -2,12 +2,6 @@
 
 function pa_lideres_destaque($lideres_id){
 
-	// pconsole($lideres_id);
-	// pconsole(empty($lideres_id));
-
-	// var_dump($lideres_id);
-	// die;
-
 	if(!empty($lideres_id)){
 		lider($lideres_id);
 	} else {

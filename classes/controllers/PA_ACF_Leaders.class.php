@@ -7,7 +7,6 @@ class PaAcfLeaders {
 
     public function __construct(){
         add_action('init', [$this, 'createACFFields']);
-        // add_action( 'admin_init', [$this, 'hideEditor']);
     }
 
     function createACFFields(){

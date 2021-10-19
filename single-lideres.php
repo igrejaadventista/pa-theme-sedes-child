@@ -18,7 +18,6 @@
 			'meta_value' => $page_template
 		));
 	
-		// pconsole($pages);
 		if(isset($pages[0])) {
 			$url = get_page_link($pages[0]->ID);
 		}
