@@ -23,8 +23,6 @@
 			wp_reset_postdata(); 
 			?>
         </div>
-
-        <!-- <hr class="mb-5"> -->
        
 		<div class="pa-lideres-geral row d-flex justify-content-center pt-5">
 			<?php

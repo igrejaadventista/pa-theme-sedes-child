@@ -34,19 +34,19 @@
 				<div class="mt-4">
 					<ul class="pa-lider-contact list-inline">
 					<?php if ($lider_social['lider_facebook']):?>
-						<li class="list-inline-item mx-2"><a href="<?= $lider_social['lider_facebook']; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="list-inline-item mx-2"><a href="<?= $lider_social['lider_facebook']; ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 					<?php endif;
 						if ($lider_social['lider_twitter']):
 					?>
-						<li class="list-inline-item mx-2"><a href="<?= $lider_social['lider_twitter']; ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item mx-2"><a href="<?= $lider_social['lider_twitter']; ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-twitter"></i></a></li>
 					<?php endif;
 						if ($lider_social['lider_instagram']):
 					?>
-						<li class="list-inline-item mx-2"><a href="<?= $lider_social['lider_instagram']; ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						<li class="list-inline-item mx-2"><a href="<?= $lider_social['lider_instagram']; ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-instagram"></i></a></li>
 					<?php endif;
 						if ($lider_social['lider_email']):
 					?>
-						<li class="list-inline-item mx-2"><a href="mailto:<?= $lider_social['lider_email']; ?>" target="_blank"><i class="fas fa-envelope"></i></a></li>
+						<li class="list-inline-item mx-2"><a href="mailto:<?= $lider_social['lider_email']; ?>" rel="noreferrer noopener" target="_blank"><i class="fas fa-envelope"></i></a></li>
 					<?php endif; ?>
 					</ul>
 				</div>
