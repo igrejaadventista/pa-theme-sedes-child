@@ -86,6 +86,8 @@ class PaCptSliderHome {
 					->defaultValue('#ffffff'),
 				ColorPicker::make('Botão - Cor', 'slider_button_color')
 					->defaultValue('#003366'),
+				Text::make('Texto botão', 'slider_button_text')
+					->defaultValue('Acessar'),
 				Url::make('Botão - URL', 'slider_button_url'),
 			],
 			'location' => [
