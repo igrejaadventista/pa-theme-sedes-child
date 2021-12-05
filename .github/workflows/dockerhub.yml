@@ -1,4 +1,4 @@
-name: Cria imagem e envia ao Docker Hub
+name: Docker hub
 
 on:
   push:
@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [docker_hook]
-
+    
 jobs:
   docker:
     runs-on: ubuntu-latest
-    steps:
+    steps:      
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
