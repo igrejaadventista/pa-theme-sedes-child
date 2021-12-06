@@ -1,10 +1,10 @@
 <?php
 
-	/* Template name: Página - Visual Composer */
+/* Template name: Page - Visual Composer */
 
-	get_header("visual-composer"); 
-	if(have_posts())
-		the_post();
+get_header("visual-composer");
+if (have_posts())
+	the_post();
 ?>
 <!-- *************************** -->
 <!-- ********* Content ********* -->
@@ -17,16 +17,16 @@
 	</section>
 </div>
 
-<?php if ( comments_open() ) { ?>
-<section class="comments">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<?php comments_template(); ?>
+<?php if (comments_open()) { ?>
+	<section class="comments">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<?php comments_template(); ?>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 <?php } ?>
 
 <!-- *************************** -->

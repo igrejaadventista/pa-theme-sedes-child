@@ -1,6 +1,6 @@
 <?php
 
-/* Template name: Page - Front Pages */
+/* Template name: Page - Front Page */
 
 get_header();
 require(get_stylesheet_directory() . '/template-parts/slider-front-page.php');
