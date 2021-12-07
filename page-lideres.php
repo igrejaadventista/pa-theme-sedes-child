@@ -39,7 +39,7 @@ require(get_template_directory() . '/components/parent/header.php');
 						<?= the_post_thumbnail(array(200, 200), array('class' => 'pa-lider-thumb rounded-circle')); ?>
 						<p class="mt-4 mb-0 fw-bold"><?= the_title(); ?></p>
 						<p class="mb-0 font-italic"><?= the_field('lider_cargo', get_the_ID()); ?></p>
-						<p class="pa-link-perfil mb-0 fw-bold invisible">Ver perfil</p>
+						<p class="pa-link-perfil mb-0 fw-bold invisible"><?php __('View profile', 'iasd'); ?></p>
 					</a>
 				</div>
 			<?php

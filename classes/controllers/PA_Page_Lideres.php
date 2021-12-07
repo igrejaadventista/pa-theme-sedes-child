@@ -2,11 +2,12 @@
 
 function pa_lideres_destaque($lideres_id)
 {
-
-	if (count($lideres_id) == 1) {
-		lider($lideres_id[0]);
-	} else {
-		lideres($lideres_id);
+	if(!empty($lideres_id)){
+		if (count($lideres_id) == 1) {
+			lider($lideres_id[0]);
+		} else {
+			lideres($lideres_id);
+		}
 	}
 }
 
@@ -83,7 +84,7 @@ function lideres($lideres_id)
 					<?= get_the_post_thumbnail($id, 'lider-thumb', array('class' => 'pa-lider-thumb rounded-circle')); ?>
 					<p class="mt-4 mb-0 fw-bold"><?= get_the_title($id); ?></p>
 					<p class="mb-0 font-italic"><?= get_field('lider_cargo', $id); ?></p>
-					<p class="pa-link-perfil mb-0 fw-bold invisible">Ver perfil</p>
+					<p class="pa-link-perfil mb-0 fw-bold invisible"><?php __('View profile', 'iasd'); ?></p>
 				</a>
 			</div>
 	<?php endforeach;
