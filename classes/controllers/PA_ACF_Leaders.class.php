@@ -16,7 +16,8 @@ class PaAcfLeaders {
             'fields' => [
                 PostObject::make('Líderes destaques', 'lideres_destaques')
                     ->postTypes(['lideres'])
-                    ->returnFormat('id'), // id or object (default)
+                    ->returnFormat('id') // id or object (default)
+                    ->allowMultiple(true),
             ],
             'location' => [
                 Location::if('page_template', 'page-lideres.php'),
