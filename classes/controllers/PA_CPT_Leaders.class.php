@@ -10,47 +10,50 @@ use WordPlate\Acf\Fields\Repeater;
 use WordPlate\Acf\Location;
 
 
-class PaCptLideres {
+class PaCptLideres
+{
 
-	public function __construct(){
+	public function __construct()
+	{
 		add_action('init', [$this, 'CreatePostType']);
 		add_action('init', [$this, 'CreateACFFields']);
 	}
 
-	function CreatePostType() {
+	function CreatePostType()
+	{
 		$labels = array(
-			'name'                  => _x( 'Líderes', 'Post Type General Name', 'pa_iasd' ),
-			'singular_name'         => _x( 'Líder', 'Post Type Singular Name', 'pa_iasd' ),
-			'menu_name'             => __( 'Líderes', 'pa_iasd' ),
-			'name_admin_bar'        => __( 'Líderes', 'pa_iasd' ),
-			'archives'              => __( 'Líderes', 'pa_iasd' ),
-			'attributes'            => __( 'Item Attributes', 'pa_iasd' ),
-			'parent_item_colon'     => __( '', 'pa_iasd' ),
-			'all_items'             => __( 'Todos os lideres', 'pa_iasd' ),
-			'add_new_item'          => __( 'Adicionar novo líder', 'pa_iasd' ),
-			'add_new'               => __( 'Adicionar Novo', 'pa_iasd' ),
-			'new_item'              => __( 'Novo', 'pa_iasd' ),
-			'edit_item'             => __( 'Editar', 'pa_iasd' ),
-			'update_item'           => __( 'Atualizar', 'pa_iasd' ),
-			'view_item'             => __( 'Visualizar líder', 'pa_iasd' ),
-			'view_items'            => __( 'Visualizar lideres', 'pa_iasd' ),
-			'search_items'          => __( 'Buscar lideres', 'pa_iasd' ),
-			'not_found'             => __( 'Não encontrado', 'pa_iasd' ),
-			'not_found_in_trash'    => __( 'Não encontrado na lixeira', 'pa_iasd' ),
-			'featured_image'        => __( 'Imagem destacada', 'pa_iasd' ),
-			'set_featured_image'    => __( 'Adicionar imagem destacada', 'pa_iasd' ),
-			'remove_featured_image' => __( 'Remover imagem destacada', 'pa_iasd' ),
-			'use_featured_image'    => __( 'Usar como imagem destacada', 'pa_iasd' ),
-			'insert_into_item'      => __( 'Inserir no item', 'pa_iasd' ),
-			'uploaded_to_this_item' => __( 'Uploaded to this item', 'pa_iasd' ),
-			'items_list'            => __( 'Items list', 'pa_iasd' ),
-			'items_list_navigation' => __( 'Items list navigation', 'pa_iasd' ),
-			'filter_items_list'     => __( 'Filter items list', 'pa_iasd' ),
+			'name'                  => _x('Líderes', 'Post Type General Name', 'pa_iasd'),
+			'singular_name'         => _x('Líder', 'Post Type Singular Name', 'pa_iasd'),
+			'menu_name'             => __('Líderes', 'pa_iasd'),
+			'name_admin_bar'        => __('Líderes', 'pa_iasd'),
+			'archives'              => __('Líderes', 'pa_iasd'),
+			'attributes'            => __('Item Attributes', 'pa_iasd'),
+			'parent_item_colon'     => __('', 'pa_iasd'),
+			'all_items'             => __('Todos os lideres', 'pa_iasd'),
+			'add_new_item'          => __('Adicionar novo líder', 'pa_iasd'),
+			'add_new'               => __('Adicionar Novo', 'pa_iasd'),
+			'new_item'              => __('Novo', 'pa_iasd'),
+			'edit_item'             => __('Editar', 'pa_iasd'),
+			'update_item'           => __('Atualizar', 'pa_iasd'),
+			'view_item'             => __('Visualizar líder', 'pa_iasd'),
+			'view_items'            => __('Visualizar lideres', 'pa_iasd'),
+			'search_items'          => __('Buscar lideres', 'pa_iasd'),
+			'not_found'             => __('Não encontrado', 'pa_iasd'),
+			'not_found_in_trash'    => __('Não encontrado na lixeira', 'pa_iasd'),
+			'featured_image'        => __('Imagem destacada', 'pa_iasd'),
+			'set_featured_image'    => __('Adicionar imagem destacada', 'pa_iasd'),
+			'remove_featured_image' => __('Remover imagem destacada', 'pa_iasd'),
+			'use_featured_image'    => __('Usar como imagem destacada', 'pa_iasd'),
+			'insert_into_item'      => __('Inserir no item', 'pa_iasd'),
+			'uploaded_to_this_item' => __('Uploaded to this item', 'pa_iasd'),
+			'items_list'            => __('Items list', 'pa_iasd'),
+			'items_list_navigation' => __('Items list navigation', 'pa_iasd'),
+			'filter_items_list'     => __('Filter items list', 'pa_iasd'),
 		);
 		$args = array(
-			'label'                 => __( 'Líder', 'pa_iasd' ),
+			'label'                 => __('Líder', 'pa_iasd'),
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'thumbnail', 'revisions' ),
+			'supports'              => array('title', 'thumbnail', 'revisions', 'editor'),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
@@ -65,10 +68,11 @@ class PaCptLideres {
 			'capability_type'       => 'page',
 			'show_in_rest'          => true,
 		);
-		register_post_type( 'lideres', $args );
+		register_post_type('lideres', $args);
 	}
 
-	function CreateACFFields(){
+	function CreateACFFields()
+	{
 		register_extended_field_group([
 			'title' => 'Leaders',
 			'style' => 'default',
@@ -92,7 +96,7 @@ class PaCptLideres {
 						Image::make('Foto', 'lider_equipe_foto')
 							->library('all') // all or uploadedTo
 							->height(300)
-    						->width(300)
+							->width(300)
 							->returnFormat('array') // id, url or array (default)
 							->previewSize('medium'), // thumbnail, medium or large
 						Email::make('E-mail', 'lider_equipe_email'),
