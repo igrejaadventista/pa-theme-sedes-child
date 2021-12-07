@@ -16,10 +16,10 @@ class PaAcfSiteMinistries {
 
     function createAcfFields(){
         register_extended_field_group([
-            'title' => 'Ministry',
+            'title' => __('Ministry select', 'iasd'),
             'style' => 'default',
             'fields' => [
-                Select::make('Departamento', 'departamento')
+                Select::make(__('Ministry', 'iasd'), 'departamento')
                     ->choices([
                         'institucional' => __('Institucional', 'iasd'),
                         'depto-adolescente' => __('Adolescente', 'iasd'),

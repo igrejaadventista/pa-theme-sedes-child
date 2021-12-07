@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-12-07 13:47-0300\n"
-"PO-Revision-Date: 2021-12-07 13:53-0300\n"
+"POT-Creation-Date: 2021-12-07 14:30-0300\n"
+"PO-Revision-Date: 2021-12-07 14:30-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -35,6 +35,14 @@ msgstr "lideres"
 #: classes/controllers/PA_CPT_Leaders.class.php:63
 msgid "Leaders"
 msgstr "Líderes"
+
+#: classes/controllers/PA_ACF_Site-ministries.class.php:19
+msgid "Ministry select"
+msgstr "Selecionar departamento"
+
+#: classes/controllers/PA_ACF_Site-ministries.class.php:22
+msgid "Ministry"
+msgstr "Departamento"
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:24
 msgid "Institucional"
@@ -89,7 +97,7 @@ msgid "Espirito de Profecia"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:37
-msgid "Evanvelismo"
+msgid "Evangelismo"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:38
@@ -274,7 +282,7 @@ msgstr "Acessar"
 msgid "Button URL"
 msgstr "URL de destino"
 
-#: classes/controllers/PA_Page_Lideres.php:86 page-lideres.php:42
+#: classes/controllers/PA_Page_Lideres.php:87 page-lideres.php:42
 msgid "View profile"
 msgstr "Ver perfil"
 
@@ -736,9 +744,6 @@ msgstr "Acessar o site"
 
 #~ msgid "editorial"
 #~ msgstr "editoria"
-
-#~ msgid "Ministry"
-#~ msgstr "Departamento"
 
 #~ msgid "Ministry, father"
 #~ msgstr "Departamento - Pai"
