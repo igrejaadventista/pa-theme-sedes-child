@@ -10,6 +10,7 @@ class PaAcfLeaders
     {
         add_action('init', [$this, 'createACFFields']);
         add_action('init', [$this, 'hideEditor']);
+        add_action('init', [$this, 'createLeadersPage']);
     }
 
     function createACFFields()
@@ -46,6 +47,26 @@ class PaAcfLeaders
         if ($template_file == 'page-lideres.php') { // edit the template name
 
             remove_post_type_support('page', 'editor');
+        }
+    }
+
+    public static function createLeadersPage()
+    {
+        $page = __('/leaders/', 'iasd');
+        $page = get_page_by_path($page);
+
+        if (!$page) {
+
+            $new_page = array(
+                'post_content'   => '',
+                'post_name'      => __('leaders', 'iasd'),
+                'post_title'     => __('Leaders', 'iasd'),
+                'post_status'    => 'publish',
+                'post_type'      => 'page',
+                'post_author'    => get_current_user_id(),
+                'page_template'  => 'page-lideres.php'
+            );
+            $page_id = wp_insert_post($new_page);
         }
     }
 }
