@@ -22,8 +22,8 @@ class PaCptLideres
 	function CreatePostType()
 	{
 		$labels = array(
-			'name'                  => _x('Leaders', 'Post Type General Name', 'iasd'),
-			'singular_name'         => _x('Leader', 'Post Type Singular Name', 'iasd'),
+			'name'                  => __('Leaders', 'iasd'),
+			'singular_name'         => __('Leader', 'iasd'),
 			'menu_name'             => __('Leaders', 'iasd'),
 			'name_admin_bar'        => __('Leaders', 'iasd'),
 			'add_new'               => __('Add New', 'iasd'),
