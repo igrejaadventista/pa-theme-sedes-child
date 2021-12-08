@@ -29,8 +29,8 @@ function getTplPageURL($page_template)
 <section class="pa-content pa-lideres my-5">
 	<div class="container">
 		<div class="pa-lider-geral row row-cols-auto mb-5">
-			<div class="col-12 col-xl-4 text-center mb-4">
-				<?php echo get_the_post_thumbnail(get_the_ID(), array(215, 215), array('class' => 'pa-lider-thumb rounded-circle mx-auto')); ?>
+			<div class="col-12 col-xl-4 text-center mb-5">
+				<?php echo get_the_post_thumbnail(get_the_ID(), array(200, 200), array('class' => 'pa-lider-thumb rounded-circle mx-auto')); ?>
 				<?php if (isset($lider_social)) : ?>
 					<div class="mt-4">
 						<ul class="pa-lider-contact list-inline">
@@ -53,7 +53,7 @@ function getTplPageURL($page_template)
 					</div>
 				<?php endif; ?>
 			</div>
-			<div class="col col-xl-8">
+			<div class="col col-xl-8 mb-5">
 				<h1 class="h2 fw-bold"><?php the_title(); ?></h1>
 				<h5 class="mb-4"><?php the_field('lider_cargo'); ?></h5>
 				<div class="pa-lider-bio">

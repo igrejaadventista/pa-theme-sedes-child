@@ -2,7 +2,7 @@
 
 function pa_lideres_destaque($lideres_id)
 {
-	if(!empty($lideres_id)){
+	if (!empty($lideres_id)) {
 		if (count($lideres_id) == 1) {
 			lider($lideres_id[0]);
 		} else {
@@ -20,7 +20,7 @@ function lider($id)
 
 	<div class="pa-lider-geral row row-cols-auto mb-5">
 		<div class="col-12 col-xl-4 text-center mb-4">
-			<?= get_the_post_thumbnail($id, 'lider-thumb', array('class' => 'pa-lider-thumb rounded-circle mx-auto')); ?>
+			<?= get_the_post_thumbnail($id, array(200, 200), array('class' => 'pa-lider-thumb rounded-circle mx-auto')); ?>
 			<div class="mt-4">
 				<ul class="pa-lider-contact list-inline">
 					<?php if ($lider_social['lider_facebook']) : ?>
@@ -81,7 +81,7 @@ function lideres($lideres_id)
 		foreach ($lideres_id as $id) : ?>
 			<div class="pa-lider-destaque col col-xl-3 my-5 text-center">
 				<a href="<?= get_permalink($id); ?>">
-					<?= get_the_post_thumbnail($id, 'lider-thumb', array('class' => 'pa-lider-thumb rounded-circle')); ?>
+					<?= get_the_post_thumbnail($id, array(200, 200), array('class' => 'pa-lider-thumb rounded-circle')); ?>
 					<p class="mt-4 mb-0 fw-bold"><?= get_the_title($id); ?></p>
 					<p class="mb-0 font-italic"><?= get_field('lider_cargo', $id); ?></p>
 					<p class="pa-link-perfil mb-0 fw-bold invisible"><?php __('View profile', 'iasd'); ?></p>
