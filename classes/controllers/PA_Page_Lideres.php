@@ -20,7 +20,14 @@ function lider($id)
 
 	<div class="pa-lider-geral row row-cols-auto mb-5">
 		<div class="col-12 col-xl-4 text-center mb-4">
-			<?= get_the_post_thumbnail($id, array(200, 200), array('class' => 'pa-lider-thumb rounded-circle mx-auto')); ?>
+			<?php 
+			$img_id = get_post_thumbnail_id($id);
+			$img_url = wp_get_attachment_image_src($img_id, 'lider-thumb');
+			
+			if ($img_url[0]){ ?>
+			<a href="<?= get_permalink($id); ?>">
+			<img src="<?= $img_url[0]; ?>" class="pa-lider-thumb rounded-circle mx-auto" alt="" loading="lazy" width="200" height="200"></a>
+			<?php } ?>
 			<div class="mt-4">
 				<ul class="pa-lider-contact list-inline">
 					<?php if ($lider_social['lider_facebook']) : ?>
@@ -42,46 +49,29 @@ function lider($id)
 			</div>
 		</div>
 		<div class="col col-xl-8">
-			<h1 class="h2 fw-bold"><?php echo esc_html(get_the_title($id)); ?></h1>
+			<h1 class="h2 fw-bold link"><a href="<?= get_permalink($id); ?>"><?php echo esc_html(get_the_title($id)); ?></a></h1>
 			<h5 class="mb-4"><?php the_field('lider_cargo', $id); ?></h5>
 			<div class="pa-lider-bio">
 				<?php the_field('lider_bibliografia', $id); ?>
 			</div>
-			<?php
-			if (have_rows('lider_equipe', $id)) :
-				echo "<hr class='my-5'>";
-				while (have_rows('lider_equipe', $id)) : the_row();
-					$img = get_sub_field('lider_equipe_foto', $id);
-			?>
-					<div class="pa-lider-equipe mb-5 clearfix">
-						<img src="<?php echo esc_url($img['sizes']['lider-thumb']); ?>" alt="<?php the_sub_field('lider_equipe_nome', $id); ?>" class="pa-lider-thumb rounded-circle float-start me-3 d-none d-xl-block" width="120" height="120">
-						<ul class="ml-3 list-unstyled">
-							<li>
-								<h4 class="mb-0"><?php the_sub_field('lider_equipe_nome', $id); ?></h4>
-							</li>
-							<li class="mb-2"><em><?php the_sub_field('lider_equipe_cargo', $id); ?></em></li>
-							<?php if (get_sub_field('lider_equipe_email', $id)) : ?><li><a href="mailto:<?php the_sub_field('lider_equipe_email', $id); ?>"><i class="fas fa-envelope me-3"></i><?php the_sub_field('lider_equipe_email', $id); ?></a></li><?php endif; ?>
-							<?php if (get_sub_field('lider_equipe_telefone', $id)) : ?><li><a href="tel:<?php the_sub_field('lider_equipe_telefone', $id); ?>"><i class="fas fa-phone me-3"></i><?php the_sub_field('lider_equipe_telefone', $id); ?></a></li><?php endif; ?>
-						</ul>
-					</div>
-
-			<?php endwhile;
-			endif; ?>
 		</div>
 		<hr class="mb-5 w-100">
 	</div>
 	<?php
 }
 
-
 function lideres($lideres_id)
 {
-
 	if ($lideres_id) {
-		foreach ($lideres_id as $id) : ?>
+		foreach ($lideres_id as $id) : 
+			$img_id = get_post_thumbnail_id($id);
+			$img_url = wp_get_attachment_image_src($img_id, 'lider-thumb');
+		?>
 			<div class="pa-lider-destaque col col-xl-3 my-5 text-center">
 				<a href="<?= get_permalink($id); ?>">
-					<?= get_the_post_thumbnail($id, array(200, 200), array('class' => 'pa-lider-thumb rounded-circle')); ?>
+					<?php if ($img_url[0]){ ?>
+					<img src="<?= $img_url[0]; ?>" class="pa-lider-thumb rounded-circle mx-auto" alt="" loading="lazy" width="200" height="200"></a>
+					<?php } ?>
 					<p class="mt-4 mb-0 fw-bold"><?= get_the_title($id); ?></p>
 					<p class="mb-0 font-italic"><?= get_field('lider_cargo', $id); ?></p>
 					<p class="pa-link-perfil mb-0 fw-bold invisible"><?php __('View profile', 'iasd'); ?></p>

@@ -24,10 +24,12 @@ require(get_template_directory() . '/components/parent/header.php');
 		<div class="pa-lideres-geral row d-flex justify-content-center pt-5">
 			<?php
 			$args = array(
-				'numberposts'	=> -1,
-				'post_type'		=> 'lideres',
-				'post_status'	=> 'publish',
-				'post__not_in' => $lideres
+				'posts_per_page' 	=> -1,
+				'post_type'			=> 'lideres',
+				'post_status'		=> 'publish',
+				'order' 			=> 'ASC',
+				'orderby' 			=> 'title',
+				'post__not_in'  	=> $lideres
 			);
 
 			$query = new WP_Query($args);

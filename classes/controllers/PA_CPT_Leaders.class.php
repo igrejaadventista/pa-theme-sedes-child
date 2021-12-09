@@ -63,11 +63,11 @@ class PaCptLideres
 			'title' => __('Leaders', 'iasd'),
 			'style' => 'default',
 			'fields' => [
-				Text::make('Cargo/Campo', 'lider_cargo'),
-				Textarea::make('Bibliografia', 'lider_bibliografia')
+				Text::make(__('Role/Field', 'iasd'), 'lider_cargo'),
+				Textarea::make(__('Biography', 'iasd'), 'lider_bibliografia')
 					->newLines('br') // br or wpautop
 					->rows(8),
-				Group::make('Redes Sociais', 'lider_redes_sociais')
+				Group::make(__('Social Netork', 'iasd'), 'lider_redes_sociais')
 					->fields([
 						Url::make('Facebook', 'lider_facebook'),
 						Url::make('Twitter', 'lider_twitter'),
@@ -75,20 +75,20 @@ class PaCptLideres
 						Email::make('E-mail', 'lider_email')
 					])
 					->layout('block'),
-				Repeater::make('Equipe', 'lider_equipe')
+				Repeater::make(__('Staff', 'iasd'), 'lider_equipe')
 					->fields([
-						Text::make('Nome', 'lider_equipe_nome'),
-						Text::make('Cargo', 'lider_equipe_cargo'),
-						Image::make('Foto', 'lider_equipe_foto')
+						Text::make(__('Name', 'iasd'), 'lider_equipe_nome'),
+						Text::make(__('Role', 'iasd'), 'lider_equipe_cargo'),
+						Image::make(__('Picture', 'iasd'), 'lider_equipe_foto')
 							->library('all') // all or uploadedTo
 							->height(300)
 							->width(300)
 							->returnFormat('array') // id, url or array (default)
 							->previewSize('medium'), // thumbnail, medium or large
-						Email::make('E-mail', 'lider_equipe_email'),
-						Text::make('Telefone', 'lider_equipe_telefone'),
+						Email::make(__('E-mail', 'iasd'), 'lider_equipe_email'),
+						Text::make(__('Telephone', 'iasd'), 'lider_equipe_telefone'),
 					])
-					->buttonLabel('Adicionar membro')
+					->buttonLabel(__('Add member', 'iasd'))
 					->layout('table') // block, row or table
 			],
 			'location' => [
