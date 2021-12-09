@@ -66,7 +66,9 @@ function getTplPageURL($page_template)
 						$img = get_sub_field('lider_equipe_foto');
 				?>
 						<div class="pa-lider-equipe mb-5 clearfix">
-							<img src="<?php echo esc_url($img['sizes']['thumbnail']); ?>" alt="<?php the_sub_field('lider_equipe_nome'); ?>" class="pa-lider-thumb rounded-circle float-start me-3 d-none d-xl-block" width="120" height="120">
+							<?php if(!empty(esc_url($img['sizes']['lider-thumb']))){ ?>
+							<img src="<?php echo esc_url($img['sizes']['lider-thumb']); ?>" alt="<?php the_sub_field('lider_equipe_nome'); ?>" class="pa-lider-thumb rounded-circle float-start me-3 d-none d-xl-block" width="120" height="120">
+							<?php } ?>
 							<ul class="ml-3 list-unstyled">
 								<li>
 									<h4 class="mb-0"><?php the_sub_field('lider_equipe_nome'); ?></h4>
@@ -81,8 +83,7 @@ function getTplPageURL($page_template)
 
 				<div class="pa-linkback text-center text-md-start mt-2">
 
-					<a href="<?= getTplPageURL('page-lideres.php') ?>" class="fw-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i><?php __('Back to leaders page', 'iasd'); ?></a>
-
+					<a href="<?= getTplPageURL('page-lideres.php') ?>" class="fw-bold text-decoration-none"><i class="fas fa-arrow-left ml-2"></i> <?php _e('Back to leaders page', 'iasd'); ?></a>
 				</div>
 			</div>
 		</div>
