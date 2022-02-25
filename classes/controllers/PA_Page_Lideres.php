@@ -18,7 +18,7 @@ function lider($id)
 	$lider_social = get_field('lider_redes_sociais', $id);
 ?>
 
-	<div class="pa-lider-geral row row-cols-auto mb-5">
+	<div class="pa-lider-geral row row-cols-auto mb-3">
 		<div class="col-12 col-xl-4 text-center mb-4">
 			<?php 
 			$img_id = get_post_thumbnail_id($id);
@@ -55,7 +55,7 @@ function lider($id)
 				<?php the_field('lider_bibliografia', $id); ?>
 			</div>
 		</div>
-		<hr class="mb-5 w-100">
+		<hr class="mt-5 w-100">
 	</div>
 	<?php
 }
@@ -67,7 +67,7 @@ function lideres($lideres_id)
 			$img_id = get_post_thumbnail_id($id);
 			$img_url = wp_get_attachment_image_src($img_id, 'lider-thumb');
 		?>
-			<div class="pa-lider-destaque col col-xl-3 my-5 text-center">
+			<div class="pa-lider-destaque col-6 col-md-3 my-5 text-center">
 				<a href="<?= get_permalink($id); ?>">
 					<?php if ($img_url[0]){ ?>
 					<img src="<?= $img_url[0]; ?>" class="pa-lider-thumb rounded-circle mx-auto" alt="" loading="lazy" width="200" height="200"></a>

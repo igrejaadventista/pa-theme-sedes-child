@@ -36,7 +36,7 @@ require(get_template_directory() . '/components/parent/header.php');
 
 			while ($query->have_posts()) : $query->the_post();
 			?>
-				<div class="pa-lider-geral col col-xl-3 mb-5 text-center">
+				<div class="pa-lider-geral col-6 col-md-3 mb-5 text-center">
 					<a href="<?= get_permalink(); ?>">
 						<?= the_post_thumbnail(array(200, 200), array('class' => 'pa-lider-thumb rounded-circle')); ?>
 						<p class="mt-4 mb-0 fw-bold"><?= the_title(); ?></p>
