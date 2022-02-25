@@ -67,7 +67,7 @@ function getTplPageURL($page_template)
 				?>
 						<div class="pa-lider-equipe mb-5 clearfix">
 							<?php if(!empty(esc_url($img['sizes']['lider-thumb']))){ ?>
-							<img src="<?php echo esc_url($img['sizes']['lider-thumb']); ?>" alt="<?php the_sub_field('lider_equipe_nome'); ?>" class="pa-lider-thumb rounded-circle float-start me-3 d-none d-xl-block" width="120" height="120">
+							<img src="<?php echo esc_url($img['sizes']['lider-thumb']); ?>" alt="<?php the_sub_field('lider_equipe_nome'); ?>" class="pa-lider-thumb rounded-circle float-start me-3 d-none d-sm-block" width="120" height="120">
 							<?php } ?>
 							<ul class="ml-3 list-unstyled">
 								<li>
