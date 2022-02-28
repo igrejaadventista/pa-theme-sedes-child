@@ -7,7 +7,7 @@ if (have_posts())
 require(get_template_directory() . '/components/parent/header.php');
 ?>
 <div class="pa-single-projects">
-	<article class="pa-single-project xcontainer">
+	<article class="pa-single-project container">
 		<div class="row">
 			<div class="col">
 				<?php the_content(); ?>
