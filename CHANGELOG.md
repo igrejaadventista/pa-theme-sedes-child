@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.0.5] - 2022-02-25
+
+### Fix  
+- Ajustando tradução do termo: "Todos los ítems"
+
 ## [1.0.4] - 2022-02-25
 
 ### Fix  
