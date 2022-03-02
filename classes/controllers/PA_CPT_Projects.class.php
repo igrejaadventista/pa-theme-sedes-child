@@ -6,7 +6,6 @@ class PaCptProjects
 	public function __construct()
 	{
 		add_action('init', [$this, 'CreatePostType']);
-		// add_action('init', [$this, 'RegisterSidebars']);
 	}
 
 	function CreatePostType()
@@ -43,25 +42,10 @@ class PaCptProjects
 			'publicly_queryable'    => true,
 			'capability_type'       => 'page',
 			'show_in_rest'          => true,
+			'rewrite'            => ['slug' => sanitize_title(__('project', 'iasd'))],
+
 		);
-		register_post_type( __('projects','iasd'), $args );
-	}
-
-
-	function RegisterSidebars() {
-		$projetos = query_posts( array('post_type' => 'projetos') );
-		foreach($projetos as $projeto) {
-			$slug = $projeto->post_name;
-			register_sidebar( array(
-				'name'	=> __( 'Projeto - '.$projeto->post_title.'', 'iasd'),
-				'id'	=> 'projeto-'.$slug,
-				'before_widget' => '<div class="pa-widget %2$s col">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h2>',
-				'after_title'   => '</h2>',
-			) );
-		}
-		wp_reset_query();
+		register_post_type('projects', $args);
 	}
 }
 
