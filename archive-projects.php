@@ -3,7 +3,7 @@
 get_header();
 
 $args = array(
-	'post_type' => 'projetos',
+	'post_type' => 'projects',
 	'post_status' => 'publish',
 );
 
