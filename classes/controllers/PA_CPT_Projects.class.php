@@ -5,7 +5,8 @@ class PaCptProjects
 
 	public function __construct()
 	{
-		add_action('init', [$this, 'CreatePostType']);
+		add_action('init', [$this, 'CreatePostType'], 10, 2);
+		add_filter('register_taxonomy_args', 'ChanteXttProjecTaxonomySlug', 10, 2);
 	}
 
 	function CreatePostType()
@@ -42,10 +43,17 @@ class PaCptProjects
 			'publicly_queryable'    => true,
 			'capability_type'       => 'page',
 			'show_in_rest'          => true,
-			'rewrite'            => ['slug' => sanitize_title(__('project', 'iasd'))],
-
+			'rewrite'				=> array('slug' => __('project-slug', 'iasd'))
 		);
 		register_post_type('projects', $args);
+	}
+
+	function ChanteXttProjecTaxonomySlug($args, $taxonomy)
+	{
+		if ('xtt-pa-projetos' === $taxonomy) {
+			$args['rewrite']['slug'] = 'xtt-pa-projetos';
+		}
+		return $args;
 	}
 }
 
