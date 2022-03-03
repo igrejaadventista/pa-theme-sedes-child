@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-03-02 13:32-0300\n"
-"PO-Revision-Date: 2022-03-02 13:33-0300\n"
+"POT-Creation-Date: 2022-03-03 09:06-0300\n"
+"PO-Revision-Date: 2022-03-03 09:06-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -158,55 +158,55 @@ msgid "Leader"
 msgstr "Líder"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:29
-#: classes/controllers/PA_CPT_Projects.class.php:18
+#: classes/controllers/PA_CPT_Projects.class.php:19
 #: classes/controllers/PA_CPT_SliderHome.class.php:23
 msgid "Add New"
 msgstr "Adicionar novo"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:30
-#: classes/controllers/PA_CPT_Projects.class.php:19
+#: classes/controllers/PA_CPT_Projects.class.php:20
 #: classes/controllers/PA_CPT_SliderHome.class.php:24
 msgid "Add New Item"
 msgstr "Adicionar novo item"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:31
-#: classes/controllers/PA_CPT_Projects.class.php:20
+#: classes/controllers/PA_CPT_Projects.class.php:21
 #: classes/controllers/PA_CPT_SliderHome.class.php:25
 msgid "New item"
 msgstr "Novo item"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:32
-#: classes/controllers/PA_CPT_Projects.class.php:21
+#: classes/controllers/PA_CPT_Projects.class.php:22
 #: classes/controllers/PA_CPT_SliderHome.class.php:26
 msgid "Edit item"
 msgstr "Editar item"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:33
-#: classes/controllers/PA_CPT_Projects.class.php:22
+#: classes/controllers/PA_CPT_Projects.class.php:23
 #: classes/controllers/PA_CPT_SliderHome.class.php:27
 msgid "View item"
 msgstr "Visualizar item"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:34
-#: classes/controllers/PA_CPT_Projects.class.php:23
+#: classes/controllers/PA_CPT_Projects.class.php:24
 #: classes/controllers/PA_CPT_SliderHome.class.php:28
 msgid "All items"
 msgstr "Todos os itens"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:35
-#: classes/controllers/PA_CPT_Projects.class.php:24
+#: classes/controllers/PA_CPT_Projects.class.php:25
 #: classes/controllers/PA_CPT_SliderHome.class.php:29
 msgid "Search item"
 msgstr "Buscar item"
 
 #: classes/controllers/PA_CPT_Leaders.class.php:36
-#: classes/controllers/PA_CPT_Projects.class.php:25
+#: classes/controllers/PA_CPT_Projects.class.php:26
 #: classes/controllers/PA_CPT_SliderHome.class.php:30
 msgid "Not found."
 msgstr "Nenhuma correspondência encontrada."
 
 #: classes/controllers/PA_CPT_Leaders.class.php:37
-#: classes/controllers/PA_CPT_Projects.class.php:26
+#: classes/controllers/PA_CPT_Projects.class.php:27
 #: classes/controllers/PA_CPT_SliderHome.class.php:31
 msgid "Not found in Trash."
 msgstr "Nada foi encontrado na lixeira."
@@ -251,19 +251,19 @@ msgstr "Telefone"
 msgid "Add member"
 msgstr "Adicionar membro"
 
-#: classes/controllers/PA_CPT_Projects.class.php:14
-#: classes/controllers/PA_CPT_Projects.class.php:16
+#: classes/controllers/PA_CPT_Projects.class.php:15
 #: classes/controllers/PA_CPT_Projects.class.php:17
+#: classes/controllers/PA_CPT_Projects.class.php:18
 msgid "Projects"
 msgstr "Projetos"
 
-#: classes/controllers/PA_CPT_Projects.class.php:15
-#: classes/controllers/PA_CPT_Projects.class.php:29
+#: classes/controllers/PA_CPT_Projects.class.php:16
+#: classes/controllers/PA_CPT_Projects.class.php:30
 msgid "Project"
 msgstr "Projeto"
 
-#: classes/controllers/PA_CPT_Projects.class.php:45
-msgid "project"
+#: classes/controllers/PA_CPT_Projects.class.php:46
+msgid "project-slug"
 msgstr "projeto"
 
 #: classes/controllers/PA_CPT_SliderHome.class.php:18
@@ -326,40 +326,23 @@ msgstr "Ver perfil"
 msgid "Back to leaders page"
 msgstr "Voltar para a página de líderes"
 
-#: storage/views/1/c0b6fa4988d89e8b6b446a760c55fb67c73c0194.php:3
-#: storage/views/1/c0b6fa4988d89e8b6b446a760c55fb67c73c0194.php:5
-#: storage/views/8/19744ac3eced7aec4e17738ca16a12444340a256.php:2
-#: storage/views/8/1f2015bfae63f6228a8fa87a74b4270da778ec99.php:2
-#: storage/views/8/2a50c15d5859ae476996294e8a2a9f7704cad55f.php:2
-#: storage/views/8/c041eb3f53bcdd6c8bc994543b35422240a78630.php:2
-#: storage/views/8/c0b6fa4988d89e8b6b446a760c55fb67c73c0194.php:3
-#: storage/views/8/c0b6fa4988d89e8b6b446a760c55fb67c73c0194.php:5
-#: storage/views/8/d0994df581ff449effac7e569cf41d6641b39bbc.php:2
-#: storage/views/8/efd1d9ad54d7f87b88bbce05a10034ac018a8cfa.php:2
-#: storage/views/8/f0723cc26c1e9e50a0fd7f85882c5a062276c0fa.php:3
-#: storage/views/8/f0723cc26c1e9e50a0fd7f85882c5a062276c0fa.php:5
-msgid "Illustrative image of the front end of the block."
-msgstr "Imagem ilustrativa."
+#~ msgid "Illustrative image of the front end of the block."
+#~ msgstr "Imagem ilustrativa."
 
-#: storage/views/8/c041eb3f53bcdd6c8bc994543b35422240a78630.php:7
-msgid "Finding a church"
-msgstr "Encontre uma igreja"
+#~ msgid "Finding a church"
+#~ msgstr "Encontre uma igreja"
 
-#: storage/views/8/c041eb3f53bcdd6c8bc994543b35422240a78630.php:8
-msgid "Adventist churches that are located in the South American Division."
-msgstr "Busque uma Igreja Adventista localizada na América do Sul."
+#~ msgid "Adventist churches that are located in the South American Division."
+#~ msgstr "Busque uma Igreja Adventista localizada na América do Sul."
 
-#: storage/views/8/c041eb3f53bcdd6c8bc994543b35422240a78630.php:12
-msgid "Church search"
-msgstr "Buscar igreja"
+#~ msgid "Church search"
+#~ msgstr "Buscar igreja"
 
-#: storage/views/8/c041eb3f53bcdd6c8bc994543b35422240a78630.php:14
-msgid "Search by Postcode, city, neighborhood."
-msgstr "Buscar por CEP, cidade ou bairro."
+#~ msgid "Search by Postcode, city, neighborhood."
+#~ msgstr "Buscar por CEP, cidade ou bairro."
 
-#: storage/views/8/c041eb3f53bcdd6c8bc994543b35422240a78630.php:17
-msgid "Search"
-msgstr "Buscar"
+#~ msgid "Search"
+#~ msgstr "Buscar"
 
 #~ msgid "Projeto - "
 #~ msgstr "Projeto - "
