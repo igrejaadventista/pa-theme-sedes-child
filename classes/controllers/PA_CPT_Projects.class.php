@@ -6,7 +6,7 @@ class PaCptProjects
 	public function __construct()
 	{
 		add_action('init', [$this, 'CreatePostType'], 10, 2);
-		add_filter('register_taxonomy_args', 'ChanteXttProjecTaxonomySlug', 10, 2);
+		add_filter('register_taxonomy_args', [$this, 'ChangeXttProjecTaxonomySlug'], 10, 2);
 	}
 
 	function CreatePostType()
@@ -48,7 +48,7 @@ class PaCptProjects
 		register_post_type('projects', $args);
 	}
 
-	function ChanteXttProjecTaxonomySlug($args, $taxonomy)
+	function ChangeXttProjecTaxonomySlug($args, $taxonomy)
 	{
 		if ('xtt-pa-projetos' === $taxonomy) {
 			$args['rewrite']['slug'] = 'xtt-pa-projetos';
