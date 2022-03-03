@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.0.10] - 2022-03-03
+
+### Fix
+
+- Ajusta o formato de chamada do metodo dentro da classe PaCptProjects.
+
 ## [1.0.9] - 2022-03-03
 
 ### Fix
