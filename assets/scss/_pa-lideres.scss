@@ -2,6 +2,7 @@
   .pa-lider-thumb {
     border: 5px solid var(--pa-color-default-aux);
     transition: border 0.5s;
+    object-fit: cover;
   }
 
   .pa-linkback,
