@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.12] - 2022-03-12
+
+### Fix
+
+- Forcando o tamanho da imagem na classe pa-lider-thumb na página de lideres.
+
 ## [1.0.11] - 2022-03-11
 
 ### Fix
