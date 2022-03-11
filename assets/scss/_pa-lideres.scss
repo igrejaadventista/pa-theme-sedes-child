@@ -3,6 +3,8 @@
     border: 5px solid var(--pa-color-default-aux);
     transition: border 0.5s;
     object-fit: cover;
+    width: 200px !important;
+    height: 200px !important;
   }
 
   .pa-linkback,
