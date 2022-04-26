@@ -43,7 +43,6 @@ require(get_template_directory() . '/components/parent/header.php');
 					<p class="mt-4 mb-0 fw-bold"><?= the_title(); ?></p>
 					<p class="mb-0 font-italic"><?= the_field('lider_cargo', get_the_ID()); ?></p>
 					<p class="pa-link-perfil mb-0 fw-bold invisible"><?php __('View profile', 'iasd'); ?></p>
-					</a>
 				</div>
 			<?php
 			endwhile;

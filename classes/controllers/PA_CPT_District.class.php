@@ -1,0 +1,156 @@
+<?php
+
+use WordPlate\Acf\Fields\Text;
+use WordPlate\Acf\Fields\Textarea;
+use WordPlate\Acf\Fields\Group;
+use WordPlate\Acf\Fields\Url;
+use WordPlate\Acf\Fields\Email;
+use WordPlate\Acf\Fields\Image;
+use WordPlate\Acf\Fields\Repeater;
+use WordPlate\Acf\Location;
+
+
+class PaCptDistricts
+{
+
+    public function __construct()
+    {
+        add_action('init', [$this, 'CreatePostType']);
+        add_action('init', [$this, 'CreateACFFields']);
+        add_action('init', [$this, 'RegisterTaxonomyDistricts']);
+    }
+
+    function CreatePostType()
+    {
+        $labels = array(
+            'name'                  => __('Districts', 'iasd'),
+            'singular_name'         => __('District', 'iasd'),
+            'menu_name'             => __('Districts', 'iasd'),
+            'name_admin_bar'        => __('Districts', 'iasd'),
+            'add_new'               => __('Add New', 'iasd'),
+            'add_new_item'          => __('Add New Item', 'iasd'),
+            'new_item'              => __('New item', 'iasd'),
+            'edit_item'             => __('Edit item', 'iasd'),
+            'view_item'             => __('View item', 'iasd'),
+            'all_items'             => __('All items', 'iasd'),
+            'search_items'          => __('Search item', 'iasd'),
+            'not_found'             => __('Not found.', 'iasd'),
+            'not_found_in_trash'    => __('Not found in Trash.', 'iasd'),
+        );
+        $args = array(
+            'label'                 => __('District', 'iasd'),
+            'labels'                => $labels,
+            'supports'              => array('title', 'thumbnail', 'revisions'),
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 5,
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => false,
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'post',
+            'show_in_rest'          => true,
+        );
+        register_post_type('districts', $args);
+    }
+
+    function CreateACFFields()
+    {
+        register_extended_field_group([
+            'title' => __('Districts', 'iasd'),
+            'style' => 'default',
+            'fields' => [
+                Repeater::make(__('Churches', 'iasd'), 'churches')
+                    ->fields([
+                        Text::make(__('Name', 'iasd'), 'church_nome'),
+                        Image::make(__('Picture', 'iasd'), 'church_foto')
+                            ->library('all') // all or uploadedTo
+                            ->height(300)
+                            ->width(300)
+                            ->returnFormat('array') // id, url or array (default)
+                            ->previewSize('medium'), // thumbnail, medium or large
+                        Textarea::make(__('Address', 'iasd'), 'church_address'),
+                        Group::make(__('Church Netork', 'iasd'), 'church_netork')
+                            ->fields([
+                                Url::make('Facebook', 'district_facebook'),
+                                Url::make('Youtube', 'district_youtube'),
+                                Url::make('Instagram', 'district_instagram'),
+                                Url::make('Google Maps', 'district_maps'),
+                                Url::make('Waze', 'district_waze'),
+                                Email::make('E-mail', 'district_email')
+                            ])
+                            ->layout('block')
+                    ])
+                    ->buttonLabel(__('Add church', 'iasd'))
+                    ->layout('table'), // block, row or table
+
+                Repeater::make(__('Shepherds', 'iasd'), 'shepherds')
+                    ->fields([
+                        Text::make(__('Name', 'iasd'), 'shepherd_nome'),
+                        Image::make(__('Picture', 'iasd'), 'shepherd_foto')
+                            ->library('all') // all or uploadedTo
+                            ->height(300)
+                            ->width(300)
+                            ->returnFormat('array') // id, url or array (default)
+                            ->previewSize('medium'), // thumbnail, medium or large
+                        Group::make(__('Shepherd Netork', 'iasd'), 'shepherd_netork')
+                            ->fields([
+                                Url::make('Facebook', 'shepherd_facebook'),
+                                Url::make('Instagram', 'shepherd_instagram'),
+                                Url::make('Twitter', 'shepherd_twitter'),
+                                Email::make('E-mail', 'shepherd_email')
+                            ])
+                            ->layout('block')
+                    ])
+                    ->buttonLabel(__('Add church', 'iasd'))
+                    ->layout('table') // block, row or table
+
+            ],
+            'location' => [
+                Location::if('post_type', 'districts'),
+            ],
+        ]);
+    }
+
+    function RegisterTaxonomyDistricts()
+    {
+
+        $labels = array(
+            'name'              => __('Region', 'webdsa'),
+            'singular_name'     => __('Region', 'webdsa'),
+            'search_items'      => __('Search', 'webdsa'),
+            'all_items'         => __('All itens', 'webdsa'),
+            'parent_item'       => __('Region', 'webdsa') . ', father',
+            'parent_item_colon' => __('Region', 'webdsa') . ', father',
+            'edit_item'         => __('Edit', 'webdsa'),
+            'update_item'       => __('Update', 'webdsa'),
+            'add_new_item'      => __('Add new', 'webdsa'),
+            'new_item_name'     => __('New', 'webdsa'),
+            'menu_name'         => __('Region', 'webdsa'),
+        );
+
+        $args   = array(
+            'hierarchical'        => true, // make it hierarchical (like categories)
+            'labels'              => $labels,
+            'show_ui'             => true,
+            'show_admin_column'   => true,
+            'query_var'           => true,
+            'rewrite'             => array('slug' => sanitize_title(__('Region', 'webdsa'))),
+            'public'              => true,
+            'show_in_rest'        => true, // add support for Gutenberg editor
+            // 'capabilities'        => array(
+            //   'edit_terms'        => false,
+            //   'delete_terms'      => false,
+            // )
+        );
+
+        register_taxonomy('xtt-pa-region', ['districts'], $args);
+    }
+}
+
+
+$PaCptdistricts = new PaCptdistricts();
