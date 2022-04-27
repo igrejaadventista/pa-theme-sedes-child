@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2022-04-27 11:35-0300\n"
-"PO-Revision-Date: 2022-04-27 11:35-0300\n"
+"PO-Revision-Date: 2022-04-27 11:50-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -130,7 +130,7 @@ msgstr "Mujer"
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:45
 msgid "Música"
-msgstr ""
+msgstr "Musica"
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:46
 msgid "Publicações"
@@ -157,12 +157,12 @@ msgstr "Voluntarios"
 #: classes/controllers/PA_CPT_District.class.php:29
 #: classes/controllers/PA_CPT_District.class.php:64
 msgid "Districts"
-msgstr ""
+msgstr "Distritos"
 
 #: classes/controllers/PA_CPT_District.class.php:27
 #: classes/controllers/PA_CPT_District.class.php:41 single-districts.php:31
 msgid "District"
-msgstr ""
+msgstr "Distrito"
 
 #: classes/controllers/PA_CPT_District.class.php:30
 #: classes/controllers/PA_CPT_Leaders.class.php:29
