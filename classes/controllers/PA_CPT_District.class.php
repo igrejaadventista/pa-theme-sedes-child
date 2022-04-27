@@ -76,9 +76,7 @@ class PaCptDistricts
                         Textarea::make(__('Address', 'iasd'), 'church_address'),
                         Group::make(__('Church Netork', 'iasd'), 'church_netork')
                             ->fields([
-                                Url::make('Facebook', 'district_facebook'),
                                 Url::make('Youtube', 'district_youtube'),
-                                Url::make('Instagram', 'district_instagram'),
                                 Url::make('Google Maps', 'district_maps'),
                                 Url::make('Waze', 'district_waze'),
                                 Email::make('E-mail', 'district_email')
