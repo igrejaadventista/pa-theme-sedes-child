@@ -41,7 +41,7 @@ if (have_posts())
             <div class="col-12 col-xl-4 mb-5">
                 <h2 class="mb-4"><?= _e('Shepherd', 'iasd') ?></h2>
                 <?php
-                $shepherds = get_field('shepherds');
+                $shepherds = get_field('shepherd');
                 if ($shepherds) {
                     foreach ($shepherds as $index => $shepherd) {
                         $img = $shepherd['shepherd_foto'];
