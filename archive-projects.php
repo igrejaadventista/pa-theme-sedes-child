@@ -5,6 +5,8 @@ get_header();
 $args = array(
 	'post_type' => 'projects',
 	'post_status' => 'publish',
+	'posts_per_page' => -1
+
 );
 
 $loop = new WP_Query($args);
