@@ -8,6 +8,7 @@ use WordPlate\Acf\Fields\Email;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Repeater;
 use WordPlate\Acf\Location;
+use WordPlate\Acf\Fields\Tab;
 
 
 class PaCptDistricts
@@ -64,6 +65,7 @@ class PaCptDistricts
             'title' => __('Districts', 'iasd'),
             'style' => 'default',
             'fields' => [
+                Tab::make(__('Churches', 'iasd')),
                 Repeater::make(__('Churches', 'iasd'), 'churches')
                     ->fields([
                         Text::make(__('Name', 'iasd'), 'church_nome'),
@@ -72,7 +74,7 @@ class PaCptDistricts
                             ->height(300)
                             ->width(300)
                             ->returnFormat('array') // id, url or array (default)
-                            ->previewSize('medium'), // thumbnail, medium or large
+                            ->previewSize('thumbnail'), // thumbnail, medium or large
                         Textarea::make(__('Address', 'iasd'), 'church_address'),
                         Group::make(__('Church Netork', 'iasd'), 'church_netork')
                             ->fields([
@@ -84,8 +86,9 @@ class PaCptDistricts
                             ->layout('block')
                     ])
                     ->buttonLabel(__('Add church', 'iasd'))
-                    ->layout('table'), // block, row or table
+                    ->layout('row'), // block, row or table
 
+                Tab::make(__('Shepherds', 'iasd')),
                 Repeater::make(__('Shepherds', 'iasd'), 'shepherds')
                     ->fields([
                         Text::make(__('Name', 'iasd'), 'shepherd_nome'),
@@ -94,7 +97,7 @@ class PaCptDistricts
                             ->height(300)
                             ->width(300)
                             ->returnFormat('array') // id, url or array (default)
-                            ->previewSize('medium'), // thumbnail, medium or large
+                            ->previewSize('thumbnail'), // thumbnail, medium or large
                         Group::make(__('Shepherd Netork', 'iasd'), 'shepherd_netork')
                             ->fields([
                                 Url::make('Facebook', 'shepherd_facebook'),
@@ -105,7 +108,8 @@ class PaCptDistricts
                             ->layout('block')
                     ])
                     ->buttonLabel(__('Add church', 'iasd'))
-                    ->layout('table') // block, row or table
+                    ->layout('row') // block, row or table
+
 
             ],
             'location' => [
