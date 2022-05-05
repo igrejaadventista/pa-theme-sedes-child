@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-04-27 11:45-0300\n"
-"PO-Revision-Date: 2022-04-27 11:48-0300\n"
+"POT-Creation-Date: 2022-05-05 16:38-0300\n"
+"PO-Revision-Date: 2022-05-05 16:48-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -152,148 +152,156 @@ msgstr ""
 msgid "Voluntários"
 msgstr ""
 
-#: classes/controllers/PA_CPT_District.class.php:26
-#: classes/controllers/PA_CPT_District.class.php:28
+#: classes/controllers/PA_CPT_District.class.php:27
 #: classes/controllers/PA_CPT_District.class.php:29
-#: classes/controllers/PA_CPT_District.class.php:64
+#: classes/controllers/PA_CPT_District.class.php:30
+#: classes/controllers/PA_CPT_District.class.php:65
 msgid "Districts"
 msgstr "Distritos"
 
-#: classes/controllers/PA_CPT_District.class.php:27
-#: classes/controllers/PA_CPT_District.class.php:41 single-districts.php:31
+#: classes/controllers/PA_CPT_District.class.php:28
+#: classes/controllers/PA_CPT_District.class.php:42 single-districts.php:31
 msgid "District"
 msgstr "Distrito"
 
-#: classes/controllers/PA_CPT_District.class.php:30
+#: classes/controllers/PA_CPT_District.class.php:31
 #: classes/controllers/PA_CPT_Leaders.class.php:29
 #: classes/controllers/PA_CPT_Projects.class.php:19
 #: classes/controllers/PA_CPT_SliderHome.class.php:23
 msgid "Add New"
 msgstr "Adicionar novo"
 
-#: classes/controllers/PA_CPT_District.class.php:31
+#: classes/controllers/PA_CPT_District.class.php:32
 #: classes/controllers/PA_CPT_Leaders.class.php:30
 #: classes/controllers/PA_CPT_Projects.class.php:20
 #: classes/controllers/PA_CPT_SliderHome.class.php:24
 msgid "Add New Item"
 msgstr "Adicionar novo item"
 
-#: classes/controllers/PA_CPT_District.class.php:32
+#: classes/controllers/PA_CPT_District.class.php:33
 #: classes/controllers/PA_CPT_Leaders.class.php:31
 #: classes/controllers/PA_CPT_Projects.class.php:21
 #: classes/controllers/PA_CPT_SliderHome.class.php:25
 msgid "New item"
 msgstr "Novo item"
 
-#: classes/controllers/PA_CPT_District.class.php:33
+#: classes/controllers/PA_CPT_District.class.php:34
 #: classes/controllers/PA_CPT_Leaders.class.php:32
 #: classes/controllers/PA_CPT_Projects.class.php:22
 #: classes/controllers/PA_CPT_SliderHome.class.php:26
 msgid "Edit item"
 msgstr "Editar item"
 
-#: classes/controllers/PA_CPT_District.class.php:34
+#: classes/controllers/PA_CPT_District.class.php:35
 #: classes/controllers/PA_CPT_Leaders.class.php:33
 #: classes/controllers/PA_CPT_Projects.class.php:23
 #: classes/controllers/PA_CPT_SliderHome.class.php:27
 msgid "View item"
 msgstr "Visualizar item"
 
-#: classes/controllers/PA_CPT_District.class.php:35
+#: classes/controllers/PA_CPT_District.class.php:36
 #: classes/controllers/PA_CPT_Leaders.class.php:34
 #: classes/controllers/PA_CPT_Projects.class.php:24
 #: classes/controllers/PA_CPT_SliderHome.class.php:28
 msgid "All items"
 msgstr "Todos os itens"
 
-#: classes/controllers/PA_CPT_District.class.php:36
+#: classes/controllers/PA_CPT_District.class.php:37
 #: classes/controllers/PA_CPT_Leaders.class.php:35
 #: classes/controllers/PA_CPT_Projects.class.php:25
 #: classes/controllers/PA_CPT_SliderHome.class.php:29
 msgid "Search item"
 msgstr "Buscar item"
 
-#: classes/controllers/PA_CPT_District.class.php:37
+#: classes/controllers/PA_CPT_District.class.php:38
 #: classes/controllers/PA_CPT_Leaders.class.php:36
 #: classes/controllers/PA_CPT_Projects.class.php:26
 #: classes/controllers/PA_CPT_SliderHome.class.php:30
 msgid "Not found."
 msgstr "Nenhuma correspondência encontrada."
 
-#: classes/controllers/PA_CPT_District.class.php:38
+#: classes/controllers/PA_CPT_District.class.php:39
 #: classes/controllers/PA_CPT_Leaders.class.php:37
 #: classes/controllers/PA_CPT_Projects.class.php:27
 #: classes/controllers/PA_CPT_SliderHome.class.php:31
 msgid "Not found in Trash."
 msgstr "Nada foi encontrado na lixeira."
 
-#: classes/controllers/PA_CPT_District.class.php:67 single-districts.php:93
+#: classes/controllers/PA_CPT_District.class.php:68
+msgid "Tab churches"
+msgstr "Aba Igrejas"
+
+#: classes/controllers/PA_CPT_District.class.php:69 single-districts.php:94
 msgid "Churches"
 msgstr "Igrejas"
 
-#: classes/controllers/PA_CPT_District.class.php:69
-#: classes/controllers/PA_CPT_District.class.php:91
+#: classes/controllers/PA_CPT_District.class.php:71
+#: classes/controllers/PA_CPT_District.class.php:94
 #: classes/controllers/PA_CPT_Leaders.class.php:80
 msgid "Name"
 msgstr "Nome"
 
-#: classes/controllers/PA_CPT_District.class.php:70
-#: classes/controllers/PA_CPT_District.class.php:92
+#: classes/controllers/PA_CPT_District.class.php:72
+#: classes/controllers/PA_CPT_District.class.php:95
 #: classes/controllers/PA_CPT_Leaders.class.php:82
 msgid "Picture"
 msgstr "Foto"
 
-#: classes/controllers/PA_CPT_District.class.php:76
+#: classes/controllers/PA_CPT_District.class.php:78
 msgid "Address"
 msgstr "Endereço"
 
-#: classes/controllers/PA_CPT_District.class.php:77
+#: classes/controllers/PA_CPT_District.class.php:79
 msgid "Church Netork"
 msgstr "Igreja Netork"
 
-#: classes/controllers/PA_CPT_District.class.php:86
-#: classes/controllers/PA_CPT_District.class.php:107
+#: classes/controllers/PA_CPT_District.class.php:88
+#: classes/controllers/PA_CPT_District.class.php:110
 msgid "Add church"
 msgstr "Adicionar igreja"
 
-#: classes/controllers/PA_CPT_District.class.php:89
+#: classes/controllers/PA_CPT_District.class.php:91
+msgid "Tab shepherds"
+msgstr "Aba pastores"
+
+#: classes/controllers/PA_CPT_District.class.php:92
 msgid "Shepherds"
 msgstr "Pastores"
 
-#: classes/controllers/PA_CPT_District.class.php:98
+#: classes/controllers/PA_CPT_District.class.php:101
 msgid "Shepherd Netork"
 msgstr "Pastor Netork"
 
-#: classes/controllers/PA_CPT_District.class.php:121
-#: classes/controllers/PA_CPT_District.class.php:122
 #: classes/controllers/PA_CPT_District.class.php:125
 #: classes/controllers/PA_CPT_District.class.php:126
-#: classes/controllers/PA_CPT_District.class.php:131
-#: classes/controllers/PA_CPT_District.class.php:140
+#: classes/controllers/PA_CPT_District.class.php:129
+#: classes/controllers/PA_CPT_District.class.php:130
+#: classes/controllers/PA_CPT_District.class.php:135
+#: classes/controllers/PA_CPT_District.class.php:144
 msgid "Region"
 msgstr "Região"
 
-#: classes/controllers/PA_CPT_District.class.php:123
+#: classes/controllers/PA_CPT_District.class.php:127
 msgid "Search"
 msgstr "Buscar"
 
-#: classes/controllers/PA_CPT_District.class.php:124
+#: classes/controllers/PA_CPT_District.class.php:128
 msgid "All itens"
 msgstr "Todos os itens"
 
-#: classes/controllers/PA_CPT_District.class.php:127
+#: classes/controllers/PA_CPT_District.class.php:131
 msgid "Edit"
 msgstr "Edigar"
 
-#: classes/controllers/PA_CPT_District.class.php:128
+#: classes/controllers/PA_CPT_District.class.php:132
 msgid "Update"
 msgstr "Atualizar"
 
-#: classes/controllers/PA_CPT_District.class.php:129
+#: classes/controllers/PA_CPT_District.class.php:133
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: classes/controllers/PA_CPT_District.class.php:130
+#: classes/controllers/PA_CPT_District.class.php:134
 msgid "New"
 msgstr "Novo"
 

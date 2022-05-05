@@ -65,7 +65,7 @@ class PaCptDistricts
             'title' => __('Districts', 'iasd'),
             'style' => 'default',
             'fields' => [
-                Tab::make(__('Churches', 'iasd')),
+                Tab::make(__('Tab churches', 'iasd')),
                 Repeater::make(__('Churches', 'iasd'), 'churches')
                     ->fields([
                         Text::make(__('Name', 'iasd'), 'church_nome'),
@@ -88,7 +88,7 @@ class PaCptDistricts
                     ->buttonLabel(__('Add church', 'iasd'))
                     ->layout('row'), // block, row or table
 
-                Tab::make(__('Shepherds', 'iasd')),
+                Tab::make(__('Tab shepherds', 'iasd')),
                 Repeater::make(__('Shepherds', 'iasd'), 'shepherds')
                     ->fields([
                         Text::make(__('Name', 'iasd'), 'shepherd_nome'),
@@ -113,8 +113,8 @@ class PaCptDistricts
 
             ],
             'location' => [
-                Location::if('post_type', 'districts'),
-            ],
+                Location::if('post_type', 'districts')
+            ]
         ]);
     }
 
