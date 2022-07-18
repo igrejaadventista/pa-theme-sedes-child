@@ -44,6 +44,7 @@ class PaAcfSiteMinistries {
                         'depto-mulher' => __('Mulher', 'iasd'),
                         'depto-musica' => __('Música', 'iasd'),
                         'depto-publicacoes' => __('Publicações', 'iasd'),
+                        'depto-recepcao' => __('Recepção', 'iasd'),
                         'depto-salt' => __('SALT', 'iasd'),
                         'depto-saude' => __('Saúde', 'iasd'),
                         'depto-universitario' => __('Universitários', 'iasd'),
