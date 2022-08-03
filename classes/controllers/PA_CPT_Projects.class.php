@@ -41,7 +41,8 @@ class PaCptProjects
 			'has_archive'           => sanitize_title(__('Projects', 'iasd')),
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
-			'capability_type'       => 'page',
+			//'capability_type'       => 'projects',
+			'capabilities'			=> pa_compile_post_type_capabilities('project', 'projects'),
 			'show_in_rest'          => true,
 			'rewrite'				=> array('slug' => __('project-slug', 'iasd'))
 		);

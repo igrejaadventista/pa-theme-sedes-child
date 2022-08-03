@@ -53,7 +53,8 @@ class PaCptDistricts
             'has_archive'           => false,
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
-            'capability_type'       => 'post',
+            //'capability_type'       => 'districts',
+            'capabilities'			=> pa_compile_post_type_capabilities('district', 'districts'),
             'show_in_rest'          => true,
         );
         register_post_type('districts', $args);

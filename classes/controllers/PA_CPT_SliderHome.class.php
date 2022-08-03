@@ -45,7 +45,8 @@ class PaCptSliderHome {
 			'has_archive'           => false,
 			'exclude_from_search'   => true,
 			'publicly_queryable'    => false,
-			'capability_type'       => 'page',
+			//'capability_type'       => 'pages',
+			'capabilities'			=> pa_compile_post_type_capabilities('slider', 'sliders'),
 			'show_in_rest'          => true,
 		);
 		register_post_type( 'sliders', $args );

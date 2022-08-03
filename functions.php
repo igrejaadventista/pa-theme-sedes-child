@@ -9,6 +9,7 @@ require_once(dirname(__FILE__) . '/classes/controllers/PA_CPT_SliderHome.class.p
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Enqueue_Files.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Page_Lideres.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_CPT_District.class.php');
+require_once(dirname(__FILE__) . '/classes/controllers/PA_Theme_Helpers.php');
 
 add_action('after_setup_theme', function () {
     load_theme_textdomain('iasd', get_stylesheet_directory() . '/language/');
