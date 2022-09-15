@@ -2,6 +2,8 @@
 
 get_header();
 
+$sem_imagem = get_theme_file_uri() . "/assets/img/sem-imagem.png";
+
 function getTplPageURL($page_template)
 {
     $url = null;
@@ -42,13 +44,12 @@ if (have_posts())
                 <h2 class="mb-4"><?= _e('Shepherd', 'iasd') ?></h2>
                 <?php
                 $shepherds = get_field('shepherds');
-                pconsole($shepherds);
                 if ($shepherds) {
                     foreach ($shepherds as $index => $shepherd) {
                         $img = $shepherd['shepherd_foto'];
                 ?>
                         <div class="d-flex flex-column align-items-center mt-5">
-                            <img src="<?= esc_url($img['sizes']['lider-thumb']); ?>" alt="<?php $shepherd['shepherd_nome'] ?>" class="pa-lider-thumb rounded-circle float-start me-3" width="120" height="120">
+                            <img src="<?= esc_url($img['sizes']['lider-thumb'] ?: $sem_imagem); ?>" alt="<?php $shepherd['shepherd_nome'] ?>" class="pa-lider-thumb rounded-circle float-start me-3" width="120" height="120">
                             <p class="mt-4 mb-0 fw-bold"><?= $shepherd['shepherd_nome'] ?></p>
                             <?php
                             $netork = $shepherd['shepherd_netork'];
@@ -82,7 +83,6 @@ if (have_posts())
 
                         </div>
                         <div class="<?= end($shepherds) != $shepherd ?: 'pb-5 border-bottom' ?> d-md-none">
-
                         </div>
                 <?php
                     }
@@ -103,7 +103,7 @@ if (have_posts())
                         <div class="row mt-5 align-items-center">
                             <div class="<?= $index == 0 ? 'col-md-6' : 'col-md-4' ?> mb-5 mb-md-0">
                                 <div class="ratio ratio-4x3">
-                                    <img src="<?= esc_url($img['sizes']['lider-thumb']); ?>" alt="<?php $churche['church_nome']; ?>" class="rounded float-start me-3" width="120" height="120">
+                                    <img src="<?=  esc_url($img['sizes']['lider-thumb'] ?: $sem_imagem); ?>" alt="<?php $churche['church_nome']; ?>" class="rounded float-start me-3" width="120" height="120">
                                 </div>
                             </div>
                             <div class="<?= $index == 0 ? 'col-md-6' : 'col-md-6' ?>">
@@ -120,7 +120,7 @@ if (have_posts())
                                         ?>
                                             <div class="col-2 col-md-3">
                                                 <div class="ratio ratio-1x1">
-                                                    <a class="border p-3 me-3 bg-light" href="<?= $netorks['district_maps'] ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-youtube position-absolute top-50 start-50 translate-middle"></i></a>
+                                                    <a class="border p-3 me-3 bg-light" href="<?= $netork['district_youtube'] ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-youtube position-absolute top-50 start-50 translate-middle"></i></a>
                                                 </div>
                                             </div>
                                         <?php endif;
@@ -128,7 +128,7 @@ if (have_posts())
                                         ?>
                                             <div class="col-2 col-md-3">
                                                 <div class="ratio ratio-1x1">
-                                                    <a class="border p-3 me-3 bg-light" href="<?= $netorks['district_maps'] ?>" rel="noreferrer noopener" target="_blank"><i class="fas fa-map-marked-alt position-absolute top-50 start-50 translate-middle"></i></a>
+                                                    <a class="border p-3 me-3 bg-light" href="<?= $netork['district_maps'] ?>" rel="noreferrer noopener" target="_blank"><i class="fas fa-map-marked-alt position-absolute top-50 start-50 translate-middle"></i></a>
                                                 </div>
                                             </div>
                                         <?php endif;
@@ -136,7 +136,7 @@ if (have_posts())
                                         ?>
                                             <div class="col-2 col-md-3">
                                                 <div class="ratio ratio-1x1">
-                                                    <a class="border p-3 me-3 bg-light" href="<?= $netorks['district_maps'] ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-waze position-absolute top-50 start-50 translate-middle"></i></a>
+                                                    <a class="border p-3 me-3 bg-light" href="<?= $netork['district_waze'] ?>" rel="noreferrer noopener" target="_blank"><i class="fab fa-waze position-absolute top-50 start-50 translate-middle"></i></a>
                                                 </div>
                                             </div>
                                         <?php endif;
@@ -144,7 +144,7 @@ if (have_posts())
                                         ?>
                                             <div class="col-2 col-md-3">
                                                 <div class="ratio ratio-1x1">
-                                                    <a class="border p-3 me-3 bg-light" href="mailto:<?= $netorks['district_maps'] ?>" rel="noreferrer noopener" target="_blank"><i class="fas fa-at position-absolute top-50 start-50 translate-middle"></i></a>
+                                                    <a class="border p-3 me-3 bg-light" href="mailto:<?= $netork['district_email'] ?>" rel="noreferrer noopener" target="_blank"><i class="fas fa-at position-absolute top-50 start-50 translate-middle"></i></a>
                                                 </div>
                                             </div>
                                         <?php endif; ?>
