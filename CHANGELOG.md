@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.3] - 2022-09-15
+
+### Fix
+
+- Ajustando noma das variaveis que monta os links na página de distritos.
+- Adicionando uma imagem padrão quando a foto da igreja ou do pastor não estiver disponivel.
+
 ## [1.2.2] - 2022-08-08
 
 ### Fix
