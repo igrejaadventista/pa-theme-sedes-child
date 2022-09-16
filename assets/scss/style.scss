@@ -3,7 +3,7 @@ Theme Name: PA - Theme Sedes (Child)
 Theme URI: adventistas.org
 Description: Parent theme for adventistas.org website network.
 Author: WebDSA
-Version: 1.2.4
+Version: 1.2.5
 Template: pa-theme-sedes
 
 */
@@ -12,3 +12,4 @@ Template: pa-theme-sedes
 @import "pa-cpt-projects";
 @import "pa-front-page";
 @import "pa-lideres";
+@import "pa-cpt-districts";

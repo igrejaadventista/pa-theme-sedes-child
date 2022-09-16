@@ -1,5 +1,7 @@
 <?php 
-	get_header();
+	get_header(); 
+	//global $wp_query, $queryFeatured;
+
 ?>
 
 <section class="pa-header py-3">
@@ -32,7 +34,7 @@
                                             <div class="card-body ps-4 pe-0 py-4 border-start border-5 pa-border">
                                                 <span class="pa-tag text-uppercase d-none d-xl-table-cell rounded"><?= __('Distrito', 'iasd') ?></span>
                                                 <h3 class="fw-bold h2 mt-xl-2 pa-truncate-4"><?= get_the_title() ?></h3>
-                                                <label><i class="fas fa-church pe-2"></i><?= count(get_field('churches')) ?><?= get_field('shepherds') ? ' - ' . get_field('shepherds')[0]['shepherd_nome']: ''?></label>
+                                                <label><?= get_field('shepherds') ? __('Pr.', 'iasd') . ' ' . get_field('shepherds')[0]['shepherd_nome']: ''?></label>
                                             </div>
                                         </div>
                                     </div>
