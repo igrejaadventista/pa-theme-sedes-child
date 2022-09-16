@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.4] - 2022-09-16
+
+### Fix
+
+- Adicionando na página archive de distritos o número de igrejas e o nome do pastor.
+
 ## [1.2.3] - 2022-09-15
 
 ### Fix
