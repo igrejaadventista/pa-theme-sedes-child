@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.5] - 2022-09-16
+
+### Fix
+
+- Removendo o número de igrejas da lista de itens.
+- Nova folha de stilos exclusiva para distritos. 
+
+
 ## [1.2.4] - 2022-09-16
 
 ### Fix
