@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.6] - 2022-09-19
+
+### Fix
+
+- Limitando a abrangencia da propriedade css object-fit
+
 ## [1.2.5] - 2022-09-16
 
 ### Fix
