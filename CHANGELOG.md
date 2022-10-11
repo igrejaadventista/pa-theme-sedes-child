@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.7] - 2022-10-11
+
+### Fix
+
+- Traduzindo termos
+- Adicionando tema de cor ao departamento MAP
+- Adicionando o MAP na lista de departamentos na página de configuração
+
 ## [1.2.6] - 2022-09-19
 
 ### Fix

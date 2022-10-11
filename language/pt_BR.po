@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-07-18 16:32-0300\n"
-"PO-Revision-Date: 2022-07-18 16:32-0300\n"
+"POT-Creation-Date: 2022-10-11 15:16-0300\n"
+"PO-Revision-Date: 2022-10-11 15:19-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -32,7 +32,7 @@ msgstr "lideres"
 #: classes/controllers/PA_CPT_Leaders.class.php:25
 #: classes/controllers/PA_CPT_Leaders.class.php:27
 #: classes/controllers/PA_CPT_Leaders.class.php:28
-#: classes/controllers/PA_CPT_Leaders.class.php:63
+#: classes/controllers/PA_CPT_Leaders.class.php:65
 msgid "Leaders"
 msgstr "Líderes"
 
@@ -53,7 +53,7 @@ msgid "Adolescente"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:26
-msgid "Adra"
+msgid "ADRA"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:27
@@ -113,58 +113,62 @@ msgid "Liberdade Religiosa"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:41
-msgid "Ministério Pessoal"
+msgid "Ministério Adventista das Possibilidades"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:42
-msgid "Missão Global"
+msgid "Ministério Pessoal"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:43
-msgid "Mordomia"
+msgid "Missão Global"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:44
-msgid "Mulher"
+msgid "Mordomia"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:45
-msgid "Música"
+msgid "Mulher"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:46
-msgid "Publicações"
+msgid "Música"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:47
-msgid "Recepção"
+msgid "Publicações"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:48
-msgid "SALT"
+msgid "Recepção"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:49
-msgid "Saúde"
+msgid "SALT"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:50
-msgid "Universitários"
+msgid "Saúde"
 msgstr ""
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:51
+msgid "Universitários"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site-ministries.class.php:52
 msgid "Voluntários"
 msgstr ""
 
 #: classes/controllers/PA_CPT_District.class.php:27
 #: classes/controllers/PA_CPT_District.class.php:29
 #: classes/controllers/PA_CPT_District.class.php:30
-#: classes/controllers/PA_CPT_District.class.php:65
+#: classes/controllers/PA_CPT_District.class.php:66
 msgid "Districts"
 msgstr "Distritos"
 
 #: classes/controllers/PA_CPT_District.class.php:28
-#: classes/controllers/PA_CPT_District.class.php:42 single-districts.php:31
+#: classes/controllers/PA_CPT_District.class.php:42 single-districts.php:33
 msgid "District"
 msgstr "Distrito"
 
@@ -231,81 +235,84 @@ msgstr "Nenhuma correspondência encontrada."
 msgid "Not found in Trash."
 msgstr "Nada foi encontrado na lixeira."
 
-#: classes/controllers/PA_CPT_District.class.php:68
+#: classes/controllers/PA_CPT_District.class.php:69
 msgid "Tab churches"
 msgstr "Aba Igrejas"
 
-#: classes/controllers/PA_CPT_District.class.php:69 single-districts.php:94
+#: classes/controllers/PA_CPT_District.class.php:70 single-districts.php:94
 msgid "Churches"
 msgstr "Igrejas"
-
-#: classes/controllers/PA_CPT_District.class.php:71
-#: classes/controllers/PA_CPT_District.class.php:94
-#: classes/controllers/PA_CPT_Leaders.class.php:80
-msgid "Name"
-msgstr "Nome"
 
 #: classes/controllers/PA_CPT_District.class.php:72
 #: classes/controllers/PA_CPT_District.class.php:95
 #: classes/controllers/PA_CPT_Leaders.class.php:82
+msgid "Name"
+msgstr "Nome"
+
+#: classes/controllers/PA_CPT_District.class.php:73
+#: classes/controllers/PA_CPT_District.class.php:96
+#: classes/controllers/PA_CPT_Leaders.class.php:84
 msgid "Picture"
 msgstr "Foto"
 
-#: classes/controllers/PA_CPT_District.class.php:78
+#: classes/controllers/PA_CPT_District.class.php:79
 msgid "Address"
 msgstr "Endereço"
 
-#: classes/controllers/PA_CPT_District.class.php:79
+#: classes/controllers/PA_CPT_District.class.php:80
 msgid "Church Netork"
 msgstr "Igreja Netork"
 
-#: classes/controllers/PA_CPT_District.class.php:88
-#: classes/controllers/PA_CPT_District.class.php:110
+#: classes/controllers/PA_CPT_District.class.php:89
 msgid "Add church"
 msgstr "Adicionar igreja"
 
-#: classes/controllers/PA_CPT_District.class.php:91
+#: classes/controllers/PA_CPT_District.class.php:92
 msgid "Tab shepherds"
 msgstr "Aba pastores"
 
-#: classes/controllers/PA_CPT_District.class.php:92
+#: classes/controllers/PA_CPT_District.class.php:93
 msgid "Shepherds"
 msgstr "Pastores"
 
-#: classes/controllers/PA_CPT_District.class.php:101
+#: classes/controllers/PA_CPT_District.class.php:102
 msgid "Shepherd Netork"
 msgstr "Pastor Netork"
 
-#: classes/controllers/PA_CPT_District.class.php:125
+#: classes/controllers/PA_CPT_District.class.php:111
+msgid "Add shepherd"
+msgstr "Adicionar pastor"
+
 #: classes/controllers/PA_CPT_District.class.php:126
-#: classes/controllers/PA_CPT_District.class.php:129
+#: classes/controllers/PA_CPT_District.class.php:127
 #: classes/controllers/PA_CPT_District.class.php:130
-#: classes/controllers/PA_CPT_District.class.php:135
-#: classes/controllers/PA_CPT_District.class.php:144
+#: classes/controllers/PA_CPT_District.class.php:131
+#: classes/controllers/PA_CPT_District.class.php:136
+#: classes/controllers/PA_CPT_District.class.php:145
 msgid "Region"
 msgstr "Região"
 
-#: classes/controllers/PA_CPT_District.class.php:127
+#: classes/controllers/PA_CPT_District.class.php:128
 msgid "Search"
 msgstr "Buscar"
 
-#: classes/controllers/PA_CPT_District.class.php:128
+#: classes/controllers/PA_CPT_District.class.php:129
 msgid "All itens"
 msgstr "Todos os itens"
 
-#: classes/controllers/PA_CPT_District.class.php:131
-msgid "Edit"
-msgstr "Edigar"
-
 #: classes/controllers/PA_CPT_District.class.php:132
+msgid "Edit"
+msgstr "Editar"
+
+#: classes/controllers/PA_CPT_District.class.php:133
 msgid "Update"
 msgstr "Atualizar"
 
-#: classes/controllers/PA_CPT_District.class.php:133
+#: classes/controllers/PA_CPT_District.class.php:134
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: classes/controllers/PA_CPT_District.class.php:134
+#: classes/controllers/PA_CPT_District.class.php:135
 msgid "New"
 msgstr "Novo"
 
@@ -314,35 +321,35 @@ msgstr "Novo"
 msgid "Leader"
 msgstr "Líder"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:66
+#: classes/controllers/PA_CPT_Leaders.class.php:68
 msgid "Role/Field"
 msgstr "Cargo/Campo"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:67
+#: classes/controllers/PA_CPT_Leaders.class.php:69
 msgid "Biography"
 msgstr "Biografia"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:70
+#: classes/controllers/PA_CPT_Leaders.class.php:72
 msgid "Social Netork"
 msgstr "Redes sociais"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:78
+#: classes/controllers/PA_CPT_Leaders.class.php:80
 msgid "Staff"
 msgstr "Equipe"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:81
+#: classes/controllers/PA_CPT_Leaders.class.php:83
 msgid "Role"
 msgstr "Cargo"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:88
+#: classes/controllers/PA_CPT_Leaders.class.php:90
 msgid "E-mail"
 msgstr ""
 
-#: classes/controllers/PA_CPT_Leaders.class.php:89
+#: classes/controllers/PA_CPT_Leaders.class.php:91
 msgid "Telephone"
 msgstr "Telefone"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:91
+#: classes/controllers/PA_CPT_Leaders.class.php:93
 msgid "Add member"
 msgstr "Adicionar membro"
 
@@ -358,7 +365,7 @@ msgstr "Projetos"
 msgid "Project"
 msgstr "Projeto"
 
-#: classes/controllers/PA_CPT_Projects.class.php:46
+#: classes/controllers/PA_CPT_Projects.class.php:47
 msgid "project-slug"
 msgstr "projeto"
 
@@ -374,43 +381,43 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:59
+#: classes/controllers/PA_CPT_SliderHome.class.php:60
 msgid "Image - Desktop"
 msgstr "Imagem - Desktop"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:64
+#: classes/controllers/PA_CPT_SliderHome.class.php:65
 msgid "Image - Mobile"
 msgstr "Imagem - Mobile"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:69
+#: classes/controllers/PA_CPT_SliderHome.class.php:70
 msgid "Line 1 - Text"
 msgstr "Linha 1 - Texto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:70
+#: classes/controllers/PA_CPT_SliderHome.class.php:71
 msgid "Line 2 - Text"
 msgstr "Linha 2 - Texto - Título"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:71
+#: classes/controllers/PA_CPT_SliderHome.class.php:72
 msgid "Line 3 - Text"
 msgstr "Linha 3 - Texto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:72
+#: classes/controllers/PA_CPT_SliderHome.class.php:73
 msgid "Button text color"
 msgstr "Texto do botão - Cor"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:74
+#: classes/controllers/PA_CPT_SliderHome.class.php:75
 msgid "Button color"
 msgstr "Botão - Cor"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:76
+#: classes/controllers/PA_CPT_SliderHome.class.php:77
 msgid "Button text"
 msgstr "Botão - Texto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:77
+#: classes/controllers/PA_CPT_SliderHome.class.php:78
 msgid "Access"
 msgstr "Acessar"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:78
+#: classes/controllers/PA_CPT_SliderHome.class.php:79
 msgid "Button URL"
 msgstr "URL de destino"
 
@@ -418,13 +425,25 @@ msgstr "URL de destino"
 msgid "View profile"
 msgstr "Ver perfil"
 
-#: single-districts.php:42
+#: home.php:15 home.php:28
+msgid "Post"
+msgstr ""
+
+#: single-districts.php:44
 msgid "Shepherd"
 msgstr "Pastor"
 
 #: single-lideres.php:86
 msgid "Back to leaders page"
 msgstr "Voltar para a página de líderes"
+
+#: taxonomy-xtt-pa-region.php:35
+msgid "Distrito"
+msgstr "Distrito"
+
+#: taxonomy-xtt-pa-region.php:37
+msgid "Pr."
+msgstr ""
 
 #~ msgid "Shepherdx"
 #~ msgstr "Pastores"
