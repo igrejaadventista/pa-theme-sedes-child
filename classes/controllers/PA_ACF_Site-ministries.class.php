@@ -23,7 +23,7 @@ class PaAcfSiteMinistries {
                     ->choices([
                         'institucional' => __('Institucional', 'iasd'),
                         'depto-adolescente' => __('Adolescente', 'iasd'),
-                        'depto-adra' => __('Adra', 'iasd'),
+                        'depto-adra' => __('ADRA', 'iasd'),
                         'depto-afam' => __('AFAM', 'iasd'),
                         'depto-asa' => __('ASA', 'iasd'),
                         'depto-associacao-ministerial' => __('Associação Ministerial', 'iasd'),
@@ -38,6 +38,7 @@ class PaAcfSiteMinistries {
                         'depto-familia' => __('Família', 'iasd'),
                         'depto-jovem' => __('Jovens', 'iasd'),
                         'depto-liberdade-religiosa' => __('Liberdade Religiosa', 'iasd'),
+                        'depto-map' => __('Ministério Adventista das Possibilidades', 'iasd'),
                         'depto-ministerio-pessoal' => __('Ministério Pessoal', 'iasd'),
                         'depto-missao-global' => __('Missão Global', 'iasd'),
                         'depto-mordomia' => __('Mordomia', 'iasd'),

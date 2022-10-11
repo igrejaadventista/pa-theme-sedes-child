@@ -108,7 +108,7 @@ class PaCptDistricts
                             ])
                             ->layout('block')
                     ])
-                    ->buttonLabel(__('Add church', 'iasd'))
+                    ->buttonLabel(__('Add shepherd', 'iasd'))
                     ->layout('row') // block, row or table
 
 
