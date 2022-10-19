@@ -15,8 +15,16 @@ class PaCptLideres
 
 	public function __construct()
 	{
-		add_action('init', [$this, 'CreatePostType']);
-		add_action('init', [$this, 'CreateACFFields']);
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_leaders', 'option')))
+			return;
+
+		$this->CreatePostType();
+		$this->CreateACFFields();
 	}
 
 	function CreatePostType()
@@ -101,7 +109,7 @@ class PaCptLideres
 }
 
 $PaCptLideres = new PaCptLideres();
-
+ 
 
 //gadd_action( 'init', 'teste_cap', 9999 );
 
