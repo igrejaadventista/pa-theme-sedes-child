@@ -34,6 +34,9 @@ class PaAcfChildSettings {
         TrueFalse::make(__('Districts', 'iasd'), 'module_districts')
           ->defaultValue(false)
           ->stylisedUi(),
+        TrueFalse::make(__('Sliders', 'iasd'), 'module_sliders')
+          ->defaultValue(false)
+          ->stylisedUi(),
       ],
       'location' => [
         Location::if('options_page', 'iasd_child_settings'),

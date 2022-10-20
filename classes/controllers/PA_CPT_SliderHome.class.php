@@ -8,9 +8,18 @@ use WordPlate\Acf\Location;
 
 class PaCptSliderHome {
 
-	public function __construct(){
-		add_action('init', [$this, 'CreatePostType']);
-		add_action('init', [$this, 'CreateACFFields']);
+	public function __construct()
+	{
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_sliders', 'option')))
+			return;
+
+		$this->CreatePostType();
+		$this->CreateACFFields();
 	}
 
 	function CreatePostType() {
