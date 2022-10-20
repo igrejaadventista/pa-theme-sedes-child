@@ -20,7 +20,7 @@ class PaCptLideres
 
 	function checkModule()
 	{
-		if(empty(get_field('module_leaders', 'option')))
+		if(empty(get_field('module_leaders', 'pa_settings')))
 			return;
 
 		$this->CreatePostType();
