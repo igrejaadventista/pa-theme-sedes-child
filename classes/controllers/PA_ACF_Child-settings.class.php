@@ -6,23 +6,10 @@ use WordPlate\Acf\Location;
 class PaAcfChildSettings {
 
   public function __construct() {
-    add_action('after_setup_theme', [$this, 'addPageSettings']);
+    add_action('after_setup_theme', [$this, 'createModulesFields']);
   }
 
-  function addPageSettings() {
-    acf_add_options_sub_page(array(
-      'page_title'  => __('IASD Site - Child Settings', 'iasd'),
-      'menu_title'  => __('IASD Site - Child Settings', 'iasd'),
-      'menu_slug'   => 'iasd_child_settings',
-      'parent_slug' => 'themes.php',
-      'capability'  => 'manage_options'
-    ));
-
-    $this->createAcfFields();
-  }
-
-  function createAcfFields() {
-
+  function createModulesFields() {
     register_extended_field_group([
       'title'    => __('Modules', 'iasd'),
       'key'      => 'child_settings_modules',
@@ -37,11 +24,15 @@ class PaAcfChildSettings {
         TrueFalse::make(__('Sliders', 'iasd'), 'module_sliders')
           ->defaultValue(false)
           ->stylisedUi(),
+        TrueFalse::make(__('Projects', 'iasd'), 'module_projects')
+          ->defaultValue(false)
+          ->stylisedUi(),
       ],
       'location' => [
-        Location::if('options_page', 'iasd_child_settings'),
+        Location::if('options_page', 'iasd_custom_settings'),
       ],
     ]);
   }
 }
+
 $PaAcfChildettings = new PaAcfChildSettings();

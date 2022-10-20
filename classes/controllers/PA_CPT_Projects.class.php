@@ -5,7 +5,15 @@ class PaCptProjects
 
 	public function __construct()
 	{
-		add_action('init', [$this, 'CreatePostType'], 10, 2);
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_projects', 'option')))
+			return;
+
+		$this->CreatePostType();
 		add_filter('register_taxonomy_args', [$this, 'ChangeXttProjecTaxonomySlug'], 10, 2);
 	}
 
