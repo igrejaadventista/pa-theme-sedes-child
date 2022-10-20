@@ -15,11 +15,19 @@ class PaCptDistricts
 {
 
     public function __construct()
-    {
-        add_action('init', [$this, 'CreatePostType']);
-        add_action('init', [$this, 'CreateACFFields']);
-        add_action('init', [$this, 'RegisterTaxonomyDistricts']);
-    }
+	{
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_districts', 'option')))
+			return;
+
+		$this->CreatePostType();
+		$this->CreateACFFields();
+        $this->RegisterTaxonomyDistricts();
+	}
 
     function CreatePostType()
     {

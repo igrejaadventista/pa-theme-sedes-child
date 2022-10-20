@@ -1,14 +1,7 @@
 <?php
 
-use WordPlate\Acf\ConditionalLogic;
-use WordPlate\Acf\Fields\Tab;
-use WordPlate\Acf\Fields\Text;
-use WordPlate\Acf\Fields\Textarea;
-use WordPlate\Acf\Fields\Taxonomy;
 use WordPlate\Acf\Fields\TrueFalse;
-use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
-
 
 class PaAcfChildSettings {
 
@@ -18,7 +11,6 @@ class PaAcfChildSettings {
 
   function addPageSettings() {
     acf_add_options_sub_page(array(
-      // 'post_id'     => 'pa_child_settings',
       'page_title'  => __('IASD Site - Child Settings', 'iasd'),
       'menu_title'  => __('IASD Site - Child Settings', 'iasd'),
       'menu_slug'   => 'iasd_child_settings',
@@ -37,6 +29,9 @@ class PaAcfChildSettings {
       'style'    => 'default',
       'fields'   => [
         TrueFalse::make(__('Leaders', 'iasd'), 'module_leaders')
+          ->defaultValue(false)
+          ->stylisedUi(),
+        TrueFalse::make(__('Districts', 'iasd'), 'module_districts')
           ->defaultValue(false)
           ->stylisedUi(),
       ],
