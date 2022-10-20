@@ -15,11 +15,19 @@ class PaCptDistricts
 {
 
     public function __construct()
-    {
-        add_action('init', [$this, 'CreatePostType']);
-        add_action('init', [$this, 'CreateACFFields']);
-        add_action('init', [$this, 'RegisterTaxonomyDistricts']);
-    }
+	{
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_districts', 'pa_settings')))
+			return;
+
+		$this->CreatePostType();
+		$this->CreateACFFields();
+        $this->RegisterTaxonomyDistricts();
+	}
 
     function CreatePostType()
     {
@@ -53,7 +61,8 @@ class PaCptDistricts
             'has_archive'           => false,
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
-            'capability_type'       => 'post',
+            //'capability_type'       => 'districts',
+            'capabilities'			=> pa_compile_post_type_capabilities('district', 'districts'),
             'show_in_rest'          => true,
         );
         register_post_type('districts', $args);
@@ -107,7 +116,7 @@ class PaCptDistricts
                             ])
                             ->layout('block')
                     ])
-                    ->buttonLabel(__('Add church', 'iasd'))
+                    ->buttonLabel(__('Add shepherd', 'iasd'))
                     ->layout('row') // block, row or table
 
 

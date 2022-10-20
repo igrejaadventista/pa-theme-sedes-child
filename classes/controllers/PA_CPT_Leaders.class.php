@@ -15,8 +15,16 @@ class PaCptLideres
 
 	public function __construct()
 	{
-		add_action('init', [$this, 'CreatePostType']);
-		add_action('init', [$this, 'CreateACFFields']);
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_leaders', 'pa_settings')))
+			return;
+
+		$this->CreatePostType();
+		$this->CreateACFFields();
 	}
 
 	function CreatePostType()
@@ -51,11 +59,13 @@ class PaCptLideres
 			'has_archive'           => false,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
-			'capability_type'       => 'page',
+			//'capability_type'       => 'lidere',
+			'capabilities'			=> pa_compile_post_type_capabilities('lidere', 'lideres'),
 			'show_in_rest'          => true,
 		);
 		register_post_type('lideres', $args);
 	}
+
 
 	function CreateACFFields()
 	{
@@ -99,3 +109,20 @@ class PaCptLideres
 }
 
 $PaCptLideres = new PaCptLideres();
+ 
+
+//gadd_action( 'init', 'teste_cap', 9999 );
+
+
+function teste_cap(){
+
+	global $wp_post_types, $wp_roles;
+
+	
+	$wp_post_types['lideres']->cap->create_posts = 'create_lideres';
+
+	print_r($wp_post_types['lideres']);	
+	die;
+	
+
+}

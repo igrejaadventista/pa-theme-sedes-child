@@ -8,9 +8,18 @@ use WordPlate\Acf\Location;
 
 class PaCptSliderHome {
 
-	public function __construct(){
-		add_action('init', [$this, 'CreatePostType']);
-		add_action('init', [$this, 'CreateACFFields']);
+	public function __construct()
+	{
+		add_action('acf/init', [$this, 'checkModule']);
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_sliders', 'pa_settings')))
+			return;
+
+		$this->CreatePostType();
+		$this->CreateACFFields();
 	}
 
 	function CreatePostType() {
@@ -45,7 +54,8 @@ class PaCptSliderHome {
 			'has_archive'           => false,
 			'exclude_from_search'   => true,
 			'publicly_queryable'    => false,
-			'capability_type'       => 'page',
+			//'capability_type'       => 'pages',
+			'capabilities'			=> pa_compile_post_type_capabilities('slider', 'sliders'),
 			'show_in_rest'          => true,
 		);
 		register_post_type( 'sliders', $args );

@@ -5,6 +5,54 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.7] - 2022-10-11
+
+### Fix
+
+- Traduzindo termos
+- Adicionando tema de cor ao departamento MAP
+- Adicionando o MAP na lista de departamentos na página de configuração
+
+## [1.2.6] - 2022-09-19
+
+### Fix
+
+- Limitando a abrangencia da propriedade css object-fit
+
+## [1.2.5] - 2022-09-16
+
+### Fix
+
+- Removendo o número de igrejas da lista de itens.
+- Nova folha de stilos exclusiva para distritos. 
+
+
+## [1.2.4] - 2022-09-16
+
+### Fix
+
+- Adicionando na página archive de distritos o número de igrejas e o nome do pastor.
+
+## [1.2.3] - 2022-09-15
+
+### Fix
+
+- Ajustando noma das variaveis que monta os links na página de distritos.
+- Adicionando uma imagem padrão quando a foto da igreja ou do pastor não estiver disponivel.
+
+## [1.2.2] - 2022-08-08
+
+### Fix
+
+- Criando nova página home.php para listar todos os post do site
+- Ajustando Cahngelog.md
+
+## [1.2.1] - 2022-08-03
+
+### Fix
+
+- Adiciona as configurações de capability no momento que os posts types são instanciados.
+
 ## [1.2.0] - 2022-07-18
 
 ### Added
