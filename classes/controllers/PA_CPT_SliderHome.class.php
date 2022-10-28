@@ -10,13 +10,13 @@ class PaCptSliderHome {
 
 	public function __construct()
 	{
-		add_action('acf/init', [$this, 'checkModule']);
+		add_action('init', [$this, 'checkModule']);
 	}
 
 	function checkModule()
 	{
-		if(empty(get_field('module_sliders', 'pa_settings')))
-			return;
+		// if(empty(get_field('module_sliders', 'pa_settings')))
+		// 	return;
 
 		$this->CreatePostType();
 		$this->CreateACFFields();
