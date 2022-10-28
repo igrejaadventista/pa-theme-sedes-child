@@ -5,8 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.11] - 2022-10-28
 
-## [1.2.9] - 2022-10-28
+### Fix
+
+- Ajustando chamadas das funções
+
+## [1.2.10] - 2022-10-28
 
 ### Fix
 
