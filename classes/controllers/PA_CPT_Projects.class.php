@@ -52,7 +52,7 @@ class PaCptProjects
 			//'capability_type'       => 'projects',
 			'capabilities'			=> pa_compile_post_type_capabilities('project', 'projects'),
 			'show_in_rest'          => true,
-			//'rewrite'				=> array('slug' => __('project-slug', 'iasd'))
+			'rewrite'				=> array('slug' => __('project-slug', 'iasd'))
 		);
 		register_post_type('projects', $args);
 	}
