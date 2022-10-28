@@ -5,13 +5,13 @@ class PaCptProjects
 
 	public function __construct()
 	{
-		add_action('acf/init', [$this, 'checkModule']);
+		add_action('init', [$this, 'checkModule']);
 	}
 
 	function checkModule()
 	{
-		if(empty(get_field('module_projects', 'pa_settings')))
-			return;
+		// if(empty(get_field('module_projects', 'pa_settings')))
+		// 	return;
 
 		$this->CreatePostType();
 		add_filter('register_taxonomy_args', [$this, 'ChangeXttProjecTaxonomySlug'], 10, 2);
@@ -52,7 +52,7 @@ class PaCptProjects
 			//'capability_type'       => 'projects',
 			'capabilities'			=> pa_compile_post_type_capabilities('project', 'projects'),
 			'show_in_rest'          => true,
-			'rewrite'				=> array('slug' => __('project-slug', 'iasd'))
+			//'rewrite'				=> array('slug' => __('project-slug', 'iasd'))
 		);
 		register_post_type('projects', $args);
 	}

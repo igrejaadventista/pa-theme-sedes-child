@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.9] - 2022-10-28
+
+### Fix
+
+- Novas cores tema departamento crianças
+- Novas cores tema departamento adolescentes
+- Anulando temporariamente o ajuste de blocos 
+
 ## [1.2.8] - 2022-10-20
 
 ### Fix
