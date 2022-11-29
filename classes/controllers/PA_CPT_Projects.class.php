@@ -12,7 +12,8 @@ class PaCptProjects
 
 	function checkModule()
 	{
-		if(empty(get_field('module_projects', 'pa_settings')))
+		
+		if(get_field('module_projects', 'pa_settings') === false)
 			return;
 
 		$this->CreatePostType();

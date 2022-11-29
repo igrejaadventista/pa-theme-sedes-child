@@ -16,16 +16,16 @@ class PaAcfChildSettings {
       'style'    => 'default',
       'fields'   => [
         TrueFalse::make(__('Leaders', 'iasd'), 'module_leaders')
-          ->defaultValue(false)
+          ->defaultValue(true)
           ->stylisedUi(),
         TrueFalse::make(__('Districts', 'iasd'), 'module_districts')
-          ->defaultValue(false)
+          ->defaultValue(true)
           ->stylisedUi(),
         TrueFalse::make(__('Sliders', 'iasd'), 'module_sliders')
-          ->defaultValue(false)
+          ->defaultValue(true)
           ->stylisedUi(),
         TrueFalse::make(__('Projects', 'iasd'), 'module_projects')
-          ->defaultValue(false)
+          ->defaultValue(true)
           ->stylisedUi(),
       ],
       'location' => [

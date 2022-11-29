@@ -21,7 +21,7 @@ class PaCptDistricts
 
 	function checkModule()
 	{
-		if(empty(get_field('module_districts', 'pa_settings')))
+		if(get_field('module_districts', 'pa_settings') === false)
 			return;
 
 		$this->CreatePostType();
