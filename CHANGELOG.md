@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.12] - 2022-10-29
+
+### Fix
+
+- Abilitando seleção de módulos
+- Nova cor para o departaemnto da AFAM
+
 ## [1.2.11] - 2022-10-28
 
 ### Fix

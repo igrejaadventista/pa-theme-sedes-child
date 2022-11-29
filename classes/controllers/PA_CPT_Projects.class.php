@@ -5,8 +5,17 @@ class PaCptProjects
 
 	public function __construct()
 	{
-		add_action('init', [$this, 'CreatePostType'], 10, 2);
 		add_filter('register_taxonomy_args', [$this, 'ChangeXttProjecTaxonomySlug'], 10, 2);
+		add_action('init', [$this, 'checkModule'], 10, 2);
+		
+	}
+
+	function checkModule()
+	{
+		if(empty(get_field('module_projects', 'pa_settings')))
+			return;
+
+		$this->CreatePostType();
 	}
 
 	function CreatePostType()
