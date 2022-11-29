@@ -15,8 +15,8 @@ class PaCptSliderHome {
 
 	function checkModule()
 	{
-		// if(empty(get_field('module_sliders', 'pa_settings')))
-		// 	return;
+		if(empty(get_field('module_sliders', 'pa_settings')))
+			return;
 
 		$this->CreatePostType();
 		$this->CreateACFFields();
