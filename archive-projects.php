@@ -24,7 +24,7 @@ require(get_template_directory() . '/components/parent/header.php');
 				<div class="pa-project-item col-12 col-md-6 mb-4">
 					<a href="<?php the_permalink(); ?>">
 						<figure class="figure m-xl-0 w-100">
-							<div class="ratio ratio-16x9">
+							<div class="ratio ratio-16x9 pa-img-default">
 								<?= get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-fluid rounded')); ?>
 							</div>
 							<figcaption class="figure-caption w-100 rounded-bottom ">
