@@ -88,7 +88,7 @@ class PaCptSliderHome {
 				Url::make(__('Button URL', 'iasd'), 'slider_button_url'),
 			],
 			'location' => [
-				Location::if('post_type', 'sliders'),
+				Location::where('post_type', '==','sliders'),
 			],
 		]);
 	}

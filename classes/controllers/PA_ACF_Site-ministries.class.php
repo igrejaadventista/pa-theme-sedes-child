@@ -54,7 +54,7 @@ class PaAcfSiteMinistries {
                     ->returnFormat('value'), // array, label or value (default)
             ],
             'location' => [
-                Location::if('options_page', 'iasd_custom_settings'),
+                Location::where('options_page', '==', 'iasd_custom_settings'),
             ],
         ]);
     }

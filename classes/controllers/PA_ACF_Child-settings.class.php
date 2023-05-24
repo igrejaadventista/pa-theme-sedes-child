@@ -1,7 +1,7 @@
 <?php
 
-use WordPlate\Acf\Fields\TrueFalse;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\TrueFalse;
+use Extended\ACF\Location;
 
 class PaAcfChildSettings {
 
@@ -29,7 +29,7 @@ class PaAcfChildSettings {
           ->stylisedUi(),
       ],
       'location' => [
-        Location::if('options_page', 'iasd_custom_settings'),
+        Location::where('options_page', '==', 'iasd_custom_settings'),
       ],
     ]);
   }
