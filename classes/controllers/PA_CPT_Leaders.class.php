@@ -104,7 +104,7 @@ class PaCptLideres
 					->layout('table') // block, row or table
 			],
 			'location' => [
-				Location::if('post_type', 'lideres'),
+				Location::where('post_type', '==', 'lideres'),
 			],
 		]);
 	}

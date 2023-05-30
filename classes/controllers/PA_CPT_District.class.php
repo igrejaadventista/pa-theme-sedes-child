@@ -122,7 +122,7 @@ class PaCptDistricts
 
             ],
             'location' => [
-                Location::if('post_type', 'districts')
+                Location::where('post_type', '==', 'districts')
             ]
         ]);
     }
