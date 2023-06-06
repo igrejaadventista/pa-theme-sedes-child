@@ -7,13 +7,23 @@ class PA_Theme_Handler
         add_action( 'admin_notices', array( $this, 'showError' ) );
     }
 
+    private function checkACF() {
+        return function_exists('acf');
+    }
+
     public function checkParent() {
+
+        if (self::checkACF() !== true) {
+            $error_message = 'Desculpe: Este projeto necessita do plugin Advanced Custom Fields instalado e ativo.' ;
+            $notice= $error_message ? sprintf( '<div class="error">%s</div>', $error_message ) : '';
+        }
+
         $theme = wp_get_theme();
         $parent_theme = $theme->parent();
         $error_message = '';
 
         if ( ! $parent_theme->exists() || $parent_theme->Stylesheet !== 'pa-theme-sedes' ) {
-            $error_message = 'Desculpe. Este tema-filho necessita do tema Sedes instalado.' ;
+            $error_message .= 'Desculpe. Este tema-filho necessita do tema Sedes instalado.' ;
             switch_theme( WP_DEFAULT_THEME );
         }
 
