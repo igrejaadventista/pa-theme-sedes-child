@@ -11,7 +11,13 @@ jobs:
     steps:         
       - name: Checkout do repositório
         uses: actions/checkout@v2
-        
+
+      - name: Verificando o cache dos pacotes do Composer
+        uses: actions/cache@v2
+        with:
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+      
       - name: Executando composer install para dependências do Tema
         uses: php-actions/composer@v5
         with:
