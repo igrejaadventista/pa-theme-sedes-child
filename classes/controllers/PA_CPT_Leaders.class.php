@@ -1,13 +1,13 @@
 <?php
 
-use WordPlate\Acf\Fields\Text;
-use WordPlate\Acf\Fields\Textarea;
-use WordPlate\Acf\Fields\Group;
-use WordPlate\Acf\Fields\Url;
-use WordPlate\Acf\Fields\Email;
-use WordPlate\Acf\Fields\Image;
-use WordPlate\Acf\Fields\Repeater;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\Textarea;
+use Extended\ACF\Fields\Group;
+use Extended\ACF\Fields\Url;
+use Extended\ACF\Fields\Email;
+use Extended\ACF\Fields\Image;
+use Extended\ACF\Fields\Repeater;
+use Extended\ACF\Location;
 
 
 class PaCptLideres
@@ -104,7 +104,7 @@ class PaCptLideres
 					->layout('table') // block, row or table
 			],
 			'location' => [
-				Location::if('post_type', 'lideres'),
+				Location::where('post_type', '==', 'lideres'),
 			],
 		]);
 	}

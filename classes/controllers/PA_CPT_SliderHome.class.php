@@ -1,10 +1,10 @@
 <?php
 
-use WordPlate\Acf\Fields\Image;
-use WordPlate\Acf\Fields\Url;
-use WordPlate\Acf\Fields\Text;
-use WordPlate\Acf\Fields\ColorPicker;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Image;
+use Extended\ACF\Fields\Url;
+use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\ColorPicker;
+use Extended\ACF\Location;
 
 class PaCptSliderHome {
 
@@ -88,7 +88,7 @@ class PaCptSliderHome {
 				Url::make(__('Button URL', 'iasd'), 'slider_button_url'),
 			],
 			'location' => [
-				Location::if('post_type', 'sliders'),
+				Location::where('post_type', '==','sliders'),
 			],
 		]);
 	}
