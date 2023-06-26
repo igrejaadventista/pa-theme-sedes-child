@@ -1,7 +1,7 @@
 <?php
 
-use WordPlate\Acf\Fields\PostObject;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\PostObject;
+use Extended\ACF\Location;
 
 class PaAcfLeaders
 {
@@ -25,7 +25,7 @@ class PaAcfLeaders
                     ->allowMultiple(true),
             ],
             'location' => [
-                Location::if('page_template', 'page-lideres.php'),
+                Location::where('page_template', '==', 'page-lideres.php'),
             ]
         ]);
     }

@@ -5,8 +5,8 @@
 // https://www.advancedcustomfields.com/resources/acf_add_options_page/
 
 
-use WordPlate\Acf\Fields\Select;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Select;
+use Extended\ACF\Location;
 
 
 class PaAcfSiteMinistries {
@@ -54,7 +54,7 @@ class PaAcfSiteMinistries {
                     ->returnFormat('value'), // array, label or value (default)
             ],
             'location' => [
-                Location::if('options_page', 'iasd_custom_settings'),
+                Location::where('options_page', '==', 'iasd_custom_settings'),
             ],
         ]);
     }

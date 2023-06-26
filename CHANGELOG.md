@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.14] - 2023-01-26
+
+### Fix
+
+- Colocamos uma imagem com padrão de fundo, quando não for possível mostrar uma imagem na página archive de projeto.
+
 ## [1.2.13] - 2022-10-29
 
 ### Fix
