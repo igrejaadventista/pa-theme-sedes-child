@@ -1,5 +1,5 @@
 {
     "require": {
-        "wordplate/acf": "^9.1"
+        "wordplate/acf": "^13.1"
     }
 }
