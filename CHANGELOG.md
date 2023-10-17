@@ -5,11 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.0] - 2023-10-17
+
+### Fix
+
+- Limitando versão do PHP 8.0
+
 ## [1.2.15] - 2023-09-12
 
 ### Fix
 
 - Ajustando a cor do departamento AFAM
+
 ## [1.2.14] - 2023-01-26
 
 ### Fix
