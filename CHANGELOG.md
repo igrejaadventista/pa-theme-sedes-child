@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.0] - 2024-10-09
+
+### Fix
+
+- Campo ACF para ser marcado caso o projeto seja um site
+- Validação para determinar se é um site ou uma landing page 
+
 ## [1.3.0] - 2023-10-17
 
 ### Fix

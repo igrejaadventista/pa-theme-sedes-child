@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-10-11 15:16-0300\n"
-"PO-Revision-Date: 2022-10-11 15:19-0300\n"
+"POT-Creation-Date: 2024-10-10 11:30-0300\n"
+"PO-Revision-Date: 2024-10-10 11:30-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
 "esc_attr_e;esc_attr_x\n"
@@ -20,6 +20,43 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
+#: classes/controllers/PA_ACF_Child-settings.class.php:14
+msgid "Modules"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Child-settings.class.php:18
+#: classes/controllers/PA_ACF_Leaders.class.php:63
+#: classes/controllers/PA_CPT_Leaders.class.php:35
+#: classes/controllers/PA_CPT_Leaders.class.php:37
+#: classes/controllers/PA_CPT_Leaders.class.php:38
+#: classes/controllers/PA_CPT_Leaders.class.php:75
+msgid "Leaders"
+msgstr "Líderes"
+
+#: classes/controllers/PA_ACF_Child-settings.class.php:21
+#: classes/controllers/PA_CPT_District.class.php:35
+#: classes/controllers/PA_CPT_District.class.php:37
+#: classes/controllers/PA_CPT_District.class.php:38
+#: classes/controllers/PA_CPT_District.class.php:74
+msgid "Districts"
+msgstr "Distritos"
+
+#: classes/controllers/PA_ACF_Child-settings.class.php:24
+#: classes/controllers/PA_CPT_SliderHome.class.php:27
+#: classes/controllers/PA_CPT_SliderHome.class.php:29
+#: classes/controllers/PA_CPT_SliderHome.class.php:30
+#: classes/controllers/PA_CPT_SliderHome.class.php:31
+msgid "Sliders"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Child-settings.class.php:27
+#: classes/controllers/PA_CPT_Projects.class.php:25
+#: classes/controllers/PA_CPT_Projects.class.php:27
+#: classes/controllers/PA_CPT_Projects.class.php:28
+#: classes/controllers/PA_CPT_Projects.class.php:51
+msgid "Projects"
+msgstr "Projetos"
+
 #: classes/controllers/PA_ACF_Leaders.class.php:55
 msgid "/leaders/"
 msgstr "/lideres/"
@@ -27,14 +64,6 @@ msgstr "/lideres/"
 #: classes/controllers/PA_ACF_Leaders.class.php:62
 msgid "leaders"
 msgstr "lideres"
-
-#: classes/controllers/PA_ACF_Leaders.class.php:63
-#: classes/controllers/PA_CPT_Leaders.class.php:25
-#: classes/controllers/PA_CPT_Leaders.class.php:27
-#: classes/controllers/PA_CPT_Leaders.class.php:28
-#: classes/controllers/PA_CPT_Leaders.class.php:65
-msgid "Leaders"
-msgstr "Líderes"
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:19
 msgid "Ministry select"
@@ -160,264 +189,263 @@ msgstr ""
 msgid "Voluntários"
 msgstr ""
 
-#: classes/controllers/PA_CPT_District.class.php:27
-#: classes/controllers/PA_CPT_District.class.php:29
-#: classes/controllers/PA_CPT_District.class.php:30
-#: classes/controllers/PA_CPT_District.class.php:66
-msgid "Districts"
-msgstr "Distritos"
-
-#: classes/controllers/PA_CPT_District.class.php:28
-#: classes/controllers/PA_CPT_District.class.php:42 single-districts.php:33
+#: classes/controllers/PA_CPT_District.class.php:36
+#: classes/controllers/PA_CPT_District.class.php:50 single-districts.php:33
 msgid "District"
 msgstr "Distrito"
 
-#: classes/controllers/PA_CPT_District.class.php:31
-#: classes/controllers/PA_CPT_Leaders.class.php:29
-#: classes/controllers/PA_CPT_Projects.class.php:19
-#: classes/controllers/PA_CPT_SliderHome.class.php:23
+#: classes/controllers/PA_CPT_District.class.php:39
+#: classes/controllers/PA_CPT_Leaders.class.php:39
+#: classes/controllers/PA_CPT_Projects.class.php:29
+#: classes/controllers/PA_CPT_SliderHome.class.php:32
 msgid "Add New"
 msgstr "Adicionar novo"
 
-#: classes/controllers/PA_CPT_District.class.php:32
-#: classes/controllers/PA_CPT_Leaders.class.php:30
-#: classes/controllers/PA_CPT_Projects.class.php:20
-#: classes/controllers/PA_CPT_SliderHome.class.php:24
+#: classes/controllers/PA_CPT_District.class.php:40
+#: classes/controllers/PA_CPT_Leaders.class.php:40
+#: classes/controllers/PA_CPT_Projects.class.php:30
+#: classes/controllers/PA_CPT_SliderHome.class.php:33
 msgid "Add New Item"
 msgstr "Adicionar novo item"
 
-#: classes/controllers/PA_CPT_District.class.php:33
-#: classes/controllers/PA_CPT_Leaders.class.php:31
-#: classes/controllers/PA_CPT_Projects.class.php:21
-#: classes/controllers/PA_CPT_SliderHome.class.php:25
+#: classes/controllers/PA_CPT_District.class.php:41
+#: classes/controllers/PA_CPT_Leaders.class.php:41
+#: classes/controllers/PA_CPT_Projects.class.php:31
+#: classes/controllers/PA_CPT_SliderHome.class.php:34
 msgid "New item"
 msgstr "Novo item"
 
-#: classes/controllers/PA_CPT_District.class.php:34
-#: classes/controllers/PA_CPT_Leaders.class.php:32
-#: classes/controllers/PA_CPT_Projects.class.php:22
-#: classes/controllers/PA_CPT_SliderHome.class.php:26
+#: classes/controllers/PA_CPT_District.class.php:42
+#: classes/controllers/PA_CPT_Leaders.class.php:42
+#: classes/controllers/PA_CPT_Projects.class.php:32
+#: classes/controllers/PA_CPT_SliderHome.class.php:35
 msgid "Edit item"
 msgstr "Editar item"
 
-#: classes/controllers/PA_CPT_District.class.php:35
-#: classes/controllers/PA_CPT_Leaders.class.php:33
-#: classes/controllers/PA_CPT_Projects.class.php:23
-#: classes/controllers/PA_CPT_SliderHome.class.php:27
+#: classes/controllers/PA_CPT_District.class.php:43
+#: classes/controllers/PA_CPT_Leaders.class.php:43
+#: classes/controllers/PA_CPT_Projects.class.php:33
+#: classes/controllers/PA_CPT_SliderHome.class.php:36
 msgid "View item"
 msgstr "Visualizar item"
 
-#: classes/controllers/PA_CPT_District.class.php:36
-#: classes/controllers/PA_CPT_Leaders.class.php:34
-#: classes/controllers/PA_CPT_Projects.class.php:24
-#: classes/controllers/PA_CPT_SliderHome.class.php:28
+#: classes/controllers/PA_CPT_District.class.php:44
+#: classes/controllers/PA_CPT_Leaders.class.php:44
+#: classes/controllers/PA_CPT_Projects.class.php:34
+#: classes/controllers/PA_CPT_SliderHome.class.php:37
 msgid "All items"
 msgstr "Todos os itens"
 
-#: classes/controllers/PA_CPT_District.class.php:37
-#: classes/controllers/PA_CPT_Leaders.class.php:35
-#: classes/controllers/PA_CPT_Projects.class.php:25
-#: classes/controllers/PA_CPT_SliderHome.class.php:29
+#: classes/controllers/PA_CPT_District.class.php:45
+#: classes/controllers/PA_CPT_Leaders.class.php:45
+#: classes/controllers/PA_CPT_Projects.class.php:35
+#: classes/controllers/PA_CPT_SliderHome.class.php:38
 msgid "Search item"
 msgstr "Buscar item"
 
-#: classes/controllers/PA_CPT_District.class.php:38
-#: classes/controllers/PA_CPT_Leaders.class.php:36
-#: classes/controllers/PA_CPT_Projects.class.php:26
-#: classes/controllers/PA_CPT_SliderHome.class.php:30
+#: classes/controllers/PA_CPT_District.class.php:46
+#: classes/controllers/PA_CPT_Leaders.class.php:46
+#: classes/controllers/PA_CPT_Projects.class.php:36
+#: classes/controllers/PA_CPT_SliderHome.class.php:39
 msgid "Not found."
 msgstr "Nenhuma correspondência encontrada."
 
-#: classes/controllers/PA_CPT_District.class.php:39
-#: classes/controllers/PA_CPT_Leaders.class.php:37
-#: classes/controllers/PA_CPT_Projects.class.php:27
-#: classes/controllers/PA_CPT_SliderHome.class.php:31
+#: classes/controllers/PA_CPT_District.class.php:47
+#: classes/controllers/PA_CPT_Leaders.class.php:47
+#: classes/controllers/PA_CPT_Projects.class.php:37
+#: classes/controllers/PA_CPT_SliderHome.class.php:40
 msgid "Not found in Trash."
 msgstr "Nada foi encontrado na lixeira."
 
-#: classes/controllers/PA_CPT_District.class.php:69
+#: classes/controllers/PA_CPT_District.class.php:77
 msgid "Tab churches"
 msgstr "Aba Igrejas"
 
-#: classes/controllers/PA_CPT_District.class.php:70 single-districts.php:94
+#: classes/controllers/PA_CPT_District.class.php:78 single-districts.php:94
 msgid "Churches"
 msgstr "Igrejas"
 
-#: classes/controllers/PA_CPT_District.class.php:72
-#: classes/controllers/PA_CPT_District.class.php:95
-#: classes/controllers/PA_CPT_Leaders.class.php:82
+#: classes/controllers/PA_CPT_District.class.php:80
+#: classes/controllers/PA_CPT_District.class.php:103
+#: classes/controllers/PA_CPT_Leaders.class.php:92
 msgid "Name"
 msgstr "Nome"
 
-#: classes/controllers/PA_CPT_District.class.php:73
-#: classes/controllers/PA_CPT_District.class.php:96
-#: classes/controllers/PA_CPT_Leaders.class.php:84
+#: classes/controllers/PA_CPT_District.class.php:81
+#: classes/controllers/PA_CPT_District.class.php:104
+#: classes/controllers/PA_CPT_Leaders.class.php:94
 msgid "Picture"
 msgstr "Foto"
 
-#: classes/controllers/PA_CPT_District.class.php:79
+#: classes/controllers/PA_CPT_District.class.php:87
 msgid "Address"
 msgstr "Endereço"
 
-#: classes/controllers/PA_CPT_District.class.php:80
+#: classes/controllers/PA_CPT_District.class.php:88
 msgid "Church Netork"
 msgstr "Igreja Netork"
 
-#: classes/controllers/PA_CPT_District.class.php:89
+#: classes/controllers/PA_CPT_District.class.php:97
 msgid "Add church"
 msgstr "Adicionar igreja"
 
-#: classes/controllers/PA_CPT_District.class.php:92
+#: classes/controllers/PA_CPT_District.class.php:100
 msgid "Tab shepherds"
 msgstr "Aba pastores"
 
-#: classes/controllers/PA_CPT_District.class.php:93
+#: classes/controllers/PA_CPT_District.class.php:101
 msgid "Shepherds"
 msgstr "Pastores"
 
-#: classes/controllers/PA_CPT_District.class.php:102
+#: classes/controllers/PA_CPT_District.class.php:110
 msgid "Shepherd Netork"
 msgstr "Pastor Netork"
 
-#: classes/controllers/PA_CPT_District.class.php:111
+#: classes/controllers/PA_CPT_District.class.php:119
 msgid "Add shepherd"
 msgstr "Adicionar pastor"
 
-#: classes/controllers/PA_CPT_District.class.php:126
-#: classes/controllers/PA_CPT_District.class.php:127
-#: classes/controllers/PA_CPT_District.class.php:130
-#: classes/controllers/PA_CPT_District.class.php:131
-#: classes/controllers/PA_CPT_District.class.php:136
-#: classes/controllers/PA_CPT_District.class.php:145
+#: classes/controllers/PA_CPT_District.class.php:134
+#: classes/controllers/PA_CPT_District.class.php:135
+#: classes/controllers/PA_CPT_District.class.php:138
+#: classes/controllers/PA_CPT_District.class.php:139
+#: classes/controllers/PA_CPT_District.class.php:144
+#: classes/controllers/PA_CPT_District.class.php:153
 msgid "Region"
 msgstr "Região"
 
-#: classes/controllers/PA_CPT_District.class.php:128
+#: classes/controllers/PA_CPT_District.class.php:136
 msgid "Search"
 msgstr "Buscar"
 
-#: classes/controllers/PA_CPT_District.class.php:129
+#: classes/controllers/PA_CPT_District.class.php:137
 msgid "All itens"
 msgstr "Todos os itens"
 
-#: classes/controllers/PA_CPT_District.class.php:132
+#: classes/controllers/PA_CPT_District.class.php:140
 msgid "Edit"
 msgstr "Editar"
 
-#: classes/controllers/PA_CPT_District.class.php:133
+#: classes/controllers/PA_CPT_District.class.php:141
 msgid "Update"
 msgstr "Atualizar"
 
-#: classes/controllers/PA_CPT_District.class.php:134
+#: classes/controllers/PA_CPT_District.class.php:142
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: classes/controllers/PA_CPT_District.class.php:135
+#: classes/controllers/PA_CPT_District.class.php:143
 msgid "New"
 msgstr "Novo"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:26
-#: classes/controllers/PA_CPT_Leaders.class.php:40
+#: classes/controllers/PA_CPT_Leaders.class.php:36
+#: classes/controllers/PA_CPT_Leaders.class.php:50
 msgid "Leader"
 msgstr "Líder"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:68
+#: classes/controllers/PA_CPT_Leaders.class.php:78
 msgid "Role/Field"
 msgstr "Cargo/Campo"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:69
+#: classes/controllers/PA_CPT_Leaders.class.php:79
 msgid "Biography"
 msgstr "Biografia"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:72
+#: classes/controllers/PA_CPT_Leaders.class.php:82
 msgid "Social Netork"
 msgstr "Redes sociais"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:80
+#: classes/controllers/PA_CPT_Leaders.class.php:90
 msgid "Staff"
 msgstr "Equipe"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:83
+#: classes/controllers/PA_CPT_Leaders.class.php:93
 msgid "Role"
 msgstr "Cargo"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:90
+#: classes/controllers/PA_CPT_Leaders.class.php:100
 msgid "E-mail"
 msgstr ""
 
-#: classes/controllers/PA_CPT_Leaders.class.php:91
+#: classes/controllers/PA_CPT_Leaders.class.php:101
 msgid "Telephone"
 msgstr "Telefone"
 
-#: classes/controllers/PA_CPT_Leaders.class.php:93
+#: classes/controllers/PA_CPT_Leaders.class.php:103
 msgid "Add member"
 msgstr "Adicionar membro"
 
-#: classes/controllers/PA_CPT_Projects.class.php:15
-#: classes/controllers/PA_CPT_Projects.class.php:17
-#: classes/controllers/PA_CPT_Projects.class.php:18
-#: classes/controllers/PA_CPT_Projects.class.php:41
-msgid "Projects"
-msgstr "Projetos"
-
-#: classes/controllers/PA_CPT_Projects.class.php:16
-#: classes/controllers/PA_CPT_Projects.class.php:30
+#: classes/controllers/PA_CPT_Projects.class.php:26
+#: classes/controllers/PA_CPT_Projects.class.php:40
 msgid "Project"
 msgstr "Projeto"
 
-#: classes/controllers/PA_CPT_Projects.class.php:47
+#: classes/controllers/PA_CPT_Projects.class.php:57
 msgid "project-slug"
 msgstr "projeto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:18
-#: classes/controllers/PA_CPT_SliderHome.class.php:20
-#: classes/controllers/PA_CPT_SliderHome.class.php:21
-#: classes/controllers/PA_CPT_SliderHome.class.php:22
-msgid "Sliders"
+#: classes/controllers/PA_CPT_Projects.class.php:75
+msgid "Is this a website?"
+msgstr "Isto é um site?"
+
+#: classes/controllers/PA_CPT_Projects.class.php:83
+msgid "Yes, this is a website."
+msgstr "Sim, este é um site."
+
+#: classes/controllers/PA_CPT_Projects.class.php:89
+msgid "Website URL"
+msgstr "URL do site"
+
+#: classes/controllers/PA_CPT_Projects.class.php:92
+msgid "Enter the URL of the website."
+msgstr "Insira a URL do site."
+
+#: classes/controllers/PA_CPT_Projects.class.php:103
+msgid "https://"
 msgstr ""
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:19
-#: classes/controllers/PA_CPT_SliderHome.class.php:34
+#: classes/controllers/PA_CPT_SliderHome.class.php:28
+#: classes/controllers/PA_CPT_SliderHome.class.php:43
 msgid "Slider"
 msgstr ""
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:60
+#: classes/controllers/PA_CPT_SliderHome.class.php:69
 msgid "Image - Desktop"
 msgstr "Imagem - Desktop"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:65
+#: classes/controllers/PA_CPT_SliderHome.class.php:74
 msgid "Image - Mobile"
 msgstr "Imagem - Mobile"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:70
+#: classes/controllers/PA_CPT_SliderHome.class.php:79
 msgid "Line 1 - Text"
 msgstr "Linha 1 - Texto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:71
+#: classes/controllers/PA_CPT_SliderHome.class.php:80
 msgid "Line 2 - Text"
 msgstr "Linha 2 - Texto - Título"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:72
+#: classes/controllers/PA_CPT_SliderHome.class.php:81
 msgid "Line 3 - Text"
 msgstr "Linha 3 - Texto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:73
+#: classes/controllers/PA_CPT_SliderHome.class.php:82
 msgid "Button text color"
 msgstr "Texto do botão - Cor"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:75
+#: classes/controllers/PA_CPT_SliderHome.class.php:84
 msgid "Button color"
 msgstr "Botão - Cor"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:77
+#: classes/controllers/PA_CPT_SliderHome.class.php:86
 msgid "Button text"
 msgstr "Botão - Texto"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:78
+#: classes/controllers/PA_CPT_SliderHome.class.php:87
 msgid "Access"
 msgstr "Acessar"
 
-#: classes/controllers/PA_CPT_SliderHome.class.php:79
+#: classes/controllers/PA_CPT_SliderHome.class.php:88
 msgid "Button URL"
 msgstr "URL de destino"
 
@@ -459,9 +487,6 @@ msgstr ""
 
 #~ msgid "Projeto - "
 #~ msgstr "Projeto - "
-
-#~ msgid "Access the website"
-#~ msgstr "Acessar o site"
 
 #~ msgid "Apps"
 #~ msgstr "Aplicativos"
@@ -632,9 +657,6 @@ msgstr ""
 
 #~ msgid "Endpoint where the content will be catch."
 #~ msgstr "Endereço onde o conteúdo será capturado."
-
-#~ msgid "Write the URLs"
-#~ msgstr "Escreva as URLs"
 
 #~ msgid "Filter field?"
 #~ msgstr "Filtrar campo?"

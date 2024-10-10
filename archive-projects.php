@@ -22,7 +22,10 @@ require(get_template_directory() . '/components/parent/header.php');
 		<div class="pa-project-items row row-cols-auto">
 			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 				<div class="pa-project-item col-12 col-md-6 mb-4">
-					<a href="<?php the_permalink(); ?>">
+					<?php
+					$landing_page_url = get_post_meta(get_the_ID(), 'website_url', true);
+					?>
+					<a href="<?php echo !empty($landing_page_url) ? esc_url($landing_page_url) : get_permalink(); ?>" target="_blank">
 						<figure class="figure m-xl-0 w-100">
 							<div class="ratio ratio-16x9 pa-img-default">
 								<?= get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-fluid rounded')); ?>

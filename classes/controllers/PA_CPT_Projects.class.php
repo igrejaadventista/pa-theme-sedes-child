@@ -7,7 +7,7 @@ class PaCptProjects
 	{
 		add_filter('register_taxonomy_args', [$this, 'ChangeXttProjecTaxonomySlug'], 10, 2);
 		add_action('init', [$this, 'checkModule'], 10, 2);
-		
+		add_action('acf/init', [$this, 'add_acf_fields']);
 	}
 
 	function checkModule()
@@ -66,6 +66,59 @@ class PaCptProjects
 		}
 		return $args;
 	}
+
+    public function add_acf_fields()
+    {
+        if (function_exists('acf_add_local_field_group')) {
+            acf_add_local_field_group(array(
+                'key'                   => 'group_project_type',
+                'title'                 => __('Is this a website?', 'iasd'),
+                'fields'                => array(
+                    
+                    array(
+                        'key'               => 'field_is_website',
+                     //   'label'             => __('Is this a website?', 'iasd'),
+                        'name'              => 'is_website',
+                        'type'              => 'true_false',
+                        'message'           => __('Yes, this is a website.', 'iasd'),
+                        'default_value'     => 0,
+                    ),
+                   
+                    array(
+                        'key'               => 'field_website_url',
+                        'label'             => __('Website URL', 'iasd'),
+                        'name'              => 'website_url',
+                        'type'              => 'url',
+                        'instructions'      => __('Enter the URL of the website.', 'iasd'),
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field'    => 'field_is_website', 
+                                    'operator' => '==',
+                                    'value'    => '1', 
+                                ),
+                            ),
+                        ),
+                        'default_value'     => '',
+                        'placeholder'       => __('https://', 'iasd'),
+                    ),
+                ),
+                'location'              => array(
+                    array(
+                        array(
+                            'param'           => 'post_type',
+                            'operator'        => '==',
+                            'value'           => 'projects',
+                        ),
+                    ),
+                ),
+                'position'              => 'normal',
+                'style'                 => 'seamless',
+                'label_placement'       => 'top',
+                'instruction_placement' => 'label',
+            ));
+        }
+    }
 }
 
 $PaCptProjects = new PaCptProjects();
