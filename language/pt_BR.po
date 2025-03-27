@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-10 11:30-0300\n"
-"PO-Revision-Date: 2024-10-10 11:30-0300\n"
+"POT-Creation-Date: 2025-03-19 16:56-0300\n"
+"PO-Revision-Date: 2025-03-20 08:21-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -56,6 +56,14 @@ msgstr ""
 #: classes/controllers/PA_CPT_Projects.class.php:51
 msgid "Projects"
 msgstr "Projetos"
+
+#: classes/controllers/PA_ACF_Child-settings.class.php:30
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:28
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:30
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:31
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:44
+msgid "Official Notes"
+msgstr "Notas Oficiais"
 
 #: classes/controllers/PA_ACF_Leaders.class.php:55
 msgid "/leaders/"
@@ -196,6 +204,7 @@ msgstr "Distrito"
 
 #: classes/controllers/PA_CPT_District.class.php:39
 #: classes/controllers/PA_CPT_Leaders.class.php:39
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:32
 #: classes/controllers/PA_CPT_Projects.class.php:29
 #: classes/controllers/PA_CPT_SliderHome.class.php:32
 msgid "Add New"
@@ -203,6 +212,7 @@ msgstr "Adicionar novo"
 
 #: classes/controllers/PA_CPT_District.class.php:40
 #: classes/controllers/PA_CPT_Leaders.class.php:40
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:33
 #: classes/controllers/PA_CPT_Projects.class.php:30
 #: classes/controllers/PA_CPT_SliderHome.class.php:33
 msgid "Add New Item"
@@ -210,6 +220,7 @@ msgstr "Adicionar novo item"
 
 #: classes/controllers/PA_CPT_District.class.php:41
 #: classes/controllers/PA_CPT_Leaders.class.php:41
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:34
 #: classes/controllers/PA_CPT_Projects.class.php:31
 #: classes/controllers/PA_CPT_SliderHome.class.php:34
 msgid "New item"
@@ -217,6 +228,7 @@ msgstr "Novo item"
 
 #: classes/controllers/PA_CPT_District.class.php:42
 #: classes/controllers/PA_CPT_Leaders.class.php:42
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:35
 #: classes/controllers/PA_CPT_Projects.class.php:32
 #: classes/controllers/PA_CPT_SliderHome.class.php:35
 msgid "Edit item"
@@ -224,6 +236,7 @@ msgstr "Editar item"
 
 #: classes/controllers/PA_CPT_District.class.php:43
 #: classes/controllers/PA_CPT_Leaders.class.php:43
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:36
 #: classes/controllers/PA_CPT_Projects.class.php:33
 #: classes/controllers/PA_CPT_SliderHome.class.php:36
 msgid "View item"
@@ -231,6 +244,7 @@ msgstr "Visualizar item"
 
 #: classes/controllers/PA_CPT_District.class.php:44
 #: classes/controllers/PA_CPT_Leaders.class.php:44
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:37
 #: classes/controllers/PA_CPT_Projects.class.php:34
 #: classes/controllers/PA_CPT_SliderHome.class.php:37
 msgid "All items"
@@ -238,6 +252,7 @@ msgstr "Todos os itens"
 
 #: classes/controllers/PA_CPT_District.class.php:45
 #: classes/controllers/PA_CPT_Leaders.class.php:45
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:38
 #: classes/controllers/PA_CPT_Projects.class.php:35
 #: classes/controllers/PA_CPT_SliderHome.class.php:38
 msgid "Search item"
@@ -245,6 +260,7 @@ msgstr "Buscar item"
 
 #: classes/controllers/PA_CPT_District.class.php:46
 #: classes/controllers/PA_CPT_Leaders.class.php:46
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:39
 #: classes/controllers/PA_CPT_Projects.class.php:36
 #: classes/controllers/PA_CPT_SliderHome.class.php:39
 msgid "Not found."
@@ -252,6 +268,7 @@ msgstr "Nenhuma correspondência encontrada."
 
 #: classes/controllers/PA_CPT_District.class.php:47
 #: classes/controllers/PA_CPT_Leaders.class.php:47
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:40
 #: classes/controllers/PA_CPT_Projects.class.php:37
 #: classes/controllers/PA_CPT_SliderHome.class.php:40
 msgid "Not found in Trash."
@@ -375,6 +392,10 @@ msgstr "Telefone"
 msgid "Add member"
 msgstr "Adicionar membro"
 
+#: classes/controllers/PA_CPT_OfficialNotes.class.php:29
+msgid "Official Note"
+msgstr "Nota Oficial"
+
 #: classes/controllers/PA_CPT_Projects.class.php:26
 #: classes/controllers/PA_CPT_Projects.class.php:40
 msgid "Project"
@@ -452,6 +473,10 @@ msgstr "URL de destino"
 #: classes/controllers/PA_Page_Lideres.php:77 page-lideres.php:45
 msgid "View profile"
 msgstr "Ver perfil"
+
+#: classes/controllers/PA_Page_OfficialNotes.php:32
+msgid "No official notes found."
+msgstr "Nenhuma nota oficial encontrada."
 
 #: home.php:15 home.php:28
 msgid "Post"
