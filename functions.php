@@ -11,6 +11,7 @@ require_once(dirname(__FILE__) . '/classes/controllers/PA_Enqueue_Files.class.ph
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Page_Lideres.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_CPT_District.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Theme_Helpers.php');
+require_once(dirname(__FILE__) . '/classes/controllers/PA_CPT_OfficialNotes.class.php');
 require_once(dirname(__FILE__) . '/classes/PA_Theme_Handler.php');
 
 add_action('after_setup_theme', function () {

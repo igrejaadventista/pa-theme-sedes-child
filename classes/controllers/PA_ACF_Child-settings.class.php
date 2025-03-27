@@ -27,6 +27,9 @@ class PaAcfChildSettings {
         TrueFalse::make(__('Projects', 'iasd'), 'module_projects')
           ->defaultValue(true)
           ->stylisedUi(),
+        TrueFalse::make(__('Official Notes', 'iasd'), 'module_officialnotes')
+          ->defaultValue(true)
+          ->stylisedUi(),
       ],
       'location' => [
         Location::where('options_page', '==', 'iasd_custom_settings'),
