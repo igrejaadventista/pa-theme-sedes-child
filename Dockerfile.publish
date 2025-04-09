@@ -1,68 +1,68 @@
+# Etapa 1: Construção do ambiente
 FROM php:alpine as build
 
-RUN apk update 
-RUN apk upgrade 
-RUN apk add --no-cache bash nano zip wget git curl unzip
-    
-COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes /var/www/build /var/www/build/themes/pa-theme-sedes
-COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes-child /var/www/build /var/www/build/themes/pa-theme-sedes-child
+# Dependências essenciais
+RUN apk update && apk upgrade && apk add --no-cache bash zip wget curl unzip git nano
+
+# Aumenta o limite de memória
+RUN echo "memory_limit=512M" > /usr/local/etc/php/conf.d/memory-limit.ini
+ENV WP_CLI_PHP="/usr/bin/php -d memory_limit=512M"
+
+# Copia o WP-CLI
 COPY --from=wordpress:cli-php8.1 /usr/local/bin/wp /usr/local/bin/wp
 
-RUN find /var/www/build/themes/ -type d -exec chmod 755 {} \; && find /var/www/build/themes/ -type f -exec chmod 644 {} \;
+# Copia os temas dos repositórios Docker (ajuste os nomes conforme necessário)
+COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes /var/www/build /var/www/build/themes/pa-theme-sedes
+COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes-child /var/www/build /var/www/build/themes/pa-theme-sedes-child
 
-ARG ACF_KEY
+# Corrige permissões dos temas
+RUN find /var/www/build/themes/ -type d -exec chmod 755 {} \; && \
+    find /var/www/build/themes/ -type f -exec chmod 644 {} \;
 
+# Cria diretório de plugins
 RUN mkdir -p /var/www/build/plugins
-RUN curl "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=${ACF_KEY}" --output /var/www/build/plugins/advanced-custom-fields-pro.zip
-RUN curl "https://codeload.github.com/cloudflare/Cloudflare-WordPress/zip/refs/heads/master" --output /var/www/build/plugins/cloudflare.zip
 
-RUN mkdir -p /var/www/build/wp /var/www/build/wp/pt_BR /var/www/build/wp/es_ES
+# Baixa ACF Pro e Cloudflare (ajuste sua chave ACF abaixo)
+ARG ACF_KEY
+RUN curl -s "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=${ACF_KEY}" -o /var/www/build/plugins/advanced-custom-fields-pro.zip
+RUN curl -s "https://codeload.github.com/cloudflare/Cloudflare-WordPress/zip/refs/heads/master" -o /var/www/build/plugins/cloudflare.zip
 
-# Setup Portuguese WordPress
-RUN set -ex && \
+# Cria diretório pt_BR e instala WordPress
+RUN mkdir -p /var/www/build/wp/pt_BR && \
     cd /var/www/build/wp/pt_BR && \
-    wp core download --locale=pt_BR --allow-root && \
-    rm -rf wp-content/themes/* && mkdir -p wp-content/themes && touch wp-content/themes/index.php && \
-    rm -rf wp-content/plugins/* && mkdir -p wp-content/plugins && touch wp-content/plugins/index.php && \
-    cp -a /var/www/build/themes/* wp-content/themes/ && \
-    cp -a /var/www/build/plugins/* wp-content/plugins/ && \
-    cd wp-content/plugins/ && \
-    for z in *.zip; do if [ -f "$z" ]; then unzip -qq "$z" -d .; fi; done && \
-    rm -f *.zip && \
-    if [ -d "Cloudflare-WordPress-master" ]; then mv Cloudflare-WordPress-master cloudflare; fi
+    wp core download --locale=pt_BR --allow-root
 
-# Setup Spanish WordPress
-RUN set -ex && \
-    cd /var/www/build/wp/es_ES && \
-    wp core download --locale=es_ES --allow-root && \
-    rm -rf wp-content/themes/* && mkdir -p wp-content/themes && touch wp-content/themes/index.php && \
-    rm -rf wp-content/plugins/* && mkdir -p wp-content/plugins && touch wp-content/plugins/index.php && \
-    cp -a /var/www/build/themes/* wp-content/themes/ && \
-    cp -a /var/www/build/plugins/* wp-content/plugins/ && \
-    cd wp-content/plugins/ && \
-    for z in *.zip; do if [ -f "$z" ]; then unzip -qq "$z" -d .; fi; done && \
-    rm -f *.zip && \
-    if [ -d "Cloudflare-WordPress-master" ]; then mv Cloudflare-WordPress-master cloudflare; fi
+# Limpa temas e plugins padrão, adiciona os novos
+RUN rm -rf /var/www/build/wp/pt_BR/wp-content/themes/* && \
+    mkdir -p /var/www/build/wp/pt_BR/wp-content/themes && \
+    touch /var/www/build/wp/pt_BR/wp-content/themes/index.php && \
+    rm -rf /var/www/build/wp/pt_BR/wp-content/plugins/* && \
+    mkdir -p /var/www/build/wp/pt_BR/wp-content/plugins && \
+    touch /var/www/build/wp/pt_BR/wp-content/plugins/index.php && \
+    cp -a /var/www/build/themes/* /var/www/build/wp/pt_BR/wp-content/themes/ && \
+    cp -a /var/www/build/plugins/* /var/www/build/wp/pt_BR/wp-content/plugins/
 
-# Zip arquivos WordPress
-RUN cd /var/www/build/wp \
-  && for d in ./*; do zip -rqq $d.zip ./$d; done
+# Descompacta plugins
+RUN cd /var/www/build/wp/pt_BR/wp-content/plugins/ && \
+    for z in *.zip; do \
+        if [ -f "$z" ]; then unzip -qq "$z" -d .; fi; \
+    done && \
+    rm -f *.zip
 
-# Zip temas
-RUN cd /var/www/build/themes \
-  && for d in ./*; do zip -rqq $d.zip ./$d; done
+# Renomeia o plugin Cloudflare
+RUN if [ -d "/var/www/build/wp/pt_BR/wp-content/plugins/Cloudflare-WordPress-master" ]; then \
+    mv /var/www/build/wp/pt_BR/wp-content/plugins/Cloudflare-WordPress-master /var/www/build/wp/pt_BR/wp-content/plugins/cloudflare; \
+    fi
 
-# Copiar zips para dist
-RUN mkdir -p /var/www/dist /var/www/dist/plugins /var/www/dist/themes /var/www/dist/wp && \
-  cp /var/www/build/plugins/*.zip /var/www/dist/plugins && \
-  cp /var/www/build/themes/*.zip /var/www/dist/themes && \
-  cp /var/www/build/wp/*.zip /var/www/dist/wp
+# Opcional: criar ZIP do resultado
+RUN cd /var/www/build/wp && zip -rqq pt_BR.zip ./pt_BR
 
-
-# Fase final: imagem com Apache
+# Etapa 2: Servidor Apache para visualização/distribuição (opcional)
 FROM httpd:latest
 
-COPY --from=build /var/www/dist /usr/local/apache2/htdocs/
+# Copia os arquivos gerados da etapa anterior
+COPY --from=build /var/www/build/wp/pt_BR /usr/local/apache2/htdocs/pt_BR/
+COPY --from=build /var/www/build/wp/pt_BR.zip /usr/local/apache2/htdocs/wp/
 
-RUN rm -rf /usr/local/apache2/htdocs/index.html && \
-    touch /usr/local/apache2/htdocs/health.html
+# Remove index.html padrão e adiciona arquivo de saúde
+RUN rm -f /usr/local/apache2/htdocs/index.html && touch /usr/local/apache2/htdocs/health.html
