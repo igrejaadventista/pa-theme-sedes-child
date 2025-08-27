@@ -11,6 +11,8 @@ class PaCptOfficialNotes {
     public function __construct()
     {
         add_action('init', [$this, 'checkModule']);
+        add_action('after_switch_theme', [$this, 'flushRewriteRules']);
+
     }
 
     function checkModule()
@@ -25,25 +27,25 @@ class PaCptOfficialNotes {
 
     function CreatePostType() {
         $labels = array(
-            'name'                  => __('Official Notes', 'iasd'),
-            'singular_name'         => __('Official Note', 'iasd'),
-            'menu_name'             => __('Official Notes', 'iasd'),
-            'name_admin_bar'        => __('Official Notes', 'iasd'),
-            'add_new'               => __('Add New', 'iasd'),
-            'add_new_item'          => __('Add New Item', 'iasd'),
-            'new_item'              => __('New item', 'iasd'),
-            'edit_item'             => __('Edit item', 'iasd'),
-            'view_item'             => __('View item', 'iasd'),
-            'all_items'             => __('All items', 'iasd'),
-            'search_items'          => __('Search item', 'iasd'),
-            'not_found'             => __('Not found.', 'iasd'),
-            'not_found_in_trash'    => __('Not found in Trash.', 'iasd'),
+            'name'                  => __('Notas Oficiais', 'iasd'),
+            'singular_name'         => __('Nota Oficial', 'iasd'),
+            'menu_name'             => __('Notas Oficiais', 'iasd'),
+            'name_admin_bar'        => __('Nota Oficial', 'iasd'),
+            'add_new'               => __('Adicionar Nova', 'iasd'),
+            'add_new_item'          => __('Adicionar Nova Nota Oficial', 'iasd'),
+            'new_item'              => __('Nova Nota Oficial', 'iasd'),
+            'edit_item'             => __('Editar Nota Oficial', 'iasd'),
+            'view_item'             => __('Visualizar Nota Oficial', 'iasd'),
+            'all_items'             => __('Todas as Notas Oficiais', 'iasd'),
+            'search_items'          => __('Buscar Notas Oficiais', 'iasd'),
+            'not_found'             => __('Nenhuma nota oficial encontrada.', 'iasd'),
+            'not_found_in_trash'    => __('Nenhuma nota oficial encontrada na lixeira.', 'iasd'),
         );
     
         $args = array(
-            'label'                 => __('Official Notes', 'iasd'),
+            'label'                 => __('Notas Oficiais', 'iasd'),
             'labels'                => $labels,
-            'supports'              => array('title', 'editor', 'thumbnail', 'excerpt', 'author', 'revisions'), // Aqui está o ajuste
+            'supports'              => array('title', 'editor', 'thumbnail', 'excerpt', 'author', 'revisions'),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
@@ -52,14 +54,24 @@ class PaCptOfficialNotes {
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
-            'has_archive'           => false,
+            'has_archive'           => true,
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
             'capabilities'          => pa_compile_post_type_capabilities('officialnotes', 'officialnotes'),
             'show_in_rest'          => true,
+            'rewrite'               => array('slug' => 'official-notes', 'with_front' => false),
         );
     
         register_post_type('officialnotes', $args);
+    }
+
+    /**
+     * Flush rewrite rules when theme is activated
+     */
+    public function flushRewriteRules() {
+        $this->CreatePostType();
+        flush_rewrite_rules();
+
     }
 
 }
