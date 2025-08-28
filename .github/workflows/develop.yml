@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:         
       - name: Checkout do repositório
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Verificando o cache dos pacotes do Composer
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: /tmp/composer-cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
@@ -27,7 +27,7 @@ jobs:
           args: -o --ignore-platform-reqs -d ./    
       
       - name: Setup do NodeJS para o tema
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "16"   
 
