@@ -1,23 +1,38 @@
+# ==========================
+# Etapa de build
+# ==========================
 FROM php:alpine as build
 
-RUN apk update 
-RUN apk upgrade 
-RUN apk add --no-cache bash nano zip wget git curl unzip
-    
-COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes /var/www/build /var/www/build/themes/pa-theme-sedes
-COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes-child /var/www/build /var/www/build/themes/pa-theme-sedes-child
-COPY --from=wordpress:cli-php8.1 /usr/local/bin/wp /usr/local/bin/wp
-RUN find /var/www/build/themes/ -type d -exec chmod 755 {} \; && find /var/www/build/themes/ -type f -exec chmod 644 {} \;
+# Atualização e instalação de pacotes
+RUN apk update \
+ && apk upgrade \
+ && apk add --no-cache bash nano zip wget git curl unzip
 
+# Copiando os temas já prontos (apenas os diretórios de tema)
+COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes /var/www/build/themes/pa-theme-sedes /var/www/build/themes/pa-theme-sedes
+COPY --chown=www-data:www-data --from=internetdsa/pa-theme-sedes-child /var/www/build/themes/pa-theme-sedes-child /var/www/build/themes/pa-theme-sedes-child
+
+# Corrigindo permissões dos temas
+RUN find /var/www/build/themes/ -type d -exec chmod 755 {} \; \
+ && find /var/www/build/themes/ -type f -exec chmod 644 {} \;
+
+# Copiando o WP-CLI
+COPY --from=wordpress:cli-php8.1 /usr/local/bin/wp /usr/local/bin/wp
+
+# Argumento da chave do ACF Pro
 ARG ACF_KEY
 
-RUN mkdir -p /var/www/build/plugins
-RUN curl "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=${ACF_KEY}" --output /var/www/build/plugins/advanced-custom-fields-pro.zip
-RUN curl "https://codeload.github.com/cloudflare/Cloudflare-WordPress/zip/refs/heads/master" --output /var/www/build/plugins/cloudflare.zip
+# Baixando plugins
+RUN mkdir -p /var/www/build/plugins \
+ && curl -s "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=${ACF_KEY}" -o /var/www/build/plugins/advanced-custom-fields-pro.zip \
+ && curl -s "https://codeload.github.com/cloudflare/Cloudflare-WordPress/zip/refs/heads/master" -o /var/www/build/plugins/cloudflare.zip
 
-RUN mkdir -p /var/www/build/wp /var/www/build/wp/pt_BR /var/www/build/wp/es_ES
+# Criando diretórios do WordPress
+RUN mkdir -p /var/www/build/wp/pt_BR /var/www/build/wp/es_ES
 
-# Setup Portuguese WordPress
+# ==========================
+# Configuração do WordPress pt_BR
+# ==========================
 RUN set -ex && \
     cd /var/www/build/wp/pt_BR && \
     wp core download --locale=pt_BR --allow-root && \
@@ -30,7 +45,9 @@ RUN set -ex && \
     rm -f *.zip && \
     if [ -d "Cloudflare-WordPress-master" ]; then mv Cloudflare-WordPress-master cloudflare; fi
 
-# Setup Spanish WordPress
+# ==========================
+# Configuração do WordPress es_ES
+# ==========================
 RUN set -ex && \
     cd /var/www/build/wp/es_ES && \
     wp core download --locale=es_ES --allow-root && \
@@ -43,20 +60,29 @@ RUN set -ex && \
     rm -f *.zip && \
     if [ -d "Cloudflare-WordPress-master" ]; then mv Cloudflare-WordPress-master cloudflare; fi
 
+# ==========================
+# Gerando ZIPs dos WordPress e temas
+# ==========================
 RUN cd /var/www/build/wp \
-  && for d in ./*; do zip -rqq $d.zip ./$d; done
+ && for d in *; do zip -rqq "$d.zip" "$d"; done
+
 RUN cd /var/www/build/themes \
-  && for d in ./*; do zip -rqq $d.zip ./$d; done
+ && for d in *; do zip -rqq "$d.zip" "$d"; done
 
-RUN mkdir -p /var/www/dist /var/www/dist/plugins /var/www/dist/themes /var/www/dist/wp \ 
-  && cp /var/www/build/plugins/*.zip /var/www/dist/plugins \
-  && cp /var/www/build/themes/*.zip /var/www/dist/themes \
-  && cp /var/www/build/wp/*.zip   /var/www/dist/wp
+# Organizando os arquivos finais na pasta /dist
+RUN mkdir -p /var/www/dist/plugins /var/www/dist/themes /var/www/dist/wp \
+ && cp /var/www/build/plugins/*.zip /var/www/dist/plugins \
+ && cp /var/www/build/themes/*.zip /var/www/dist/themes \
+ && cp /var/www/build/wp/*.zip /var/www/dist/wp
 
-
+# ==========================
+# Imagem final com Apache
+# ==========================
 FROM httpd:latest
 
+# Copia todos os arquivos gerados
 COPY --from=build /var/www/dist /usr/local/apache2/htdocs/
 
-RUN rm -rf /usr/local/apache2/htdocs/index.html \ 
-  && touch /usr/local/apache2/htdocs/health.html
+# Remove index.html padrão e adiciona health check
+RUN rm -f /usr/local/apache2/htdocs/index.html \
+ && touch /usr/local/apache2/htdocs/health.html
