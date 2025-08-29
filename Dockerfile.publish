@@ -61,12 +61,12 @@ RUN echo "=== CONTEÚDO WP ===" && ls -la /var/www/build/wp/ && \
 
 # Gerando ZIPs dos pacotes WordPress
 RUN cd /var/www/build/wp \
- && echo "=== CRIANDO ZIPs WP ===" && \
+ && echo "=== CRIANDO ZIPs WP ===" \
  && for d in *; do echo "Criando ZIP para: $d" && zip -rqq "$d.zip" "$d" && echo "ZIP criado: $d.zip" && ls -la "$d.zip"; done
 
 # Gerando ZIPs dos temas
 RUN cd /var/www/build/themes \
- && echo "=== CRIANDO ZIPs TEMAS ===" && \
+ && echo "=== CRIANDO ZIPs TEMAS ===" \
  && for d in *; do echo "Criando ZIP para: $d" && zip -rqq "$d.zip" "$d" && echo "ZIP criado: $d.zip" && ls -la "$d.zip"; done
 
 # Debug: Verificando ZIPs criados
