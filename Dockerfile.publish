@@ -21,49 +21,70 @@ RUN mkdir -p /var/www/build/plugins /var/www/build/wp/pt_BR /var/www/build/wp/es
 
 # Baixando plugins (ACF_KEY será passado como build arg)
 ARG ACF_KEY
-RUN curl -s "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=${ACF_KEY}" -o /var/www/build/plugins/advanced-custom-fields-pro.zip && \
-    curl -s "https://codeload.github.com/cloudflare/Cloudflare-WordPress/zip/refs/heads/master" -o /var/www/build/plugins/cloudflare.zip
+RUN curl -s "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=${ACF_KEY}" -o /var/www/build/plugins/advanced-custom-fields-pro.zip
+RUN curl -s "https://codeload.github.com/cloudflare/Cloudflare-WordPress/zip/refs/heads/master" -o /var/www/build/plugins/cloudflare.zip
 
-# Setup Portuguese WordPress
+# Setup Portuguese WordPress - Download core
+RUN cd /var/www/build/wp/pt_BR && wp core download --locale=pt_BR --allow-root
+
+# Setup Portuguese WordPress - Clean themes and plugins
 RUN cd /var/www/build/wp/pt_BR && \
-    wp core download --locale=pt_BR --allow-root && \
     rm -rf wp-content/themes/* && \
     touch wp-content/themes/index.php && \
     rm -rf wp-content/plugins/* && \
-    touch wp-content/plugins/index.php && \
+    touch wp-content/plugins/index.php
+
+# Setup Portuguese WordPress - Copy themes and plugins
+RUN cd /var/www/build/wp/pt_BR && \
     cp -a /var/www/build/themes/* wp-content/themes/ && \
-    cp -a /var/www/build/plugins/* wp-content/plugins/ && \
-    cd wp-content/plugins/ && \
+    cp -a /var/www/build/plugins/* wp-content/plugins/
+
+# Setup Portuguese WordPress - Extract plugins
+RUN cd /var/www/build/wp/pt_BR/wp-content/plugins && \
     for z in ./*.zip; do [ -f "$z" ] && unzip -qq "$z" -d . || true; done && \
-    rm -f *.zip && \
+    rm -f *.zip
+
+# Setup Portuguese WordPress - Rename Cloudflare plugin
+RUN cd /var/www/build/wp/pt_BR/wp-content/plugins && \
     if [ -d "Cloudflare-WordPress-master" ]; then mv Cloudflare-WordPress-master cloudflare; fi
 
-# Setup Spanish WordPress
+# Setup Spanish WordPress - Download core
+RUN cd /var/www/build/wp/es_ES && wp core download --locale=es_ES --allow-root
+
+# Setup Spanish WordPress - Clean themes and plugins
 RUN cd /var/www/build/wp/es_ES && \
-    wp core download --locale=es_ES --allow-root && \
     rm -rf wp-content/themes/* && \
     touch wp-content/themes/index.php && \
     rm -rf wp-content/plugins/* && \
-    touch wp-content/plugins/index.php && \
+    touch wp-content/plugins/index.php
+
+# Setup Spanish WordPress - Copy themes and plugins
+RUN cd /var/www/build/wp/es_ES && \
     cp -a /var/www/build/themes/* wp-content/themes/ && \
-    cp -a /var/www/build/plugins/* wp-content/plugins/ && \
-    cd wp-content/plugins/ && \
+    cp -a /var/www/build/plugins/* wp-content/plugins/
+
+# Setup Spanish WordPress - Extract plugins
+RUN cd /var/www/build/wp/es_ES/wp-content/plugins && \
     for z in ./*.zip; do [ -f "$z" ] && unzip -qq "$z" -d . || true; done && \
-    rm -f *.zip && \
+    rm -f *.zip
+
+# Setup Spanish WordPress - Rename Cloudflare plugin
+RUN cd /var/www/build/wp/es_ES/wp-content/plugins && \
     if [ -d "Cloudflare-WordPress-master" ]; then mv Cloudflare-WordPress-master cloudflare; fi
 
-# Gerando ZIPs dos pacotes
+# Gerando ZIPs dos pacotes WordPress
 RUN cd /var/www/build/wp && \
     for d in *; do zip -rqq "$d.zip" "$d"; done
 
+# Gerando ZIPs dos temas
 RUN cd /var/www/build/themes && \
     for d in *; do zip -rqq "$d.zip" "$d"; done
 
 # Organizando os arquivos finais na pasta /dist
-RUN mkdir -p /var/www/dist/plugins /var/www/dist/themes /var/www/dist/wp && \
-    cp /var/www/build/plugins/*.zip /var/www/dist/plugins && \
-    cp /var/www/build/themes/*.zip /var/www/dist/themes && \
-    cp /var/www/build/wp/*.zip /var/www/dist/wp
+RUN mkdir -p /var/www/dist/plugins /var/www/dist/themes /var/www/dist/wp
+RUN cp /var/www/build/plugins/*.zip /var/www/dist/plugins
+RUN cp /var/www/build/themes/*.zip /var/www/dist/themes
+RUN cp /var/www/build/wp/*.zip /var/www/dist/wp
 
 # Imagem final com servidor Apache
 FROM httpd:latest
