@@ -55,18 +55,35 @@ RUN cd /var/www/build/wp/es_ES \
  && rm -f *.zip \
  && mv Cloudflare-WordPress-master cloudflare || true
 
-# Gerando ZIPs dos pacotes
-RUN cd /var/www/build/wp \
- && for d in *; do zip -rqq "$d.zip" "$d"; done
+# Debug: Verificando conteúdo antes de criar ZIPs
+RUN echo "=== CONTEÚDO WP ===" && ls -la /var/www/build/wp/ && \
+    echo "=== CONTEÚDO TEMAS ===" && ls -la /var/www/build/themes/
 
+# Gerando ZIPs dos pacotes WordPress
+RUN cd /var/www/build/wp \
+ && echo "=== CRIANDO ZIPs WP ===" \
+ && for d in *; do echo "Criando ZIP para: $d" && zip -rqq "$d.zip" "$d" && echo "ZIP criado: $d.zip" && ls -la "$d.zip"; done
+
+# Gerando ZIPs dos temas
 RUN cd /var/www/build/themes \
- && for d in *; do zip -rqq "$d.zip" "$d"; done
+ && echo "=== CRIANDO ZIPs TEMAS ===" \
+ && for d in *; do echo "Criando ZIP para: $d" && zip -rqq "$d.zip" "$d" && echo "ZIP criado: $d.zip" && ls -la "$d.zip"; done
+
+# Debug: Verificando ZIPs criados
+RUN echo "=== ZIPs WP CRIADOS ===" && ls -la /var/www/build/wp/*.zip && \
+    echo "=== ZIPs TEMAS CRIADOS ===" && ls -la /var/www/build/themes/*.zip
 
 # Organizamos os arquivos finais na pasta /dist
 RUN mkdir -p /var/www/dist/plugins /var/www/dist/themes /var/www/dist/wp \
  && cp /var/www/build/plugins/*.zip /var/www/dist/plugins \
  && cp /var/www/build/themes/*.zip /var/www/dist/themes \
  && cp /var/www/build/wp/*.zip /var/www/dist/wp
+
+# Debug: Verificando arquivos finais
+RUN echo "=== ARQUIVOS FINAIS ===" && \
+    echo "--- PLUGINS ---" && ls -la /var/www/dist/plugins/ && \
+    echo "--- TEMAS ---" && ls -la /var/www/dist/themes/ && \
+    echo "--- WP ---" && ls -la /var/www/dist/wp/
 
 # Imagem final com servidor Apache
 FROM httpd:latest
