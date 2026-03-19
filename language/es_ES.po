@@ -165,8 +165,6 @@ msgid "Districts"
 msgstr "Distritos"
 
 #: taxonomy-xtt-pa-region.php:35
-#, fuzzy
-#| msgid "District"
 msgid "Distrito"
 msgstr "Distrito"
 
@@ -336,7 +334,7 @@ msgstr "Nuevo artículo"
 #, fuzzy
 #| msgid "New"
 msgid "News"
-msgstr "Novo"
+msgstr "Noticias"
 
 #: single-officialnotes.php:57
 msgid "Next article"
@@ -521,3 +519,1155 @@ msgstr "URL del sitio web"
 #: classes/controllers/PA_CPT_Projects.class.php:83
 msgid "Yes, this is a website."
 msgstr "Sí, esto es un sitio web."
+
+#: Blocks/PAApps/views/frontend.blade.php:16
+msgid "Apps"
+msgstr "Aplicaciones"
+
+#: Blocks/PAApps/views/frontend.blade.php:22
+msgid "Apps available for:"
+msgstr "Aplicaciones disponibles para:"
+
+#: Blocks/PAApps/views/frontend.blade.php:29
+msgid "Apple Store"
+msgstr ""
+
+#: Blocks/PAApps/views/frontend.blade.php:37
+msgid "Google Play"
+msgstr ""
+
+#: Blocks/PAFeliz7Play/views/frontend.blade.php:15
+msgid "Access the website"
+msgstr "Acceder al sitio web"
+
+#: Blocks/PAFindChurch/views/frontend.blade.php:7
+msgid "Finding a church"
+msgstr "Encontrar una iglesia"
+
+#: Blocks/PAFindChurch/views/frontend.blade.php:8
+msgid "Adventist churches that are located in the South American Division."
+msgstr "Iglesias adventistas ubicadas en la División Sudamericana."
+
+#: Blocks/PAFindChurch/views/frontend.blade.php:12
+msgid "Church search"
+msgstr "Búsqueda de iglesia"
+
+#: Blocks/PAFindChurch/views/frontend.blade.php:14
+msgid "Search by Postcode, city, neighborhood."
+msgstr "Buscar por código postal, ciudad, barrio."
+
+#: Blocks/PAFindChurch/views/frontend.blade.php:17 404.php:23
+#: components/menu/header.php:26 core/Taxonomies.php:140 search.php:26
+msgid "Search"
+msgstr "Buscar"
+
+#: 404.php:10 404.php:16
+msgid "I'm sorry! Content not found! :("
+msgstr "¡Lo siento! ¡Contenido no encontrado! :("
+
+#: 404.php:17
+msgid "The content which you are looking don't exist and don't be found."
+msgstr "El contenido que está buscando no existe y no fue encontrado."
+
+#: 404.php:20
+msgid "Do you want to do a new search?"
+msgstr "¿Desea hacer una nueva búsqueda?"
+
+#: 404.php:21
+msgid "New search"
+msgstr "Nueva búsqueda"
+
+#: Blocks/Blocks.php:169
+msgid "Adventist"
+msgstr "Adventista"
+
+#: Blocks/PAApps/PAApps.php:19 Blocks/PAApps/PAApps.php:221
+#: core/settings/Modules.php:183
+msgid "IASD - Apps"
+msgstr ""
+
+#: Blocks/PAApps/PAApps.php:20 core/settings/Modules.php:184
+msgid "App"
+msgstr "Aplicación"
+
+#: Blocks/PAApps/PAApps.php:220
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:39
+#: Blocks/PACarouselFeature/PACarouselFeature.php:35
+#: Blocks/PACarouselKits/PACarouselKits.php:39
+#: Blocks/PACarouselMinistry/PACarouselMinistry.php:37
+#: Blocks/PAFacebook/PAFacebook.php:34 Blocks/PAFindChurch/PAFindChurch.php:47
+#: Blocks/PAListButtons/PAListButtons.php:50
+#: Blocks/PAListDownloads/PAListDownloads.php:38
+#: Blocks/PAListIcons/PAListIcons.php:62 Blocks/PAListItems/PAListItems.php:65
+#: Blocks/PAListNews/PAListNews.php:59 Blocks/PAListVideos/PAListVideos.php:50
+#: Blocks/PAMagazines/PAMagazines.php:33
+#: Blocks/PAQueroVidaSaude/PAQueroVidaSaude.php:38
+#: Blocks/PASevenCast/PASevenCast.php:38 Blocks/PATwitter/PATwitter.php:34
+#: Blocks/Plugins/LocalData/LocalData.php:673
+#: Blocks/Plugins/RemoteData/RemoteData.php:659
+msgid "Title"
+msgstr "Título"
+
+#: Blocks/PAApps/PAApps.php:222 Blocks/PAFindChurch/PAFindChurch.php:48
+msgid "Description"
+msgstr "Descripción"
+
+#: Blocks/PAApps/PAApps.php:223
+msgid "Button"
+msgstr "Botón"
+
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:20
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:40
+#: core/settings/Modules.php:237
+msgid "IASD - Downloads - Carousel"
+msgstr ""
+
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:21
+#: core/settings/Modules.php:238
+msgid "Block from downloads content on carousel format."
+msgstr "Bloque para mostrar contenido de descargas en formato carrusel."
+
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:42
+#: Blocks/PACarouselFeature/PACarouselFeature.php:38
+#: Blocks/PACarouselKits/PACarouselKits.php:42
+#: Blocks/PACarouselMinistry/PACarouselMinistry.php:39
+#: Blocks/PAFeliz7Play/PAFeliz7Play.php:912
+#: Blocks/PAListButtons/PAListButtons.php:52
+#: Blocks/PAListDownloads/PAListDownloads.php:41
+#: Blocks/PAListIcons/PAListIcons.php:64 Blocks/PAListItems/PAListItems.php:68
+#: Blocks/PAListNews/PAListNews.php:62 Blocks/PAListNews/PAListNews.php:93
+#: Blocks/PAListVideos/PAListVideos.php:53
+#: Blocks/PAMagazines/PAMagazines.php:35
+#: Blocks/PAQueroVidaSaude/PAQueroVidaSaude.php:41
+#: Blocks/PASevenCast/PASevenCast.php:41
+msgid "Itens"
+msgstr ""
+
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:56
+#: Blocks/PAListDownloads/PAListDownloads.php:52
+msgid "File format"
+msgstr "Formato del archivo"
+
+#: Blocks/PACarouselDownloads/PACarouselDownloads.php:58
+#: Blocks/PAListDownloads/PAListDownloads.php:54
+msgid "File size"
+msgstr "Tamaño del archivo"
+
+#: Blocks/PACarouselFeature/PACarouselFeature.php:18
+#: Blocks/PACarouselFeature/PACarouselFeature.php:36
+#: core/settings/Modules.php:138
+msgid "IASD - Feature - Carousel"
+msgstr ""
+
+#: Blocks/PACarouselFeature/PACarouselFeature.php:19
+#: core/settings/Modules.php:139
+msgid "Block to feature content on carousel format."
+msgstr "Bloque para mostrar contenido destacado en formato carrusel."
+
+#: Blocks/PACarouselKits/PACarouselKits.php:20
+#: Blocks/PACarouselKits/PACarouselKits.php:40 core/settings/Modules.php:291
+msgid "IASD - Kits - Carousel"
+msgstr ""
+
+#: Blocks/PACarouselKits/PACarouselKits.php:21 core/settings/Modules.php:292
+msgid "Block from kits content on carousel format."
+msgstr "Bloque para mostrar contenido de kits en formato carrusel."
+
+#: Blocks/PACarouselMinistry/PACarouselMinistry.php:19
+#: Blocks/PACarouselMinistry/PACarouselMinistry.php:38
+#: core/settings/Modules.php:210
+msgid "IASD - Feature Slider - Ministry"
+msgstr ""
+
+#: Blocks/PACarouselMinistry/PACarouselMinistry.php:20
+#: core/settings/Modules.php:211
+msgid "Block to feature content in slider format."
+msgstr "Bloque para mostrar contenido destacado en formato slider."
+
+#: Blocks/PACarouselMinistry/PACarouselMinistry.php:43
+msgid "Tag"
+msgstr ""
+
+#: Blocks/PAFacebook/PAFacebook.php:18 Blocks/PAFacebook/PAFacebook.php:35
+#: core/settings/Modules.php:156
+msgid "IASD - Facebook"
+msgstr ""
+
+#: Blocks/PAFacebook/PAFacebook.php:19 core/settings/Modules.php:157
+msgid "IASD Facebok block."
+msgstr "Bloque de Facebook."
+
+#: Blocks/PAFacebook/PAFacebook.php:37
+msgid "Facebook page URL."
+msgstr "URL de la página de Facebook."
+
+#: Blocks/PAFeliz7Play/PAFeliz7Play.php:17 core/settings/Modules.php:255
+msgid "IASD - Feliz7Play"
+msgstr ""
+
+#: Blocks/PAFeliz7Play/PAFeliz7Play.php:18 core/settings/Modules.php:256
+msgid "Feliz7Play content block."
+msgstr "Bloque de contenido Feliz7Play."
+
+#: Blocks/PAFindChurch/PAFindChurch.php:19 core/settings/Modules.php:282
+msgid "IASD - Find church"
+msgstr ""
+
+#: Blocks/PAFindChurch/PAFindChurch.php:20 core/settings/Modules.php:283
+msgid "Block to show a box to find a church."
+msgstr "Bloque para mostrar un cuadro de búsqueda de iglesia."
+
+#: Blocks/PAFindChurch/PAFindChurch.php:34
+msgid "Quick access"
+msgstr "Acceso rápido"
+
+#: Blocks/PAListIcons/PAListIcons.php:66
+msgid "Icon"
+msgstr "Icono"
+
+#: Blocks/PAFindChurch/PAFindChurch.php:36
+msgid "Icon or SVG"
+msgstr "Icono o SVG"
+
+#: Blocks/PAFindChurch/PAFindChurch.php:37
+msgid "You can enter a FontAwesome CSS class (e.g., <code>fas fa-bookmark</code>) or paste a custom SVG here. See the <a href=\"https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free\" target=\"_blank\">icon list</a>."
+msgstr "Puede ingresar una clase CSS de FontAwesome (ej: <code>fas fa-bookmark</code>) o pegar un SVG personalizado aquí. Vea la <a href=\"https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free\" target=\"_blank\">lista de iconos</a>."
+
+#: Blocks/PAFindChurch/PAFindChurch.php:43 Blocks/PAImage/PAImage.php:46
+#: Blocks/PAListIcons/PAListIcons.php:72
+#: Blocks/Plugins/LocalData/LocalData.php:680
+#: Blocks/Plugins/RemoteData/RemoteData.php:666
+msgid "Link"
+msgstr ""
+
+#: Blocks/PAFindChurch/PAFindChurch.php:53
+#: Blocks/PAListIcons/PAListIcons.php:78
+msgid "Add item"
+msgstr "Agregar ítem"
+
+#: Blocks/PAImage/PAImage.php:19 core/settings/Modules.php:273
+msgid "IASD - Image"
+msgstr ""
+
+#: Blocks/PAImage/PAImage.php:20 core/settings/Modules.php:274
+msgid "Block to show a image."
+msgstr "Bloque para mostrar una imagen."
+
+#: Blocks/PAImage/PAImage.php:34 Blocks/PAListNews/PAListNews.php:45
+#: Blocks/PAListVideos/PAListVideos.php:43
+msgid "Format"
+msgstr "Formato"
+
+#: Blocks/PAImage/PAImage.php:41
+msgid "Image"
+msgstr "Imagen"
+
+#: Blocks/PAListButtons/PAListButtons.php:21 core/settings/Modules.php:201
+msgid "IASD - Button - List"
+msgstr ""
+
+#: Blocks/PAListButtons/PAListButtons.php:22 core/settings/Modules.php:202
+msgid "Block with links buttons."
+msgstr "Bloque con botones de enlaces."
+
+#: Blocks/PAListButtons/PAListButtons.php:51
+msgid "IASD - Buttons - List"
+msgstr ""
+
+#: Blocks/PAListDownloads/PAListDownloads.php:19 core/settings/Modules.php:228
+msgid "IASD - Downloads - List"
+msgstr ""
+
+#: Blocks/PAListDownloads/PAListDownloads.php:20 core/settings/Modules.php:229
+msgid "Block to show downloads contents in list format."
+msgstr "Bloque para mostrar contenido de descargas en formato lista."
+
+#: Blocks/PAListDownloads/PAListDownloads.php:39
+msgid "IASD - Downloads - Buttons"
+msgstr ""
+
+#: Blocks/PAListIcons/PAListIcons.php:21 Blocks/PAListIcons/PAListIcons.php:63
+#: core/settings/Modules.php:165
+msgid "IASD - Icons - List"
+msgstr ""
+
+#: Blocks/PAListIcons/PAListIcons.php:22 core/settings/Modules.php:166
+msgid "Block to show contents in list format with icons."
+msgstr "Bloque para mostrar contenido en formato lista con iconos."
+
+#: Blocks/PAListItems/PAListItems.php:21 Blocks/PAListItems/PAListItems.php:66
+#: core/settings/Modules.php:174
+msgid "IASD - Itens - List"
+msgstr ""
+
+#: Blocks/PAListItems/PAListItems.php:22 core/settings/Modules.php:175
+#: core/settings/Modules.php:247
+msgid "Block to show contents in list format with images."
+msgstr "Bloque para mostrar contenido en formato lista con imágenes."
+
+#: Blocks/PAListNews/PAListNews.php:25 Blocks/PAListNews/PAListNews.php:60
+#: core/settings/Modules.php:246
+msgid "IASD - News - List"
+msgstr ""
+
+#: Blocks/PAListNews/PAListNews.php:26
+msgid "Block to show news content in list format."
+msgstr "Bloque para mostrar noticias en formato lista."
+
+#: Blocks/PAListNews/PAListNews.php:75 Blocks/PAListNews/PAListNews.php:97
+msgid "Post format"
+msgstr "Formato del post"
+
+#: Blocks/PAListNews/PAListNews.php:101 core/Taxonomies.php:59
+msgid "Editorial"
+msgstr "Editorial"
+
+#: Blocks/PAListVideos/PAListVideos.php:23 core/settings/Modules.php:264
+msgid "IASD - Videos - List(A)"
+msgstr ""
+
+#: Blocks/PAListVideos/PAListVideos.php:24 core/settings/Modules.php:265
+msgid "Block to show videos content in list format."
+msgstr "Bloque para mostrar videos en formato lista."
+
+#: Blocks/PAListVideos/PAListVideos.php:51
+msgid "IASD - Videos - List"
+msgstr ""
+
+#: Blocks/PAListVideos/PAListVideos.php:66
+msgid "Time (in seconds)"
+msgstr "Tiempo (en segundos)"
+
+#: Blocks/PAMagazines/PAMagazines.php:18 Blocks/PAMagazines/PAMagazines.php:34
+#: core/settings/Modules.php:192
+msgid "IASD - Magazines"
+msgstr ""
+
+#: Blocks/PAMagazines/PAMagazines.php:19 core/settings/Modules.php:193
+msgid "Block to show magazines content in carousel format."
+msgstr "Bloque para mostrar revistas en formato carrusel."
+
+#: Blocks/PAQueroVidaSaude/PAQueroVidaSaude.php:19
+#: Blocks/PAQueroVidaSaude/PAQueroVidaSaude.php:39
+#: core/settings/Modules.php:300
+msgid "IASD - Quero vida e saúde"
+msgstr ""
+
+#: Blocks/PAQueroVidaSaude/PAQueroVidaSaude.php:20
+#: core/settings/Modules.php:301
+msgid "Block to show contents from https://querovidaesaude.com/."
+msgstr "Bloco para exibir conteúdos no formato de lista com imagens."
+
+#: Blocks/PARow/PARow.php:16
+msgid "IASD - Row"
+msgstr ""
+
+#: Blocks/PARow/PARow.php:17
+msgid "Block to group IASD blocks."
+msgstr "Bloque para agrupar los bloques de IASD."
+
+#: Blocks/Plugins/LocalData/LocalData.php:32
+msgid "Local data"
+msgstr "Contenido local"
+
+#: Blocks/Plugins/LocalData/LocalData.php:90
+#: Blocks/Plugins/LocalData/LocalData.php:250
+#: Blocks/Plugins/RemoteData/RemoteData.php:114
+#: Blocks/Plugins/RemoteData/RemoteData.php:282
+msgid "Quantity"
+msgstr "Cantidad"
+
+#: Blocks/Plugins/LocalData/LocalData.php:102
+msgid "Filter by Post Type"
+msgstr "Filtrar por tipo de publicación"
+
+#: Blocks/Plugins/LocalData/LocalData.php:110
+msgid "All post types"
+msgstr "Todos los tipos de publicación"
+
+#: Blocks/Plugins/LocalData/LocalData.php:120
+msgid "Taxonomias"
+msgstr "Taxonomias"
+
+#: Blocks/Plugins/LocalData/LocalData.php:128
+msgid "Select taxonomies"
+msgstr "Seleccionar taxonomías"
+
+#: Blocks/Plugins/LocalData/LocalData.php:132
+#: Blocks/Plugins/RemoteData/RemoteData.php:163
+msgid "Enable: Search?"
+msgstr "¿Habilitar: Buscar?"
+
+#: Blocks/Plugins/LocalData/LocalData.php:140
+msgid "Enable: Number of items?"
+msgstr "¿Habilitar: Número de ítems?"
+
+#: Blocks/Plugins/LocalData/LocalData.php:148
+#: Blocks/Plugins/RemoteData/RemoteData.php:179
+msgid "Enable: Sticky itens?"
+msgstr "¿Habilitar: Ítems fijos?"
+
+#: Blocks/Plugins/LocalData/LocalData.php:156
+#: Blocks/Plugins/RemoteData/RemoteData.php:187
+msgid "Enable: Manual content?"
+msgstr "¿Habilitar: Contenido manual?"
+
+#: Blocks/Plugins/LocalData/LocalData.php:172
+#: Blocks/Plugins/RemoteData/RemoteData.php:203
+msgid "Manual content fields"
+msgstr "Campos de contenido manual"
+
+#: Blocks/Plugins/LocalData/LocalData.php:225
+#: Blocks/Plugins/RemoteData/RemoteData.php:258
+msgid "Add manual itens"
+msgstr "Agregar ítem manual"
+
+#: Blocks/Plugins/LocalData/LocalData.php:228
+#: Blocks/Plugins/RemoteData/RemoteData.php:261
+msgid "Refresh"
+msgstr "Actualizar"
+
+#: Blocks/Plugins/LocalData/LocalData.php:241
+#: Blocks/Plugins/RemoteData/RemoteData.php:273
+msgid "Search..."
+msgstr "Buscar..."
+
+#: Blocks/Plugins/LocalData/LocalData.php:250
+#: Blocks/Plugins/RemoteData/RemoteData.php:282
+msgid "Number of items to be displayed."
+msgstr "Número de ítems que se mostrarán."
+
+#: Blocks/Plugins/LocalData/LocalData.php:262
+#: Blocks/Plugins/RemoteData/RemoteData.php:291
+msgid ""
+"Filter by post type.<br />Obs: Fixed items are not affected by this filter."
+msgstr ""
+"Filtrar por tipo de publicación.<br />Obs: Los contenidos fijos no son "
+"afectados por este filtro."
+
+#: Blocks/Plugins/LocalData/LocalData.php:375
+#: Blocks/Plugins/RemoteData/RemoteData.php:402
+msgid "Results"
+msgstr "Resultados"
+
+#: Blocks/Plugins/LocalData/LocalData.php:384
+#: Blocks/Plugins/RemoteData/RemoteData.php:411
+msgid "Sticky"
+msgstr "Fijos"
+
+#: Blocks/Plugins/LocalData/LocalData.php:388
+#: Blocks/Plugins/RemoteData/RemoteData.php:415
+msgid "Recents"
+msgstr "Recientes"
+
+#: Blocks/Plugins/LocalData/LocalData.php:692
+#: Blocks/Plugins/RemoteData/RemoteData.php:678
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: Blocks/Plugins/LocalData/LocalData.php:705
+#: Blocks/Plugins/RemoteData/RemoteData.php:691
+msgid "Excerpt"
+msgstr "Resumen"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:33
+msgid "Remote data"
+msgstr "Contenido remoto"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:101
+msgid "Endpoints"
+msgstr "Dirección"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:102
+msgid "Endpoint where the content will be catch."
+msgstr "Dirección donde se capturará el contenido."
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:110
+msgid "Write the URLs"
+msgstr "Escriba las URLs"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:125
+msgid "Filter field?"
+msgstr "¿Filtrar campo?"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:133
+msgid "Fields"
+msgstr "Campos"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:141
+msgid "Write the fields names."
+msgstr "Escriba los nombres de los campos."
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:151 core/settings/Modules.php:319
+#: core/settings/Synchronization.php:61
+msgid "Taxonomies"
+msgstr "Taxonomias"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:159
+msgid "Select the taxonomies."
+msgstr "Seleccionar las taxonomías."
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:171
+msgid "Enable: Number of itens?"
+msgstr "¿Habilitar: Número de ítems?"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:258
+msgid "Add"
+msgstr "Agregar"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:351
+#: Blocks/Plugins/RemoteData/RemoteData.php:356
+#: Blocks/Plugins/RemoteData/RemoteData.php:376
+#: Blocks/Plugins/RemoteData/RemoteData.php:381
+msgid "Number of itens to be displayed. From 1 to 100."
+msgstr "Número de ítems a mostrar. De 1 a 100."
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:351
+#: Blocks/Plugins/RemoteData/RemoteData.php:376
+msgid "Taxonomie"
+msgstr "Taxonomía"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:356
+#: Blocks/Plugins/RemoteData/RemoteData.php:381
+msgid "Terms"
+msgstr "Términos"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:357
+#: Blocks/Plugins/RemoteData/RemoteData.php:382
+msgid "Select the wanted terms:"
+msgstr "Seleccionar los términos deseados:"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:360
+#: Blocks/Plugins/RemoteData/RemoteData.php:385
+msgid "Remove taxonomie"
+msgstr "Remover taxonomía"
+
+#: Blocks/Plugins/RemoteData/RemoteData.php:393
+msgid "Add taxonomie"
+msgstr "Agregar taxonomía"
+
+#: Fields/MoreContent.php:13
+msgid "More content"
+msgstr "Más contenido"
+
+#: Fields/MoreContent.php:14
+msgid "Enable"
+msgstr "Habilitar"
+
+#: Fields/MoreContent.php:14
+msgid "Disable"
+msgstr "Deshabilitar"
+
+#: Fields/Source.php:11
+msgid "Content source"
+msgstr "Fuente del contenido"
+
+#: Fields/Source.php:12
+msgid "Select where the content will be brought from."
+msgstr "Seleccione de dónde se obtendrá el contenido."
+
+#: Fields/Source.php:14
+msgid "Remote"
+msgstr "Remoto"
+
+#: Fields/Source.php:15
+msgid "Local"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:16
+msgid "Taxonomy Terms"
+msgstr "Términos de taxonomía"
+
+#: Fields/TaxonomyTerms.php:701
+msgid "Allow Taxonomy"
+msgstr "Permitir Taxonomía"
+
+#: Fields/TaxonomyTerms.php:709 core/settings/Modules.php:321
+msgid "All taxonomies"
+msgstr "Todas las taxonomías"
+
+#: Fields/TaxonomyTerms.php:794
+msgid "Allow Terms"
+msgstr "Permitir términos"
+
+#: Fields/TaxonomyTerms.php:803
+msgid "All terms"
+msgstr "Todos los términos"
+
+#: Fields/TaxonomyTerms.php:809
+msgid "Terms_level"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:815
+msgid "All"
+msgstr "Todos"
+
+#: Fields/TaxonomyTerms.php:822
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: Fields/TaxonomyTerms.php:823
+msgid "Select the appearance of this field"
+msgstr "Seleccionar la apariencia de este campo"
+
+#: Fields/TaxonomyTerms.php:828
+msgid "Checkbox"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:829
+msgid "Radio Buttons"
+msgstr "Radio Buttons"
+
+#: Fields/TaxonomyTerms.php:830 Fields/TaxonomyTerms.php:905
+msgid "Select"
+msgstr "Selecione"
+
+#: Fields/TaxonomyTerms.php:836
+msgid "Default Value"
+msgstr "Valor predeterminado"
+
+#: Fields/TaxonomyTerms.php:837
+msgid "Enter each default value on a new line"
+msgstr "Ingrese cada valor predeterminado en una nueva línea"
+
+#: Fields/TaxonomyTerms.php:844
+msgid "Return Value"
+msgstr "Valor de retorno"
+
+#: Fields/TaxonomyTerms.php:849
+msgid "Term object"
+msgstr "Objeto del término"
+
+#: Fields/TaxonomyTerms.php:850
+msgid "Term name"
+msgstr "Nombre del término"
+
+#: Fields/TaxonomyTerms.php:851
+msgid "Term ID"
+msgstr "ID del término"
+
+#: Fields/TaxonomyTerms.php:858
+msgid "Stylised UI"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:876
+msgid "Allow Null?"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:901
+msgid "Placeholder"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:902
+msgid "Appears within the input"
+msgstr "Aparece dentro del campo"
+
+#: Fields/TaxonomyTerms.php:968
+msgid "Search Input Placeholder"
+msgstr "Marcador de posición del campo de búsqueda"
+
+#: Fields/TaxonomyTerms.php:969
+msgid "Appears within the search input"
+msgstr "Aparece dentro del campo de búsqueda"
+
+#: Fields/TaxonomyTerms.php:996
+msgid "Select multiple values?"
+msgstr "¿Seleccionar múltiples valores?"
+
+#: Fields/TaxonomyTerms.php:1014
+msgid "Use AJAX to lazy load choices?"
+msgstr "¿Usar AJAX para cargar opciones de forma diferida?"
+
+#: Fields/TaxonomyTerms.php:1037
+msgid "Layout"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:1043
+msgid "Vertical"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:1044
+msgid "Horizontal"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:1066
+msgid "Toggle"
+msgstr ""
+
+#: Fields/TaxonomyTerms.php:1067
+msgid "Prepend an extra checkbox to toggle all choices"
+msgstr "Agregar una casilla extra para alternar todas las opciones"
+
+#: Fields/TaxonomyTerms.php:1084
+msgid "Save Terms"
+msgstr "Guardar términos"
+
+#: Fields/TaxonomyTerms.php:1085
+msgid "Connect selected terms to the post"
+msgstr "Conectar los términos seleccionados a la publicación"
+
+#: Fields/TaxonomyTerms.php:1093
+msgid "Load Terms"
+msgstr "Cargar términos"
+
+#: Fields/TaxonomyTerms.php:1094
+msgid "Load value from posts terms"
+msgstr "Cargar valor de los términos de las publicaciones"
+
+#: archive.php:15 archive.php:27 author.php:15 author.php:27
+msgid "News"
+msgstr "Noticias"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:27
+#: classes/controllers/PA_ACF_Site-settings.class.php:28
+#: classes/controllers/PA_ACF_Site-settings.class.php:38
+#: classes/controllers/PA_ACF_Site-settings.class.php:39
+msgid "IASD Site - Custom Settings"
+msgstr "IASD Site - Configuraciones personalizadas"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:55
+msgid "Headquarter"
+msgstr "Sede Regional"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:60
+msgid "Address"
+msgstr "Dirección"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:64
+msgid "Telephone"
+msgstr "Teléfono"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:65
+msgid "Social Networks"
+msgstr "Redes sociales"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:81
+msgid "Site settings"
+msgstr "Configuraciones del sitio"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:107
+msgid "Banner Autoplay Settings"
+msgstr "Configuraciones de reproducción automática del banner"
+
+#: classes/controllers/PA_ACF_Site-settings.class.php:87
+msgid "Rewrite global settings"
+msgstr "Reescribir configuraciones globales"
+
+#: classes/controllers/PA_Header_Title.class.php:33
+msgid "Content not found..."
+msgstr "Contenido no encontrado..."
+
+#: classes/controllers/PA_Register_Sidebars.class.php:16
+msgid "Front Page"
+msgstr ""
+
+#: classes/controllers/PA_Register_Sidebars.class.php:26
+msgid "Index"
+msgstr ""
+
+#: classes/controllers/PA_Register_Sidebars.class.php:36
+msgid "Archive"
+msgstr ""
+
+#: classes/controllers/PA_Register_Sidebars.class.php:46
+msgid "Single"
+msgstr ""
+
+#: classes/controllers/PA_Strong_Passwords.php:66
+msgid "User name cannot be empty."
+msgstr "El nombre de usuario no puede estar vacío."
+
+#: classes/controllers/PA_Strong_Passwords.php:68
+msgid "Password is not strong enough."
+msgstr "La contraseña no es lo suficientemente segura."
+
+#: components/menu/footer.php:39
+msgid "Our social networks"
+msgstr "Nuestras redes sociales"
+
+#: components/menu/footer.php:85 footer.php:11
+msgid "Seventh-day Adventist Church"
+msgstr "Iglesia Adventista del Séptimo Día"
+
+#: components/menu/footer.php:89
+msgid "Go to top"
+msgstr "Ir al inicio"
+
+#: components/parts/share.php:19
+msgid "Share:"
+msgstr "Compartir:"
+
+#: core/PA_Theme_Sedes_Install.php:62
+msgid "Headquarter - Owner"
+msgstr "Sede Propietaria"
+
+#: core/PA_Theme_Sedes_Install.php:105
+msgid "Quick&nbsp;Edit"
+msgstr "Edición&nbsp;Rápida"
+
+#: core/PA_Theme_Sedes_Install.php:114
+msgid "PA - Menu - Default"
+msgstr ""
+
+#: core/Taxonomies.php:52
+msgid "Collections"
+msgstr "Colecciones"
+
+#: core/Taxonomies.php:53
+msgid "Collection"
+msgstr "Colección"
+
+#: core/Taxonomies.php:54
+msgid "Collections taxonomy"
+msgstr "Taxonomía de colecciones"
+
+#: core/Taxonomies.php:58
+msgid "Editorials"
+msgstr "Editoriales"
+
+#: core/Taxonomies.php:60
+msgid "Editorials taxonomy"
+msgstr "Taxonomía de editoriales"
+
+#: core/Taxonomies.php:64
+msgid "Ministries"
+msgstr "Departamentos"
+
+#: core/Taxonomies.php:65
+msgid "Ministry"
+msgstr "Departamento"
+
+#: core/Taxonomies.php:66
+msgid "Ministries taxonomy"
+msgstr "Taxonomía de departamentos"
+
+#: core/Taxonomies.php:70
+msgid "Projects"
+msgstr "Proyectos"
+
+#: core/Taxonomies.php:71
+msgid "Project"
+msgstr "Proyecto"
+
+#: core/Taxonomies.php:72
+msgid "Projects taxonomy"
+msgstr "Taxonomía de proyectos"
+
+#: core/Taxonomies.php:76
+msgid "Regions"
+msgstr "Regiones"
+
+#: core/Taxonomies.php:77
+msgid "Region"
+msgstr "Región"
+
+#: core/Taxonomies.php:78
+msgid "Regions taxonomy"
+msgstr "Taxonomía de regiones"
+
+#: core/Taxonomies.php:82
+msgid "Regional Headquarters"
+msgstr "Sedes Regionales"
+
+#: core/Taxonomies.php:83
+msgid "Regional Headquarter"
+msgstr "Sede Regional"
+
+#: core/Taxonomies.php:84
+msgid "Regional Headquarters taxonomy"
+msgstr "Taxonomía de sedes regionales"
+
+#: core/Taxonomies.php:88
+msgid "Owner Headquarters"
+msgstr "Sedes Propietarias"
+
+#: core/Taxonomies.php:89
+msgid "Owner Headquarter"
+msgstr "Sede Propietaria"
+
+#: core/Taxonomies.php:90
+msgid "Owner Headquarters taxonomy"
+msgstr "Taxonomía de sedes propietarias"
+
+#: core/Taxonomies.php:94
+msgid "File types"
+msgstr "Tipos de archivo"
+
+#: core/Taxonomies.php:95
+msgid "File type"
+msgstr "Tipo de archivo"
+
+#: core/Taxonomies.php:96
+msgid "File types taxonomy"
+msgstr "Taxonomía de tipos de archivo"
+
+#: core/Taxonomies.php:141
+msgid "All itens"
+msgstr "Todos los ítems"
+
+#: core/Taxonomies.php:144
+msgid "Edit"
+msgstr "Editar"
+
+#: core/Taxonomies.php:145
+msgid "Update"
+msgstr "Actualizar"
+
+#: core/Taxonomies.php:146
+msgid "Add new"
+msgstr "Agregar nuevo"
+
+#: core/Taxonomies.php:147
+msgid "New"
+msgstr "Nuevo"
+
+#: core/settings/Modules.php:40 core/settings/Modules.php:41
+msgid "Modules"
+msgstr "Módulos"
+
+#: core/settings/Modules.php:79
+msgid "General"
+msgstr "General"
+
+#: core/settings/Modules.php:81
+msgid "Sidebars"
+msgstr ""
+
+#: core/settings/Modules.php:82
+msgid "Enable/disable all IASD sidebars"
+msgstr ""
+
+#: core/settings/Modules.php:83 core/settings/Modules.php:91
+#: core/settings/Modules.php:99 core/settings/Modules.php:107
+#: core/settings/Modules.php:115 core/settings/Modules.php:132
+#: core/settings/Modules.php:140 core/settings/Modules.php:149
+#: core/settings/Modules.php:158 core/settings/Modules.php:167
+#: core/settings/Modules.php:176 core/settings/Modules.php:185
+#: core/settings/Modules.php:194 core/settings/Modules.php:203
+#: core/settings/Modules.php:212 core/settings/Modules.php:221
+#: core/settings/Modules.php:230 core/settings/Modules.php:239
+#: core/settings/Modules.php:248 core/settings/Modules.php:257
+#: core/settings/Modules.php:266 core/settings/Modules.php:275
+#: core/settings/Modules.php:284 core/settings/Modules.php:293
+#: core/settings/Modules.php:302 core/settings/Modules.php:323
+#: core/settings/Modules.php:331 core/settings/Modules.php:342
+msgid "Enabled"
+msgstr "Habilitar"
+
+#: core/settings/Modules.php:83 core/settings/Modules.php:91
+#: core/settings/Modules.php:99 core/settings/Modules.php:107
+#: core/settings/Modules.php:115 core/settings/Modules.php:132
+#: core/settings/Modules.php:140 core/settings/Modules.php:149
+#: core/settings/Modules.php:158 core/settings/Modules.php:167
+#: core/settings/Modules.php:176 core/settings/Modules.php:185
+#: core/settings/Modules.php:194 core/settings/Modules.php:203
+#: core/settings/Modules.php:212 core/settings/Modules.php:221
+#: core/settings/Modules.php:230 core/settings/Modules.php:239
+#: core/settings/Modules.php:248 core/settings/Modules.php:257
+#: core/settings/Modules.php:266 core/settings/Modules.php:275
+#: core/settings/Modules.php:284 core/settings/Modules.php:293
+#: core/settings/Modules.php:302 core/settings/Modules.php:323
+#: core/settings/Modules.php:331 core/settings/Modules.php:342
+msgid "Disabled"
+msgstr "Desabilitar"
+
+#: core/settings/Modules.php:89
+msgid "Search page"
+msgstr "Pagina de busca"
+
+#: core/settings/Modules.php:90
+msgid "Enable/disable IASD custom search page"
+msgstr ""
+
+#: core/settings/Modules.php:97
+msgid "Header title"
+msgstr "Titulo do header"
+
+#: core/settings/Modules.php:98
+msgid "Enable/disable IASD custom header title"
+msgstr ""
+
+#: core/settings/Modules.php:105
+msgid "REST cleanup"
+msgstr ""
+
+#: core/settings/Modules.php:106
+msgid "Enable/disable IASD REST cleanup"
+msgstr ""
+
+#: core/settings/Modules.php:113
+msgid "Seventh column"
+msgstr "Séptima columna"
+
+#: core/settings/Modules.php:114
+msgid "Enable/disable IASD seventh column"
+msgstr "Habilitar/Deshabilitar séptima columna"
+
+#: core/settings/Modules.php:128 core/settings/Synchronization.php:55
+msgid "Blocks"
+msgstr "Bloques"
+
+#: core/settings/Modules.php:130
+msgid "All blocks"
+msgstr "Todos los bloques"
+
+#: core/settings/Modules.php:131
+msgid "Enable/disable all IASD blocks"
+msgstr ""
+
+#: core/settings/Modules.php:147
+msgid "IASD - Twitter"
+msgstr ""
+
+#: core/settings/Modules.php:148
+msgid "IASD Twitter block."
+msgstr "Bloque de Twitter."
+
+#: core/settings/Modules.php:219
+msgid "IASD - 7Cast"
+msgstr ""
+
+#: core/settings/Modules.php:220
+msgid "Block to show 7cast content in list format."
+msgstr "Bloque para mostrar contenido de 7cast en formato lista."
+
+#: core/settings/Modules.php:322
+msgid "Enable/disable all IASD taxonomies"
+msgstr ""
+
+#: core/settings/Modules.php:329
+msgid "Taxonomies synchronization"
+msgstr ""
+
+#: core/settings/Modules.php:330
+msgid "Enable/disable IASD taxonomies synchronization"
+msgstr ""
+
+#: core/settings/Synchronization.php:35 core/settings/Synchronization.php:36
+#: core/settings/Synchronization.php:51
+msgid "Synchronization"
+msgstr ""
+
+#: core/settings/Synchronization.php:52
+msgid "Sync site data"
+msgstr "Sincronizar datos"
+
+#: core/settings/Synchronization.php:56
+msgid "Sync blocks data"
+msgstr "Sincronizar datos de bloques"
+
+#: core/settings/Synchronization.php:57 core/settings/Synchronization.php:63
+msgid "Sync"
+msgstr "Sincronizar"
+
+#: core/settings/Synchronization.php:62
+msgid "Sync taxonomies data"
+msgstr "Sincronizar datos de taxonomías"
+
+#: core/settings/Synchronization.php:85
+msgid "Sync data"
+msgstr "Sincronizar datos"
+
+#: core/settings/Synchronization.php:95
+msgid "Sync blocks"
+msgstr "Sincronizar bloques"
+
+#: core/settings/Synchronization.php:107
+msgid "Sync taxonomies"
+msgstr "Sincronizar taxonomías"
+
+#: core/utils/PA_Schedule_Custom.php:8
+msgid "Once every 20 minutes"
+msgstr "Una vez cada 20 minutos"
+
+#: core/utils/PA_Service_Slider_Home.php:15
+msgid "Sliders Home"
+msgstr ""
+
+#: core/utils/PA_Service_Slider_Home.php:16
+msgid "Slider Home"
+msgstr ""
+
+#: page.php:22 single.php:23
+msgid "By"
+msgstr "Por"
+
+#: page.php:36 single.php:35
+msgid "Hear text"
+msgstr "Escuchar texto"
+
+#: search.php:21
+msgid "Results for:"
+msgstr "Resultados para:"
+
+#: single.php:52
+msgid "Previous article"
+msgstr "Artículo anterior"
+
+#: single.php:55
+msgid "Next article"
+msgstr "Siguiente artículo"
+
+#: template-parts/global/feature.php:3
+msgid "Featured"
+msgstr "Destacado"
+
+#~ msgid "No matches found"
+#~ msgstr "Nenhuma correspondência encontrada"
+
+#~ msgid "Loading"
+#~ msgstr "Carregando"
+
+#~ msgid ""
+#~ "Access <a href=\"https://fontawesome.com/v5.15/icons?"
+#~ "d=gallery&p=2&s=solid&m=free\" target=\"_blank\">icon list</a>, and "
+#~ "select an icon and insert the respective css class here."
+#~ msgstr ""
+#~ "Acesse <a href=“https://fontawesome.com/v5.15/icons?"
+#~ "d=gallery&p=2&s=solid&m=free” target=“_blank”>lista de ícones</a>, e "
+#~ "selecione um ícone e insira a respectiva classe csi aqui."
+
+#~ msgid "Headquarter - Owner, father"
+#~ msgstr "Sede Proprietária - Pai"
+
+#~ msgid "Collection, father"
+#~ msgstr "Coleção - Pai"
+
+#~ msgid "Editorial, father"
+#~ msgstr "Editoria - Pai"
+
+#~ msgid "editorial"
+#~ msgstr "editoria"
+
+#~ msgid "Ministry, father"
+#~ msgstr "Departamento - Pai"
+
+#~ msgid "Projects, father"
+#~ msgstr "Projetos - Pai"
+
+#~ msgid "project"
+#~ msgstr "Projeto"
+
+#~ msgid "Regions, father"
+#~ msgstr "Regi - Pai"
+
+#~ msgid "region"
+#~ msgstr "Região"
+
+#~ msgid "Regional Headquarter, father"
+#~ msgstr "Sede Regional - Pai"
+
+#~ msgid "Latest posts"
+#~ msgstr "Últimos Posts"
+
+#~ msgid "Invalid taxonomy server."
+#~ msgstr "Servidor de taxonomias inválido."
+
+#~ msgid "Settings"
+#~ msgstr "Configurações"
+
+#~ msgid "Configure the taxonomy server."
+#~ msgstr "Configurar o servidor de taxonomia."
+
+#~ msgid "Manual fields content"
+#~ msgstr "Campos de conteúdo manual"
