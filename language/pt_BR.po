@@ -1,8 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-19 16:56-0300\n"
-"PO-Revision-Date: 2025-08-27 18:06+0000\n"
+"PO-Revision-Date: 2026-04-06 15:41-0300\n"
 "Last-Translator: Igreja Adventista\n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -10,21 +11,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
-"esc_attr_e;esc_attr_x\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;esc_attr_e;esc_attr_x\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Loco-Version: 2.8.0; wp-6.6.2; php-8.2.0\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"Report-Msgid-Bugs-To: \n"
-"X-Loco-Version: 2.8.0; wp-6.6.2; php-8.2.0"
 
-#: classes/controllers/PA_ACF_Child-settings.class.php:14
+#: core/settings/Modules.php:40 core/settings/Modules.php:41
 msgid "Modules"
-msgstr ""
+msgstr "Molulos"
 
 #: classes/controllers/PA_ACF_Child-settings.class.php:18
 #: classes/controllers/PA_ACF_Leaders.class.php:63
@@ -55,7 +55,7 @@ msgstr ""
 #: classes/controllers/PA_CPT_Projects.class.php:25
 #: classes/controllers/PA_CPT_Projects.class.php:27
 #: classes/controllers/PA_CPT_Projects.class.php:28
-#: classes/controllers/PA_CPT_Projects.class.php:51
+#: classes/controllers/PA_CPT_Projects.class.php:51 core/Taxonomies.php:70
 msgid "Projects"
 msgstr "Projetos"
 
@@ -80,6 +80,7 @@ msgid "Ministry select"
 msgstr "Selecionar departamento"
 
 #: classes/controllers/PA_ACF_Site-ministries.class.php:22
+#: core/Taxonomies.php:65
 msgid "Ministry"
 msgstr "Departamento"
 
@@ -297,6 +298,7 @@ msgid "Picture"
 msgstr "Foto"
 
 #: classes/controllers/PA_CPT_District.class.php:87
+#: classes/controllers/PA_ACF_Site-settings.class.php:60
 msgid "Address"
 msgstr "Endereço"
 
@@ -329,31 +331,38 @@ msgstr "Adicionar pastor"
 #: classes/controllers/PA_CPT_District.class.php:138
 #: classes/controllers/PA_CPT_District.class.php:139
 #: classes/controllers/PA_CPT_District.class.php:144
-#: classes/controllers/PA_CPT_District.class.php:153
+#: classes/controllers/PA_CPT_District.class.php:153 core/Taxonomies.php:77
 msgid "Region"
 msgstr "Região"
 
 #: classes/controllers/PA_CPT_District.class.php:136
+#: Blocks/PAFindChurch/views/frontend.blade.php:17 404.php:23
+#: components/menu/header.php:26 core/Taxonomies.php:140 search.php:26
 msgid "Search"
 msgstr "Buscar"
 
-#: classes/controllers/PA_CPT_District.class.php:137
+#: classes/controllers/PA_CPT_District.class.php:137 core/Taxonomies.php:141
 msgid "All itens"
 msgstr "Todos os itens"
 
-#: classes/controllers/PA_CPT_District.class.php:140
+#: classes/controllers/PA_CPT_District.class.php:140 core/Taxonomies.php:144
+#, fuzzy
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
+"#-#-#-#-#  catalog.po  #-#-#-#-#\n"
+"Editar\n"
+"#-#-#-#-#  catalog.po  #-#-#-#-#\n"
+"Edigar"
 
-#: classes/controllers/PA_CPT_District.class.php:141
+#: classes/controllers/PA_CPT_District.class.php:141 core/Taxonomies.php:145
 msgid "Update"
 msgstr "Atualizar"
 
-#: classes/controllers/PA_CPT_District.class.php:142
+#: classes/controllers/PA_CPT_District.class.php:142 core/Taxonomies.php:146
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: classes/controllers/PA_CPT_District.class.php:143
+#: classes/controllers/PA_CPT_District.class.php:143 core/Taxonomies.php:147
 msgid "New"
 msgstr "Novo"
 
@@ -387,6 +396,7 @@ msgid "E-mail"
 msgstr ""
 
 #: classes/controllers/PA_CPT_Leaders.class.php:101
+#: classes/controllers/PA_ACF_Site-settings.class.php:64
 msgid "Telephone"
 msgstr "Telefone"
 
@@ -399,7 +409,7 @@ msgid "Official Note"
 msgstr "Nota Oficial"
 
 #: classes/controllers/PA_CPT_Projects.class.php:26
-#: classes/controllers/PA_CPT_Projects.class.php:40
+#: classes/controllers/PA_CPT_Projects.class.php:40 core/Taxonomies.php:71
 msgid "Project"
 msgstr "Projeto"
 
@@ -535,11 +545,6 @@ msgstr "Buscar igreja"
 #: Blocks/PAFindChurch/views/frontend.blade.php:14
 msgid "Search by Postcode, city, neighborhood."
 msgstr "Buscar pelo CEP, cidade, bairro."
-
-#: Blocks/PAFindChurch/views/frontend.blade.php:17 404.php:23
-#: components/menu/header.php:26 core/Taxonomies.php:140 search.php:26
-msgid "Search"
-msgstr "Buscar"
 
 #: 404.php:10 404.php:16
 msgid "I'm sorry! Content not found! :("
@@ -710,8 +715,15 @@ msgid "Icon or SVG"
 msgstr "Ícone ou SVG"
 
 #: Blocks/PAFindChurch/PAFindChurch.php:37
-msgid "You can enter a FontAwesome CSS class (e.g., <code>fas fa-bookmark</code>) or paste a custom SVG here. See the <a href=\"https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free\" target=\"_blank\">icon list</a>."
-msgstr "Você pode inserir uma classe CSS do FontAwesome (ex: <code>fas fa-bookmark</code>) ou colar um SVG personalizado aqui. Veja a <a href=\"https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free\" target=\"_blank\">lista de ícones</a>."
+msgid ""
+"You can enter a FontAwesome CSS class (e.g., <code>fas fa-bookmark</code>) "
+"or paste a custom SVG here. See the <a href=\"https://fontawesome.com/v5.15/"
+"icons?d=gallery&p=2&s=solid&m=free\" target=\"_blank\">icon list</a>."
+msgstr ""
+"Você pode inserir uma classe CSS do FontAwesome (ex: <code>fas fa-bookmark</"
+"code>) ou colar um SVG personalizado aqui. Veja a <a href=\"https://"
+"fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free\" "
+"target=\"_blank\">lista de ícones</a>."
 
 #: Blocks/PAFindChurch/PAFindChurch.php:43 Blocks/PAImage/PAImage.php:46
 #: Blocks/PAListIcons/PAListIcons.php:72
@@ -1211,14 +1223,6 @@ msgstr "IASD Site - Configurações customizadas"
 msgid "Headquarter"
 msgstr "Sede Regional"
 
-#: classes/controllers/PA_ACF_Site-settings.class.php:60
-msgid "Address"
-msgstr "Endereço"
-
-#: classes/controllers/PA_ACF_Site-settings.class.php:64
-msgid "Telephone"
-msgstr "Telefone"
-
 #: classes/controllers/PA_ACF_Site-settings.class.php:65
 msgid "Social Networks"
 msgstr "Redes sociais"
@@ -1315,21 +1319,9 @@ msgstr "Taxonomia Editoria"
 msgid "Ministries"
 msgstr "Departamentos"
 
-#: core/Taxonomies.php:65
-msgid "Ministry"
-msgstr "Departamento"
-
 #: core/Taxonomies.php:66
 msgid "Ministries taxonomy"
 msgstr "Taxonomias departamentos"
-
-#: core/Taxonomies.php:70
-msgid "Projects"
-msgstr "Projetos"
-
-#: core/Taxonomies.php:71
-msgid "Project"
-msgstr "Projeto"
 
 #: core/Taxonomies.php:72
 msgid "Projects taxonomy"
@@ -1338,10 +1330,6 @@ msgstr "Taxonomia Projetos"
 #: core/Taxonomies.php:76
 msgid "Regions"
 msgstr "Regiões"
-
-#: core/Taxonomies.php:77
-msgid "Region"
-msgstr "Região"
 
 #: core/Taxonomies.php:78
 msgid "Regions taxonomy"
@@ -1382,30 +1370,6 @@ msgstr "Tipo de arquivo"
 #: core/Taxonomies.php:96
 msgid "File types taxonomy"
 msgstr "Taxonomias tipo de arquivo"
-
-#: core/Taxonomies.php:141
-msgid "All itens"
-msgstr "Todos os itens"
-
-#: core/Taxonomies.php:144
-msgid "Edit"
-msgstr "Edigar"
-
-#: core/Taxonomies.php:145
-msgid "Update"
-msgstr "Atualizar"
-
-#: core/Taxonomies.php:146
-msgid "Add new"
-msgstr "Adicionar novo"
-
-#: core/Taxonomies.php:147
-msgid "New"
-msgstr "Novo"
-
-#: core/settings/Modules.php:40 core/settings/Modules.php:41
-msgid "Modules"
-msgstr "Molulos"
 
 #: core/settings/Modules.php:79
 msgid "General"
