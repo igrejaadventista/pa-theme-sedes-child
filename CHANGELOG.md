@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.6.3] - 2026-04-06
+### Feature
+
+- Traduções em espanhol (es_ES) do tema filho (ADVC-225)
+
 ## [1.6.2] - 2026-03-18
 ### Fix
 
